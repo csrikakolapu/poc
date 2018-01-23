@@ -1,0 +1,15 @@
+
+	<nav class="navbar navbar-default navbar-static-top navbackground col-xs-12 navbarmyapp" role="navigation" >
+
+		<ul class = "nav navbar-nav col-xs-12 clear-both">
+			 <li  *ngFor= "let menuItem of navItems" class = "nav-tab">
+				
+						<a routerLink="/analysis{{menuItem.linkCode}}" routerLinkActive="active">
+					<i  class="fa  pull-left fa-2x fa-{{menuItem.iconName}}"></i>
+					<span >{{menuItem.description}}</span>
+				</a>
+			</li>
+			
+		</ul> 
+	</nav>
+	<router-outlet></router-outlet>

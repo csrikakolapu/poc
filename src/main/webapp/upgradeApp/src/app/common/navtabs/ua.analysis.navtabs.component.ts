@@ -1,19 +1,25 @@
 import { Component } from '@angular/core';
-import { MenuItem } from './menuitem';
+
+import { Router, ActivatedRoute } from '@angular/router';
+import { MenuItem } from '../dto/menuitem';
 
 
 @Component({
-    selector:"topnavmenu",
-    templateUrl:"./partials/navPanel.html"
+    selector:"ua-navtabs",
+    templateUrl:'./ua.analysis.navtabs.component.html'
+   
 })
 
+export class UAAnalysisNavTabsComponent{
+    constructor(private router:Router, private activatedRoute: ActivatedRoute){       
+    }
 
-
-export class TopNavMenuComponent{
+   
+    
     navItems:MenuItem [] = [
         {
             description:'System Overview',
-            linkCode:'/home',
+            linkCode:'/dashboard',
             iconName:'dashboard'
         },
         {
