@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { SubTabItem } from '../dto/subtabitem';
 
 
 @Component({
@@ -8,4 +9,21 @@ import { Component } from "@angular/core";
 
 export class UASFourHanaComponent{
     
+      subTabItems:SubTabItem [] = [
+       {  
+        key:"busFunctions",
+        value:"Business Functions",
+        required:true
+        },
+        {  
+        key:"readycheck",
+        value:"Readiness Check",
+        required:true
+        },
+        {  
+        key:"SYCM",
+        value:"Code Incompatibilities ",
+        required:true
+        }
+    ];
 }

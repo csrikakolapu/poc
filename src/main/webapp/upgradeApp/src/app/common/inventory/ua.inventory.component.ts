@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component,OnInit } from "@angular/core";
 
 
 @Component({
@@ -6,6 +6,11 @@ import { Component } from "@angular/core";
     templateUrl:"./ua.inventory.component.html"
 })
 
-export class UAInventoryComponent{
-    
+export class UAInventoryComponent implements OnInit {
+    chart;
+    ngOnInit() {
+    	this.chart = {
+    		view1: 'pieChart'
+    	}
+    }
 }
