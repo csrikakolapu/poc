@@ -1,4 +1,4 @@
-package com.deloitte.service;
+package com.deloitte.dto;
 
 import java.util.List;
 import java.util.Map;
