@@ -27,10 +27,11 @@ import { UAPieChartComponent } from './common/d3charts/ua.piechart';
 import { UADonutChartComponent } from './common/d3charts/ua.donutchart';
 import { UAChartTableComponent } from './common/table/ua.charttable.component';
 
-
 import 'd3';
 import 'nvd3';
 
+import 'd3';
+import 'nvd3';
 
 @NgModule({
   declarations: [
