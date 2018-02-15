@@ -1,0 +1,7 @@
+
+<div class="totals-container col-xs-12">
+	<div class="totals-box col-xs-2 status-{{tileItem.color}}"  *ngFor= "let tileItem of tileItems">
+		<p class="totals-numeric"> {{tileItem.value | number}}</p>
+		<p class="totals-text">{{tileItem.key}}</p>
+	</div>
+</div>

@@ -1,14 +1,22 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
+
+import { Router, ActivatedRoute } from '@angular/router';
 import { SubTabItem } from '../dto/subtabitem';
 
+
 @Component({
-    selector:"ua-impact",
-    templateUrl:"./ua.impact.component.html"
+    selector:"ua-subtabs",
+    templateUrl:'./ua.subtabs.component.html'
+   
 })
 
-export class UAImpactComponent{
+export class UASubTabsComponent{
+    constructor(){       
+    }
 
-	 subTabItems:SubTabItem [] = [
+   
+    
+    subTabItems:SubTabItem [] = [
        {  
         key:"defects",
         value:"Incompatibilities",
@@ -30,5 +38,4 @@ export class UAImpactComponent{
         required:false
         }
     ];
-    
 }
