@@ -2,7 +2,7 @@ import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
 declare let d3: any;
 
 @Component({
-    selector: 'ua-pie-chart',
+    selector: 'ua-d3-pie-chart',
     template: `
         <div>
         <nvd3 [options]="options" [data]="data"></nvd3>
@@ -15,7 +15,7 @@ declare let d3: any;
     encapsulation: ViewEncapsulation.None
 })
 
-export class UAPieChartComponent implements OnInit {
+export class UAD3PieChartComponent implements OnInit {
     options;
 
     ngOnInit() {

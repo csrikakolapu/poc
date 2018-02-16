@@ -23,9 +23,10 @@ import { UASubTabsComponent } from './common/subtabs/ua.subtabs.component';
 import { UATableComponent } from './common/table/ua.table.component';
 import { NvD3Module } from 'ng2-nvd3';
 import { UADiscreteBarComponent } from './common/d3charts/ua.discretebar';
-import { UAPieChartComponent } from './common/d3charts/ua.piechart';
+import { UAD3PieChartComponent } from './common/d3charts/ua.piechart';
 import { UADonutChartComponent } from './common/d3charts/ua.donutchart';
 import { UAChartTableComponent } from './common/table/ua.charttable.component';
+import { UAPieChartComponent } from './common/charts/ua.piechart';
 
 import 'd3';
 import 'nvd3';
@@ -51,9 +52,10 @@ import 'nvd3';
     UASubTabsComponent,
     UATableComponent,
     UADiscreteBarComponent,
-    UAPieChartComponent,
+    UAD3PieChartComponent,
     UAChartTableComponent,
-    UADonutChartComponent
+    UADonutChartComponent,
+    UAPieChartComponent
   ],
   imports: [
     BrowserModule,

@@ -6,8 +6,9 @@ import { Component } from '@angular/core';
 })
 
 export class UATableComponent{
+    tableData;
     constructor(){   
-        const tableData : any[] = [
+        this.tableData = [
            {  
                 key:"defects",
                 value:"Incompatibilities",
