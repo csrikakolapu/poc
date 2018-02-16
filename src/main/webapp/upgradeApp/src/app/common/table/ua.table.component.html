@@ -20,23 +20,23 @@
 	    </span>
 	</div>
 	<div class="clearfix"></div>
-	<!-- <div class="center-section">
+	<!--  <div class="center-section">
 		<table float-thead="floatTheadOptions" ng-model="tabularData" class="col-xs-12">
 			<thead>
 				<tr class="border-bottom">
-					<td ng-repeat="(key,value) in tableHeader" class="border-right table-header" ng-click="sortFunction(key)">
-						<span ng-bind="value"></span>
-						<span class="fa fa-sort" ng-hide="orderByField == '{{key}}'"></span>
-						<span class="fa fa-sort-asc" ng-show="orderByField == '{{key}}' && !reverseSort"></span>
-						<span class="fa fa-sort-desc" ng-show="orderByField == '{{key}}' && reverseSort"></span>
+					<td *ngFor= "let tableItem of tableData"  class="border-right table-header">
+						<span >{{tableItem.value}}</span>
+						<span class="fa fa-sort" ng-hide="orderByField == '{{tableItem.key}}'"></span>
+						<span class="fa fa-sort-asc" ng-show="orderByField == '{{tableItem.key}}' && !reverseSort"></span>
+						<span class="fa fa-sort-desc" ng-show="orderByField == '{{tableItem.key}}' && reverseSort"></span>
 					</td>
 				</tr>
 			</thead>
 			<tbody>
-				<tr ng-repeat="row in tabularData|orderBy:orderByField:reverseSort|filter:filterFunction">
-					<td ng-repeat="(key,value) in row" class="border-right" ng-bind="value"></td>
+				<tr *ngFor= "let tableItem of tableData">
+					<td  class="border-right" ng-bind="value"></td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
- -->
+  -->

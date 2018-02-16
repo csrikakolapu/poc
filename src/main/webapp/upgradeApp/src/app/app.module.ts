@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { UAAppRoutingModule } from './ua.app.routing.module';
 import { ChartsModule } from 'ng2-charts';
 import { UAHeaderComponent } from './common/header/uaheader.component';
+
 import { UAExecutionRootComponent } from './common/executions/ua.executionroot.component';
 import { UAExecutionsComponent } from './common/executions/ua.executions.component';
 import { UANewExecutionComponent } from './common/executions/ua.new.execution.component';
@@ -28,13 +29,22 @@ import { UADonutChartComponent } from './common/d3charts/ua.donutchart';
 import { UAChartTableComponent } from './common/table/ua.charttable.component';
 import { UAPieChartComponent } from './common/charts/ua.piechart';
 
-import 'd3';
-import 'nvd3';
+
 
 import 'd3';
 import 'nvd3';
+import { FetchFileService } from './fetch-file.service';
 
 @NgModule({
+ 
+ imports: [
+    BrowserModule,
+    UAAppRoutingModule,
+    ChartsModule,
+    HttpClientModule,
+    NvD3Module
+  ],
+  providers: [FetchFileService],
   declarations: [
     AppComponent,
     UAHeaderComponent,
@@ -57,14 +67,6 @@ import 'nvd3';
     UADonutChartComponent,
     UAPieChartComponent
   ],
-  imports: [
-    BrowserModule,
-    UAAppRoutingModule,
-    ChartsModule,
-    HttpClientModule,
-    NvD3Module
-  ],
-  providers: [],
   bootstrap: [
     AppComponent 
     ]
