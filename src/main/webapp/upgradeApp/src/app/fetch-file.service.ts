@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable()
 export class FetchFileService {
 	
-	private fileUrl = 'api/getFileContent';
+	private fileUrl = '/upgradeApp/app/api/getFileContent';
     constructor(private http: HttpClient) {}
   
   getFileData(name : string): Observable<any[]> {
