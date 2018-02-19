@@ -11,55 +11,63 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Properties;
 import java.util.Scanner;
 import java.util.stream.Collectors;
+
+import org.springframework.util.StringUtils;
+
+import com.deloitte.constants.Constants;
 
 public class FileReaderService {
 
 	public List<String> getFileData(String fileKey, String folderPath) throws IOException, URISyntaxException {
 		List<String> fileContent = new ArrayList<>();
 		loadSAPFileProperties(folderPath);
-		File file = new File(folderPath + AppUtils.sapFileProperties.getProperty(fileKey));
+		File file = null;
+		if(StringUtils.isEmpty(folderPath)) {
+			file = new File(getClass().getClassLoader().getResource("data/"+AppUtils.sapFileProperties.get(fileKey)).getFile());
+		} else {
+			file = new File(folderPath + AppUtils.sapFileProperties.get(fileKey));
+		}
 		Scanner scanner = new Scanner(file);
-				while (scanner.hasNextLine()) {
-					String line = scanner.nextLine();
-					fileContent.add(line);
-				}
+		while (scanner.hasNextLine()) {
+			String line = scanner.nextLine();
+			fileContent.add(line);
+		}
 
 		scanner.close();
 		return fileContent;
 	}
 	
 	public Map<String, String> getAllFolderDetails() throws IOException {
-		readFolderDetailsFromLog();
-		return AppUtils.allFolderDetails;
+		InputStream is = FileReaderService.class.getClassLoader().getResourceAsStream("data/FolderUploadLog.Properties");
+		return readFileAsKeyValuePair(is, Constants.DELIMETER_EQUALS);
 	}
 	
-	private void readFolderDetailsFromLog() throws IOException {
-		InputStream is = FileReaderService.class.getClassLoader().getResourceAsStream("data/FolderUploadLog.Properties");
+	private void loadSAPFileProperties(String folderPath) throws IOException {
+		if(AppUtils.sapFileProperties == null){
+			InputStream inputStream = null;
+			if(StringUtils.isEmpty(folderPath)) {
+				inputStream = FileReaderService.class.getClassLoader().getResourceAsStream("data/SAPUATProp.Properties");
+			} else {
+				String propsFilePath = folderPath + "SAPUATProp.Properties";
+				inputStream = new FileInputStream(new File(propsFilePath));
+			}
+			AppUtils.sapFileProperties = readFileAsKeyValuePair(inputStream, Constants.DELIMETER_SPACE);
+		}
+	}
+	
+	private Map<String, String> readFileAsKeyValuePair(InputStream is, String delimeter) throws IOException {
+		Map<String, String> fileDataAsKeyValuePair = new HashMap<>();
 		Scanner sc = new Scanner(is);
-		Map<String, String> folderDetailsMap = new HashMap<>();
 		while(sc.hasNext()) {
 			String line = sc.nextLine();
-			String[] array = line.split("=");
-			folderDetailsMap.put(array[0], array[1]);
+			String[] array = line.split(delimeter);
+			fileDataAsKeyValuePair.put(array[0], array[1]);
 		}
 		sc.close();
 		is.close();
-		AppUtils.allFolderDetails = folderDetailsMap;
-	}
-
-	private void loadSAPFileProperties(String folderPath) throws IOException {
-		if(AppUtils.sapFileProperties == null){
-			String propsFilePath = folderPath + "SAPUATProp.Properties";
-			System.out.println(propsFilePath);
-			InputStream is = new FileInputStream(new File(propsFilePath));
-			Properties props = new Properties();
-			props.load(is);
-			is.close();
-			AppUtils.sapFileProperties = props;
-		}
+		return fileDataAsKeyValuePair;
 	}
 
 	public List<String> getFileData(InputStream inputStream) throws IOException, URISyntaxException {
