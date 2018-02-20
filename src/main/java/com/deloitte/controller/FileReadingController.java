@@ -10,7 +10,6 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -19,7 +18,6 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import com.deloitte.constants.Constants;
 import com.deloitte.dto.ResponseDTO;
-import com.deloitte.service.AppUtils;
 import com.deloitte.service.FileReaderService;
 
 @Controller
@@ -39,12 +37,12 @@ public class FileReadingController {
 			folderPath = (String) session.getAttribute(Constants.FOLDER_PATH_SESSION_VAR);
 		}
 		try{
-			dto.setFileContent(fileReaderService.getFileData(fileKey, folderPath));
+			dto.setFileContentMappedData(fileReaderService.getFileData(fileKey, folderPath));
 			
 		}catch(Exception e){
 			e.printStackTrace();
 			List<String> response = new ArrayList<String>();
-			response.add(e.getLocalizedMessage());
+			response.add(e.getMessage());
 			dto.setFileContent(response);
 			
 		}

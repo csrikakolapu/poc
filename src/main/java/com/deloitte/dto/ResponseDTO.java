@@ -14,7 +14,8 @@ public class ResponseDTO {
 	private Map<String, String> fileContentMap;
 	private List<String> errorMessage;
 	private List<String> fileContent;
-
+	private List<Map<String, String>> fileContentMappedData;
+	
 	public Map<String, String> getFileContentMap() {
 		return fileContentMap;
 	}
@@ -37,5 +38,13 @@ public class ResponseDTO {
 
 	public List<String> getFileContent() {
 		return fileContent;
+	}
+
+	public List<Map<String, String>> getFileContentMappedData() {
+		return fileContentMappedData;
+	}
+
+	public void setFileContentMappedData(List<Map<String, String>> fileContentMappedData) {
+		this.fileContentMappedData = fileContentMappedData;
 	}
 }

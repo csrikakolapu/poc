@@ -5,6 +5,8 @@ public final class Constants {
 	public static final String FOLDER_PATH_SESSION_VAR = "folderPath";
 	public static final String DELIMETER_EQUALS = "=";
 	public static final String DELIMETER_SPACE = " ";
+	public static final String DELIMETER_COLON = ";";
+	public static final String DELIMETER_TAB = "\t ";
 	
 	private Constants() {
 		
