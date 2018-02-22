@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, Input } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Input, EventEmitter, Output } from '@angular/core';
 declare let d3: any;
 
 @Component({
@@ -16,7 +16,13 @@ declare let d3: any;
 })
 
 export class UAD3PieChartComponent implements OnInit {
+    
     options;
+    viewFor;
+    bulgedArc;
+    regularArc;
+    @Input() data : any[];
+    @Output() selectedKey = new EventEmitter<string>();
 
     ngOnInit() {
         this.options = {
@@ -39,11 +45,31 @@ export class UAD3PieChartComponent implements OnInit {
                 },
                 legendPosition: "right",
                 showTooltipPercent: true,
-                growOnHover: false
+                growOnHover: false,
+                callback: this.callBackFunction.bind(this)
 
             }
         }
+        this.viewFor = '';
+        this.bulgedArc = d3.svg.arc().outerRadius(105);
+        this.regularArc = d3.svg.arc().outerRadius(100);
     }
 
-    @Input() data : any[];
+    callBackFunction(chart) : void{
+        var prevArc = null;
+        var _this = this;
+        
+        chart.pie.dispatch.on('elementClick', function(e){
+            _this.viewFor = e.data['OBJTYPE'];
+            _this.selectedKey.emit(e.data['OBJTYPE']);
+            if(prevArc){
+                d3.select(prevArc).classed('clicked', false);
+                d3.select(prevArc).select("path").transition().duration(70).attr('d', _this.regularArc);
+            }
+            d3.select(e.element).classed('clicked', true);
+            d3.select(e.element).select("path").transition().duration(70).attr('d', _this.bulgedArc);     
+            prevArc = e.element;                   
+        });
+    }
+   
 }

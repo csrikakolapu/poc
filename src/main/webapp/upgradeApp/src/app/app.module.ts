@@ -28,6 +28,7 @@ import { UAD3PieChartComponent } from './common/d3charts/ua.piechart';
 import { UADonutChartComponent } from './common/d3charts/ua.donutchart';
 import { UAChartTableComponent } from './common/table/ua.charttable.component';
 import { UAPieChartComponent } from './common/charts/ua.piechart';
+import { UAInteractiveChartComponent } from './common/charts/ua.interactivecharts';
 
 
 
@@ -65,7 +66,8 @@ import { FetchFileService } from './fetch-file.service';
     UAD3PieChartComponent,
     UAChartTableComponent,
     UADonutChartComponent,
-    UAPieChartComponent
+    UAPieChartComponent,
+    UAInteractiveChartComponent
   ],
   bootstrap: [
     AppComponent 
