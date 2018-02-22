@@ -10,7 +10,7 @@ import { UABPComponent } from './common/bp/ua.bp.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/analysis/inventory', pathMatch: 'full' },
   { path: 'home',  component: UAExecutionRootComponent },
   { path: 'analysis',  component: UAAnalysisRootComponent, children:[
     { path: 'dashboard',  component: UAExecutionRootComponent },
