@@ -297,7 +297,7 @@ var UABarChartComponent = (function () {
 /***/ "../../../../../src/app/common/charts/ua.interactivecharts.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-xs-6 graph-box padding-top-10\">\r\n\t<div class=\"pull-left col-xs-9\">&nbsp;</div>\r\n\t<div class=\"pull-right col-xs-3 switch-block-container no-padding\"> \r\n\t\t<a class=\"switch-block col-xs-6 border-right text-center\" href=\"javascript:void(0)\" (click)=\"chart.view1='pieChart'\" ng-class=\"chart.view1=='pieChart'?'active':''\" title=\"Pie\">\r\n\t\t\t<span class=\"fa-lg fa fa-pie-chart fa-lg\"></span>\r\n\t\t</a>\r\n\t\t<a class=\"switch-block col-xs-6 text-center\" ng-class=\"chart.view1=='table'?'active':''\" href=\"javascript:void(0)\" (click)=\"chart.view1='table'\" title=\"Tabular\">\r\n\t\t\t<span class=\"fa fa-table fa-lg\"></span>\r\n\t\t</a>\r\n\t</div>\r\n\t<div class=\"center-section clear-both\">\r\n\t\t<ua-d3-pie-chart *ngIf=\"chart.view1=='pieChart'\" [data]=\"chartData.chart1\" (selectedKey)=\"pieClicked($event)\"></ua-d3-pie-chart>\r\n\t\t<div class=\"tabular-data\" *ngIf=\"chart.view1=='table'\">\r\n\t\t\t<ua-chart-table [tableData]=\"chartData.chart1\"></ua-chart-table>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n<div class=\"col-xs-6 graph-box padding-top-10\">\r\n\t<div class=\"pull-left col-xs-9\">&nbsp;</div>\r\n\t<div class=\"pull-right col-xs-3 switch-block-container no-padding\"> \r\n\t\t<a class=\"switch-block col-xs-6 border-right text-center\" href=\"javascript:void(0)\" (click)=\"chart.view2='donutchart'\" ng-class=\"chart.view2=='donutchart'?'active':''\" title=\"Pie\">\r\n\t\t\t<span class=\"fa-lg fa fa-pie-chart fa-lg\"></span>\r\n\t\t</a>\r\n\t\t<a class=\"switch-block col-xs-6 text-center\" ng-class=\"chart.view2=='table'?'active':''\" href=\"javascript:void(0)\" (click)=\"chart.view2='table'\" title=\"Tabular\">\r\n\t\t\t<span class=\"fa fa-table fa-lg\"></span>\r\n\t\t</a>\r\n\t</div>\r\n\t<div class=\"center-section clear-both\">\r\n\t\t<ua-donut-chart *ngIf=\"chart.view2=='donutchart'\" [data]=\"chartData.chart2\"></ua-donut-chart>\r\n\t\t<div class=\"tabular-data\" *ngIf=\"chart.view2=='table'\">\r\n\t\t\t<ua-chart-table [tableData]=\"chartData.chart2\"></ua-chart-table>\r\n\t\t</div>\r\n\t</div>\r\n</div>"
+module.exports = "<div class=\"col-xs-6 graph-box padding-top-10\">\r\n\t<div class=\"pull-left col-xs-9\">&nbsp;</div>\r\n\t<div class=\"pull-right col-xs-3 switch-block-container no-padding\"> \r\n\t\t<a class=\"switch-block col-xs-6 border-right text-center\" href=\"javascript:void(0)\" (click)=\"chart.view1='pieChart'\" ng-class=\"chart.view1=='pieChart'?'active':''\" title=\"Pie\">\r\n\t\t\t<span class=\"fa-lg fa fa-pie-chart fa-lg\"></span>\r\n\t\t</a>\r\n\t\t<a class=\"switch-block col-xs-6 text-center\" ng-class=\"chart.view1=='table'?'active':''\" href=\"javascript:void(0)\" (click)=\"chart.view1='table'\" title=\"Tabular\">\r\n\t\t\t<span class=\"fa fa-table fa-lg\"></span>\r\n\t\t</a>\r\n\t</div>\r\n\t<div class=\"center-section clear-both\">\r\n\t\t<ua-d3-pie-chart *ngIf=\"chart.view1=='pieChart'\" [data]=\"chartData.chart1\" [keyName]=\"keyName\" (selectedSectionName)=\"pieClicked($event)\"></ua-d3-pie-chart>\r\n\t\t<div class=\"tabular-data\" *ngIf=\"chart.view1=='table'\">\r\n\t\t\t<ua-chart-table [tableData]=\"chartData.chart1\"></ua-chart-table>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n<div class=\"col-xs-6 graph-box padding-top-10\">\r\n\t<div class=\"pull-left col-xs-9\">&nbsp;</div>\r\n\t<div class=\"pull-right col-xs-3 switch-block-container no-padding\"> \r\n\t\t<a class=\"switch-block col-xs-6 border-right text-center\" href=\"javascript:void(0)\" (click)=\"chart.view2='donutchart'\" ng-class=\"chart.view2=='donutchart'?'active':''\" title=\"Pie\">\r\n\t\t\t<span class=\"fa-lg fa fa-pie-chart fa-lg\"></span>\r\n\t\t</a>\r\n\t\t<a class=\"switch-block col-xs-6 text-center\" ng-class=\"chart.view2=='table'?'active':''\" href=\"javascript:void(0)\" (click)=\"chart.view2='table'\" title=\"Tabular\">\r\n\t\t\t<span class=\"fa fa-table fa-lg\"></span>\r\n\t\t</a>\r\n\t</div>\r\n\t<div class=\"center-section clear-both\">\r\n\t\t<ua-donut-chart *ngIf=\"chart.view2=='donutchart'\" [data]=\"chartData.chart2\"></ua-donut-chart>\r\n\t\t<div class=\"tabular-data\" *ngIf=\"chart.view2=='table'\">\r\n\t\t\t<ua-chart-table [tableData]=\"chartData.chart2\"></ua-chart-table>\r\n\t\t</div>\r\n\t</div>\r\n</div>"
 
 /***/ }),
 
@@ -324,42 +324,46 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var UAInteractiveChartComponent = (function () {
     function UAInteractiveChartComponent(FetchFileService) {
         this.FetchFileService = FetchFileService;
+        this.selectedSectionName = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
     }
     UAInteractiveChartComponent.prototype.ngOnInit = function () {
+        var _this = this;
         this.chart = {
             view1: 'pieChart',
             view2: 'donutchart'
         };
-        this.chartData = {
-            chart1: [
-                { "OBJTYPE": "FM", "key": "Function Module", "value": "72" },
-                { "OBJTYPE": "DDIC", "key": "Data Dictionary", "value": "1244" },
-                { "OBJTYPE": "ENH", "key": "Enhancements", "value": "63" },
-                { "OBJTYPE": "FRM", "key": "Forms", "value": "33" },
-                { "OBJTYPE": "PROG", "key": "Programs", "value": "1746" },
-                { "OBJTYPE": "QUER", "key": "Queries", "value": "20" },
-                { "OBJTYPE": "OTH", "key": "Others", "value": "1736" },
-                { "OBJTYPE": "BDC", "key": "BDC Objects", "value": "42" }
-            ],
-            chart2: [
-                { "key": "Data Element", "value": "719" },
-                { "key": "Domain", "value": "127" },
-                { "key": "Lock Object", "value": "2" },
-                { "key": "Search Help", "value": "15" },
-                { "key": "Structure", "value": "148" },
-                { "key": "Table", "value": "188" },
-                { "key": "Table Type", "value": "27" },
-                { "key": "View", "value": "18" }
-            ]
-        };
+        this.chartData = {};
+        this.FetchFileService.getFileData(this.filePrefixSuffix.filePrefix + this.filePrefixSuffix.chartOneSuffix).subscribe(function (response) {
+            _this.chartData.chart1 = response.fileContentMappedData;
+            _this.selectedSection = response.fileContentMappedData[0][_this.keyName];
+            _this.selectedSectionName.emit(_this.selectedSection);
+            var fileKey = _this.filePrefixSuffix.filePrefix + '_' + _this.selectedSection + _this.filePrefixSuffix.chartOneSuffix;
+            _this.FetchFileService.getFileData(fileKey).subscribe(function (response) {
+                _this.chartData.chart2 = response.fileContentMappedData;
+            });
+        });
     };
-    UAInteractiveChartComponent.prototype.pieClicked = function (selectedKey) {
-        console.log('selected-' + selectedKey);
+    UAInteractiveChartComponent.prototype.pieClicked = function (sectionName) {
+        var _this = this;
+        this.selectedSection = sectionName;
+        this.selectedSectionName.emit(this.selectedSection);
+        var fileKey = this.filePrefixSuffix.filePrefix + '_' + this.selectedSection + this.filePrefixSuffix.chartOneSuffix;
+        this.FetchFileService.getFileData(fileKey).subscribe(function (response) {
+            _this.chartData.chart2 = response.fileContentMappedData;
+        });
     };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+        __metadata("design:type", Object)
+    ], UAInteractiveChartComponent.prototype, "selectedSectionName", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__dto_fileNamingConvention__["a" /* fileNamingConvention */])
     ], UAInteractiveChartComponent.prototype, "filePrefixSuffix", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", String)
+    ], UAInteractiveChartComponent.prototype, "keyName", void 0);
     UAInteractiveChartComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "ua-interactive-chart",
@@ -605,7 +609,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var UAD3PieChartComponent = (function () {
     function UAD3PieChartComponent() {
-        this.selectedKey = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
+        this.selectedSectionName = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
     }
     UAD3PieChartComponent.prototype.ngOnInit = function () {
         this.options = {
@@ -632,7 +636,6 @@ var UAD3PieChartComponent = (function () {
                 callback: this.callBackFunction.bind(this)
             }
         };
-        this.viewFor = '';
         this.bulgedArc = d3.svg.arc().outerRadius(105);
         this.regularArc = d3.svg.arc().outerRadius(100);
     };
@@ -640,8 +643,7 @@ var UAD3PieChartComponent = (function () {
         var prevArc = null;
         var _this = this;
         chart.pie.dispatch.on('elementClick', function (e) {
-            _this.viewFor = e.data['OBJTYPE'];
-            _this.selectedKey.emit(e.data['OBJTYPE']);
+            _this.selectedSectionName.emit(e.data[_this.keyName]);
             if (prevArc) {
                 d3.select(prevArc).classed('clicked', false);
                 d3.select(prevArc).select("path").transition().duration(70).attr('d', _this.regularArc);
@@ -656,9 +658,13 @@ var UAD3PieChartComponent = (function () {
         __metadata("design:type", Array)
     ], UAD3PieChartComponent.prototype, "data", void 0);
     __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", String)
+    ], UAD3PieChartComponent.prototype, "keyName", void 0);
+    __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
         __metadata("design:type", Object)
-    ], UAD3PieChartComponent.prototype, "selectedKey", void 0);
+    ], UAD3PieChartComponent.prototype, "selectedSectionName", void 0);
     UAD3PieChartComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'ua-d3-pie-chart',
@@ -902,7 +908,7 @@ var UAImpactComponent = (function () {
 /***/ "../../../../../src/app/common/inventory/ua.inventory.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"view-wrapper col-xs-12 s4-container\">\r\n\t<ua-tiles></ua-tiles>\r\n\t<div class=\"graph-label-container col-xs-12\">\r\n\t\t<div class=\"col-xs-6\">\r\n\t\t\t<b>Custom Inventory Breakup</b>\r\n\t\t</div>\r\n\t\t<div class=\"col-xs-6\">\r\n\t\t\t<b>Custom Developments - Object Breakup</b>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"inventory-graph-container col-xs-12\">\r\n\t\t<!--<div class=\"col-xs-6 graph-box padding-top-10\">\r\n\t\t\t<div class=\"pull-left col-xs-9\">&nbsp;</div>\r\n\t\t\t<div class=\"pull-right col-xs-3 switch-block-container no-padding\"> \r\n\t\t\t\t<a class=\"switch-block col-xs-6 border-right text-center\" href=\"javascript:void(0)\" (click)=\"chart.view1='pieChart'\" ng-class=\"chart.view1=='pieChart'?'active':''\" title=\"Pie\">\r\n\t\t\t\t\t<span class=\"fa-lg fa fa-pie-chart fa-lg\"></span>\r\n\t\t\t\t</a>\r\n\t\t\t\t<a class=\"switch-block col-xs-6 text-center\" ng-class=\"chart.view1=='table'?'active':''\" href=\"javascript:void(0)\" (click)=\"chart.view1='table'\" title=\"Tabular\">\r\n\t\t\t\t\t<span class=\"fa fa-table fa-lg\"></span>\r\n\t\t\t\t</a>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"center-section clear-both\">\r\n\t\t\t\t<ua-d3-pie-chart *ngIf=\"chart.view1=='pieChart'\" [data]=\"chartData.chart1\"></ua-d3-pie-chart>\r\n\t\t\t\t<div class=\"tabular-data\" *ngIf=\"chart.view1=='table'\">\r\n\t\t\t\t\t<ua-chart-table [tableData]=\"chartData.chart1\"></ua-chart-table>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class=\"col-xs-6 graph-box padding-top-10\">\r\n\t\t\t<div class=\"pull-left col-xs-9\">&nbsp;</div>\r\n\t\t\t<div class=\"pull-right col-xs-3 switch-block-container no-padding\"> \r\n\t\t\t\t<a class=\"switch-block col-xs-6 border-right text-center\" href=\"javascript:void(0)\" (click)=\"chart.view2='donutchart'\" ng-class=\"chart.view2=='donutchart'?'active':''\" title=\"Pie\">\r\n\t\t\t\t\t<span class=\"fa-lg fa fa-pie-chart fa-lg\"></span>\r\n\t\t\t\t</a>\r\n\t\t\t\t<a class=\"switch-block col-xs-6 text-center\" ng-class=\"chart.view2=='table'?'active':''\" href=\"javascript:void(0)\" (click)=\"chart.view2='table'\" title=\"Tabular\">\r\n\t\t\t\t\t<span class=\"fa fa-table fa-lg\"></span>\r\n\t\t\t\t</a>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"center-section clear-both\">\r\n\t\t\t\t<ua-donut-chart *ngIf=\"chart.view2=='donutchart'\" [data]=\"chartData.chart2\"></ua-donut-chart>\r\n\t\t\t\t<div class=\"tabular-data\" *ngIf=\"chart.view2=='table'\">\r\n\t\t\t\t\t<ua-chart-table [tableData]=\"chartData.chart2\"></ua-chart-table>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>-->\r\n\t\t<ua-interactive-chart [filePrefixSuffix]=\"filePrefixSuffix\"></ua-interactive-chart>\r\n\t</div>\r\n\t\r\n\t<ua-table  fileName=\"S4HANA_DATA\"></ua-table>\r\n</div>"
+module.exports = "<div class=\"view-wrapper col-xs-12 s4-container\">\r\n\t<ua-tiles></ua-tiles>\r\n\t<div class=\"graph-label-container col-xs-12\">\r\n\t\t<div class=\"col-xs-6\">\r\n\t\t\t<b>Custom Inventory Breakup</b>\r\n\t\t</div>\r\n\t\t<div class=\"col-xs-6\">\r\n\t\t\t<b>Custom Developments - Object Breakup</b>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"inventory-graph-container col-xs-12\">\r\n\t\t<ua-interactive-chart [filePrefixSuffix]=\"filePrefixSuffix\" [keyName]=\"keyName\" (selectedSectionName)=\"fetchTable($event)\"></ua-interactive-chart>\r\n\t</div>\r\n\t\r\n\t<ua-table  fileName=\"S4HANA_DATA\"></ua-table>\r\n</div>"
 
 /***/ }),
 
@@ -926,6 +932,10 @@ var UAInventoryComponent = (function () {
     }
     UAInventoryComponent.prototype.ngOnInit = function () {
         this.filePrefixSuffix = new __WEBPACK_IMPORTED_MODULE_1__dto_fileNamingConvention__["a" /* fileNamingConvention */]("INV_ECC", "_SUMMARY", "_SUMMARY", "");
+        this.keyName = "OBJTYPE";
+    };
+    UAInventoryComponent.prototype.fetchTable = function (selectedSectionName) {
+        console.log('table for-' + selectedSectionName);
     };
     UAInventoryComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -1202,7 +1212,7 @@ var UAChartTableComponent = (function () {
 /***/ "../../../../../src/app/common/table/ua.table.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<!-- \t\t\r\n\t\t<ul> \r\n\t\t\t<ng-container >\r\n\t\t\t\t<li  *ngIf=\"tableItem.required\"><a >{{tableItem.value}} </a></li>\r\n\t\t\t</ng-container>\r\n\t\t</ul>\r\n -->\r\n\r\n\t<div class=\"search-selector pull-left\">\r\n\t\t<span>\r\n\t\t\t<label for=\"categorySelect\">Select a category:</label>\r\n\t\t    <select name=\"categorySelect\" id=\"categorySelect\" ng-model=\"searchCategory\">\r\n\t\t    \t<option *ngFor= \"let tableItem of tableData\" value=\"{{tableItem.key}}\">{{tableItem.value}}</option>\r\n\t\t    </select>\r\n\t    </span>\r\n\t    <span>\r\n\t    \t<label for=\"searchText\">Search text:</label>\r\n\t    \t<input name=\"searchText\" type=\"text\" ng-model=\"searchText\">\r\n\t    </span>\r\n\t</div>\r\n\t<div class=\"clearfix\"></div>\r\n\t<!--  <div class=\"center-section\">\r\n\t\t<table float-thead=\"floatTheadOptions\" ng-model=\"tabularData\" class=\"col-xs-12\">\r\n\t\t\t<thead>\r\n\t\t\t\t<tr class=\"border-bottom\">\r\n\t\t\t\t\t<td *ngFor= \"let tableItem of tableData\"  class=\"border-right table-header\">\r\n\t\t\t\t\t\t<span >{{tableItem.value}}</span>\r\n\t\t\t\t\t\t<span class=\"fa fa-sort\" ng-hide=\"orderByField == '{{tableItem.key}}'\"></span>\r\n\t\t\t\t\t\t<span class=\"fa fa-sort-asc\" ng-show=\"orderByField == '{{tableItem.key}}' && !reverseSort\"></span>\r\n\t\t\t\t\t\t<span class=\"fa fa-sort-desc\" ng-show=\"orderByField == '{{tableItem.key}}' && reverseSort\"></span>\r\n\t\t\t\t\t</td>\r\n\t\t\t\t</tr>\r\n\t\t\t</thead>\r\n\t\t\t<tbody>\r\n\t\t\t\t<tr *ngFor= \"let tableItem of tableData\">\r\n\t\t\t\t\t<td  class=\"border-right\" ng-bind=\"value\"></td>\r\n\t\t\t\t</tr>\r\n\t\t\t</tbody>\r\n\t\t</table>\r\n\t</div>\r\n  -->"
+module.exports = "\r\n<!-- \t\t\r\n\t\t<ul> \r\n\t\t\t<ng-container >\r\n\t\t\t\t<li  *ngIf=\"tableItem.required\"><a >{{tableItem.value}} </a></li>\r\n\t\t\t</ng-container>\r\n\t\t</ul>\r\n -->\r\n\r\n\t<div class=\"search-selector pull-left\">\r\n\t\t<span>\r\n\t\t\t<label for=\"categorySelect\">Select a category:</label>\r\n\t\t    <select name=\"categorySelect\" id=\"categorySelect\" ng-model=\"searchCategory\">\r\n\t\t    \t<option *ngFor= \"let tableItem of tableHeader\" value=\"{{tableItem.key}}\">{{tableItem.value}}</option>\r\n\t\t    </select>\r\n\t    </span>\r\n\t    <span>\r\n\t    \t<label for=\"searchText\">Search text:</label>\r\n\t    \t<input name=\"searchText\" type=\"text\" ng-model=\"searchText\">\r\n\t    </span>\r\n\t</div>\r\n\t<div class=\"clearfix\"></div>\r\n\t<div class=\"center-section\">\r\n\t\t<table float-thead=\"floatTheadOptions\" ng-model=\"tabularData\" class=\"col-xs-12\">\r\n\t\t\t<thead>\r\n\t\t\t\t<tr class=\"border-bottom\">\r\n\t\t\t\t\t<td *ngFor= \"let tableItem of tableHeader\"  class=\"border-right table-header\">\r\n\t\t\t\t\t\t<span >{{tableItem.value}}</span>\r\n\t\t\t\t\t\t<span class=\"fa fa-sort\"></span>\r\n\t\t\t\t\t\t<span class=\"fa fa-sort-asc\" ></span>\r\n\t\t\t\t\t\t<span class=\"fa fa-sort-desc\"></span>\r\n\t\t\t\t\t</td>\r\n\t\t\t\t</tr>\r\n\t\t\t</thead>\r\n\t\t\t<tbody>\r\n\t\t\t\t<tr *ngFor= \"let tableItem of tableBody\">\r\n\t\t\t\t\t<td  class=\"border-right\" ng-bind=\"value\"></td>\r\n\t\t\t\t</tr>\r\n\t\t\t</tbody>\r\n\t\t</table>\r\n\t</div>\r\n  "
 
 /***/ }),
 
@@ -1229,6 +1239,7 @@ var UATableComponent = (function () {
         this.FetchFileService = FetchFileService;
     }
     UATableComponent.prototype.ngOnInit = function () {
+        this.tableData = [];
         this.getTableData();
     };
     UATableComponent.prototype.getTableData = function () {
@@ -1237,8 +1248,13 @@ var UATableComponent = (function () {
         if (!this.fileName) {
             return;
         }
-        this.FetchFileService.getFileData(this.fileName)
-            .subscribe(function (response) { return _this.tableData = response; });
+        this.FetchFileService.getFileData(this.fileName).subscribe(function (response) {
+            _this.tableData = response.fileContentMappedData;
+        });
+        console.log(this.tableData);
+        this.tableHeader = this.tableData[0];
+        console.log(typeof this.tableData);
+        /*this.tableBody = this.tableData.splice(0,1)*/ ;
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
@@ -1345,7 +1361,8 @@ var FetchFileService = (function () {
     }
     FetchFileService.prototype.getFileData = function (name) {
         var url = this.fileUrl + '?fileKey=' + name;
-        return this.http.get(url);
+        var response = this.http.get(url);
+        return response;
     };
     FetchFileService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
@@ -1386,7 +1403,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 var routes = [
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: '', redirectTo: '/analysis/inventory', pathMatch: 'full' },
     { path: 'home', component: __WEBPACK_IMPORTED_MODULE_2__common_executions_ua_executionroot_component__["a" /* UAExecutionRootComponent */] },
     { path: 'analysis', component: __WEBPACK_IMPORTED_MODULE_3__common_navtabs_ua_analysis_root_component__["a" /* UAAnalysisRootComponent */], children: [
             { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_2__common_executions_ua_executionroot_component__["a" /* UAExecutionRootComponent */] },

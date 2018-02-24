@@ -12,7 +12,6 @@ export class FetchFileService {
   getFileData(name : string): Observable<fileResponse> {
   	 let url = this.fileUrl+'?fileKey='+name
   	 let response = this.http.get<fileResponse>(url);
-  	 console.log(response);
   	 return response;
   }
 }

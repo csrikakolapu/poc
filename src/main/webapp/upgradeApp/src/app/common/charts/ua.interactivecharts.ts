@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { FetchFileService } from '../../fetch-file.service';
 import { fileNamingConvention } from '../dto/fileNamingConvention'
 
@@ -11,7 +11,10 @@ import { fileNamingConvention } from '../dto/fileNamingConvention'
 export class UAInteractiveChartComponent implements OnInit{
     chart;
     chartData;
+    selectedSection: string;
+    @Output() selectedSectionName = new EventEmitter<string>();
     @Input() filePrefixSuffix : fileNamingConvention;
+    @Input() keyName : string;
 
     constructor(private FetchFileService: FetchFileService){}
 
@@ -20,33 +23,26 @@ export class UAInteractiveChartComponent implements OnInit{
             view1: 'pieChart',
             view2: 'donutchart'
         };
-        this.chartData = {
-            chart1 : [
-                {"OBJTYPE":"FM","key":"Function Module","value":"72"},
-                {"OBJTYPE":"DDIC","key":"Data Dictionary","value":"1244"},
-                {"OBJTYPE":"ENH","key":"Enhancements","value":"63"},
-                {"OBJTYPE":"FRM","key":"Forms","value":"33"},
-                {"OBJTYPE":"PROG","key":"Programs","value":"1746"},
-                {"OBJTYPE":"QUER","key":"Queries","value":"20"},
-                {"OBJTYPE":"OTH","key":"Others","value":"1736"},
-                {"OBJTYPE":"BDC","key":"BDC Objects","value":"42"}
-            ],
+        this.chartData = {};
 
-            chart2: [
-                {"key":"Data Element","value":"719"},
-                {"key":"Domain","value":"127"},
-                {"key":"Lock Object","value":"2"},
-                {"key":"Search Help","value":"15"},
-                {"key":"Structure","value":"148"},
-                {"key":"Table","value":"188"},
-                {"key":"Table Type","value":"27"},
-                {"key":"View","value":"18"}
-            ]
-        };
+        this.FetchFileService.getFileData(this.filePrefixSuffix.filePrefix + this.filePrefixSuffix.chartOneSuffix).subscribe(response => {
+            this.chartData.chart1 = response.fileContentMappedData;
+            this.selectedSection = response.fileContentMappedData[0][this.keyName];
+            this.selectedSectionName.emit(this.selectedSection);
 
+            var fileKey = this.filePrefixSuffix.filePrefix + '_' + this.selectedSection + this.filePrefixSuffix.chartOneSuffix;
+            this.FetchFileService.getFileData(fileKey).subscribe(response => {
+                this.chartData.chart2 = response.fileContentMappedData;
+            });
+        });
     }
 
-    pieClicked(selectedKey:string){
-        console.log('selected-'+selectedKey); 
+    pieClicked(sectionName:string){
+        this.selectedSection = sectionName;
+        this.selectedSectionName.emit(this.selectedSection);
+        var fileKey = this.filePrefixSuffix.filePrefix + '_' +this.selectedSection + this.filePrefixSuffix.chartOneSuffix;
+        this.FetchFileService.getFileData(fileKey).subscribe(response => {
+            this.chartData.chart2 = response.fileContentMappedData;
+        });
     }
 }

@@ -9,8 +9,14 @@ import { fileNamingConvention } from '../dto/fileNamingConvention'
 
 export class UAInventoryComponent implements OnInit {
     filePrefixSuffix : fileNamingConvention;
+    keyName: string;
 
     ngOnInit() {
     	this.filePrefixSuffix = new fileNamingConvention("INV_ECC", "_SUMMARY", "_SUMMARY", "");
+    	this.keyName = "OBJTYPE";
+    }
+
+    fetchTable(selectedSectionName:string){
+    	console.log('table for-'+selectedSectionName);
     }
 }

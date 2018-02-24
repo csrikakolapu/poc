@@ -9,7 +9,7 @@
 		</a>
 	</div>
 	<div class="center-section clear-both">
-		<ua-d3-pie-chart *ngIf="chart.view1=='pieChart'" [data]="chartData.chart1" (selectedKey)="pieClicked($event)"></ua-d3-pie-chart>
+		<ua-d3-pie-chart *ngIf="chart.view1=='pieChart'" [data]="chartData.chart1" [keyName]="keyName" (selectedSectionName)="pieClicked($event)"></ua-d3-pie-chart>
 		<div class="tabular-data" *ngIf="chart.view1=='table'">
 			<ua-chart-table [tableData]="chartData.chart1"></ua-chart-table>
 		</div>
