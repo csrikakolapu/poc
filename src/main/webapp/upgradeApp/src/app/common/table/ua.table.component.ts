@@ -9,9 +9,10 @@ import { fileResponse } from '../dto/fileresponse';
 })
 
 export class UATableComponent implements OnInit{
-    tableData : fileResponse;
-    tableHeader : any[];
+    tableData : any;
+    tableHeader : any;
     tableBody : any[];
+    errorString: any;
 
     @Input() fileName: string;
 
@@ -27,13 +28,12 @@ export class UATableComponent implements OnInit{
         if (!this.fileName) { return; }
         
         this.FetchFileService.getFileData(this.fileName)
-         .subscribe(response => this.tableData = response.fileContentMappedData);
-        
-        console.log(this.tableData);
-        this.tableHeader = this.tableData[0];
-        console.log(typeof this.tableData);
-        /*this.tableBody = this.tableData.splice(0,1)*/;
+         .subscribe(
+            tableResponse => this.tableHeader = tableResponse.fileContentMappedData
+        );
+      
     }
+   
 
 
 }

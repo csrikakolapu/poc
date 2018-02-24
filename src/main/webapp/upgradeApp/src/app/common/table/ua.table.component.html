@@ -11,7 +11,9 @@
 		<span>
 			<label for="categorySelect">Select a category:</label>
 		    <select name="categorySelect" id="categorySelect" ng-model="searchCategory">
-		    	<option *ngFor= "let tableItem of tableHeader" value="{{tableItem.key}}">{{tableItem.value}}</option>
+		    	
+		    		<option *ngFor= "let tableItem of tableHeader | keys"  value="{{tableItem.key}}">{{tableItem.value}}</option>
+		    	
 		    </select>
 	    </span>
 	    <span>
