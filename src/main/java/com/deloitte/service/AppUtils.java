@@ -5,5 +5,6 @@ import java.util.Map;
 public class AppUtils {
 
 	public static Map<String, String> sapFileProperties;
+	public static String folderPath;
 	
 }

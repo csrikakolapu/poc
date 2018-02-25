@@ -15,11 +15,12 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
+import org.apache.commons.collections4.MapUtils;
 import org.springframework.util.StringUtils;
 
 import com.deloitte.constants.Constants;
 
-public class FileReaderService {
+public class FileReaderService extends ServiceUtils{
 
 	public List<Map<String, String>> getFileData(String fileKey, String folderPath)
 			throws Exception {
@@ -35,6 +36,10 @@ public class FileReaderService {
 			}
 			file = new File(fileURL.getFile());
 		} else {
+			String fileName = AppUtils.sapFileProperties.get(fileKey);
+			if(StringUtils.isEmpty(fileName)) {
+				throw new Exception("File not found with given file key : "+fileKey);
+			}
 			file = new File(folderPath + AppUtils.sapFileProperties.get(fileKey));
 		}
 		Scanner scanner = new Scanner(file);
@@ -71,13 +76,14 @@ public class FileReaderService {
 	}
 
 	public Map<String, String> getAllFolderDetails() throws IOException {
-		InputStream is = FileReaderService.class.getClassLoader()
-				.getResourceAsStream("data/FolderUploadLog.Properties");
-		return readFileAsKeyValuePair(is, Constants.DELIMETER_EQUALS);
+		String serverLocation = readServerLocationFromProps();
+		File file = new File(serverLocation + File.separator + Constants.FOLDER_LOG_FILE_NAME);
+		FileInputStream fileInputStream = new FileInputStream(file);
+		return readFileAsKeyValuePair(fileInputStream, Constants.DELIMETER_EQUALS);
 	}
 
 	private void loadSAPFileProperties(String folderPath) throws IOException {
-		if (AppUtils.sapFileProperties == null) {
+		if (AppUtils.sapFileProperties == null || MapUtils.isEmpty(AppUtils.sapFileProperties)) {
 			InputStream inputStream = null;
 			if (StringUtils.isEmpty(folderPath)) {
 				inputStream = FileReaderService.class.getClassLoader()
