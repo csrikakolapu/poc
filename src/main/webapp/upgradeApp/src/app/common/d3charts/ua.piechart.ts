@@ -18,11 +18,11 @@ declare let d3: any;
 export class UAD3PieChartComponent implements OnInit {
     
     options;
-    viewFor;
     bulgedArc;
     regularArc;
     @Input() data : any[];
-    @Output() selectedKey = new EventEmitter<string>();
+    @Input() keyName : string;
+    @Output() selectedSectionName = new EventEmitter<string>();
 
     ngOnInit() {
         this.options = {
@@ -50,7 +50,6 @@ export class UAD3PieChartComponent implements OnInit {
 
             }
         }
-        this.viewFor = '';
         this.bulgedArc = d3.svg.arc().outerRadius(105);
         this.regularArc = d3.svg.arc().outerRadius(100);
     }
@@ -60,8 +59,7 @@ export class UAD3PieChartComponent implements OnInit {
         var _this = this;
         
         chart.pie.dispatch.on('elementClick', function(e){
-            _this.viewFor = e.data['OBJTYPE'];
-            _this.selectedKey.emit(e.data['OBJTYPE']);
+            _this.selectedSectionName.emit(e.data[_this.keyName]);
             if(prevArc){
                 d3.select(prevArc).classed('clicked', false);
                 d3.select(prevArc).select("path").transition().duration(70).attr('d', _this.regularArc);

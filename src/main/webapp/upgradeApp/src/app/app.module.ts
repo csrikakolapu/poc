@@ -30,7 +30,7 @@ import { UAChartTableComponent } from './common/table/ua.charttable.component';
 import { UAPieChartComponent } from './common/charts/ua.piechart';
 import { UAInteractiveChartComponent } from './common/charts/ua.interactivecharts';
 
-
+import { KeysPipe } from './file-data-transform-pipe';
 
 import 'd3';
 import 'nvd3';
@@ -67,7 +67,9 @@ import { FetchFileService } from './fetch-file.service';
     UAChartTableComponent,
     UADonutChartComponent,
     UAPieChartComponent,
-    UAInteractiveChartComponent
+    UAInteractiveChartComponent,
+    KeysPipe
+    
   ],
   bootstrap: [
     AppComponent 

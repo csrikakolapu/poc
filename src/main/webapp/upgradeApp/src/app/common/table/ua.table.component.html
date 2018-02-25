@@ -12,7 +12,7 @@
 			<label for="categorySelect">Select a category:</label>
 		    <select name="categorySelect" id="categorySelect" ng-model="searchCategory">
 		    	
-		    		<option *ngFor= "let tableItem of tableHeader | keys"  value="{{tableItem.key}}">{{tableItem.value}}</option>
+		    		<option *ngFor= "let tableItem of tableHeader | Jsonkeys "  value="{{tableItem.key}}">{{tableItem.value}}</option>
 		    	
 		    </select>
 	    </span>
@@ -26,7 +26,7 @@
 		<table float-thead="floatTheadOptions" ng-model="tabularData" class="col-xs-12">
 			<thead>
 				<tr class="border-bottom">
-					<td *ngFor= "let tableItem of tableHeader"  class="border-right table-header">
+					<td *ngFor= "let tableItem of tableHeader | Jsonkeys"  class="border-right table-header">
 						<span >{{tableItem.value}}</span>
 						<span class="fa fa-sort"></span>
 						<span class="fa fa-sort-asc" ></span>
@@ -35,8 +35,9 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr *ngFor= "let tableItem of tableBody">
-					<td  class="border-right" ng-bind="value"></td>
+
+				<tr *ngFor= "let tableBodyItem of  tableData ">
+					<td  *ngFor= "let tbodyItem of  tableBodyItem | Jsonkeys"  class="border-right">{{tbodyItem.value}}</td>
 				</tr>
 			</tbody>
 		</table>

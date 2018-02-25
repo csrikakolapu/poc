@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FetchFileService } from '../../fetch-file.service';
-import { fileResponse } from '../dto/fileresponse';
 
 
 @Component({
@@ -9,8 +8,8 @@ import { fileResponse } from '../dto/fileresponse';
 })
 
 export class UATableComponent implements OnInit{
-    tableData : any;
-    tableHeader : any;
+    tableData : any[];
+    tableHeader : any[];
     tableBody : any[];
     errorString: any;
 
@@ -19,6 +18,8 @@ export class UATableComponent implements OnInit{
     constructor(private FetchFileService: FetchFileService){}
 
     ngOnInit() {
+        this.tableData = [];
+        this.tableBody = [];
         this.getTableData();
     }
     getTableData(): void {
@@ -29,8 +30,12 @@ export class UATableComponent implements OnInit{
         
         this.FetchFileService.getFileData(this.fileName)
          .subscribe(
-            tableResponse => this.tableHeader = tableResponse.fileContentMappedData
-        );
+            tableResponse => {
+                this.tableData = tableResponse.fileContentMappedData,
+                this.tableHeader = this.tableData[0],
+                this.tableData.splice(0,1)
+                
+            });
       
     }
    

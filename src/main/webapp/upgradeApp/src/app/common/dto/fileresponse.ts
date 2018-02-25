@@ -1,3 +1,3 @@
-export class fileResponse{
+export interface fileResponse{
     fileContentMappedData:any;
  }

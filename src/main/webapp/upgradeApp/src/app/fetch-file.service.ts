@@ -22,10 +22,10 @@ export class FetchFileService {
 	private fileUrl = '/upgradeApp/app/api/getFileContent';
     constructor(private http: HttpClient) {}
   
-  getFileData(name : string): Observable<any> {
+  getFileData(name : string): Observable<fileResponse> {
   	 let url = this.fileUrl+'?fileKey='+name;
-  	 return this.http.get<any>(url)
-  	 		.do(data => console.log('data',data))
+  	 return this.http.get<fileResponse>(url)
+  	 		.do(data => console.log('success'))
   	 		.catch(this.handleError);
     }   
 
