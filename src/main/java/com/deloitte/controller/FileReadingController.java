@@ -18,6 +18,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import com.deloitte.constants.Constants;
 import com.deloitte.dto.ResponseDTO;
+import com.deloitte.service.AppUtils;
 import com.deloitte.service.FileReaderService;
 
 @Controller
@@ -27,15 +28,11 @@ public class FileReadingController {
 
 	@RequestMapping(value = "/getFileContent", method = RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
-	public  ResponseDTO homePage(@RequestParam(required = true, value = "fileKey") String fileKey, HttpServletRequest  request)
+	public  ResponseDTO getFileContent(@RequestParam(required = true, value = "fileKey") String fileKey, HttpServletRequest  request)
 	{
 		FileReaderService fileReaderService = new FileReaderService();
 		ResponseDTO dto = new ResponseDTO();
-		String folderPath = null;
-		HttpSession session = request.getSession();
-		if(null != session.getAttribute(Constants.FOLDER_PATH_SESSION_VAR)) {
-			folderPath = (String) session.getAttribute(Constants.FOLDER_PATH_SESSION_VAR);
-		}
+		String folderPath = AppUtils.folderPath;
 		try{
 			dto.setFileContentMappedData(fileReaderService.getFileData(fileKey, folderPath));
 			

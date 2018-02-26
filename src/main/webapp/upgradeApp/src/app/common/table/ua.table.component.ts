@@ -9,11 +9,17 @@ import { FetchFileService } from '../../fetch-file.service';
 
 export class UATableComponent implements OnInit{
     tableData : any[];
+    tableHeader : any[];
+    tableBody : any[];
+    errorString: any;
+
     @Input() fileName: string;
 
     constructor(private FetchFileService: FetchFileService){}
 
     ngOnInit() {
+        this.tableData = [];
+        this.tableBody = [];
         this.getTableData();
     }
     getTableData(): void {
@@ -23,9 +29,16 @@ export class UATableComponent implements OnInit{
         if (!this.fileName) { return; }
         
         this.FetchFileService.getFileData(this.fileName)
-         .subscribe(response => this.tableData = response);
-        
+         .subscribe(
+            tableResponse => {
+                this.tableData = tableResponse.fileContentMappedData,
+                this.tableHeader = this.tableData[0],
+                this.tableData.splice(0,1)
+                
+            });
+      
     }
+   
 
 
 }

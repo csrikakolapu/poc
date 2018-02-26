@@ -1,17 +1,13 @@
 package com.deloitte.service;
 
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Properties;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
@@ -19,12 +15,9 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.deloitte.constants.Constants;
 
-public class FileUploadService {
+public class FileUploadService extends ServiceUtils{
 
-	public static final String FOLDER_LOG_FILE_NAME = "FolderUploadLog.properties";
-
-
-	public String uploadFileService(MultipartFile zipFile, String description) throws Exception {
+	public String uploadZipFileService(MultipartFile zipFile, String description) throws Exception {
 		String timeStamp = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss").format(new Date());
 		String folderName = zipFile.getOriginalFilename() + "_" + timeStamp;
 		String serverLocation = readServerLocationFromProps();
@@ -60,56 +53,66 @@ public class FileUploadService {
 		zis.closeEntry();
 		zis.close();
 
-		logFolderDetails(destinationDir.getPath() + File.separator, description);
+		logFolderDetails(folderName, description);
 		return folderName;
 	}
+	
+	public boolean uploadFileService(MultipartFile file, String folderPath) throws IOException {
+		File newFile = new File(folderPath + File.separator + file.getOriginalFilename());
+		return writeDataToFile(newFile, file.getInputStream());
+	}
+	
+	private boolean writeDataToFile(File file, InputStream inputStream) {
+		boolean isSuccess = false;
+		FileOutputStream fos = null;
+		try {
 
-	private String readServerLocationFromProps() throws IOException {
-		InputStream is = FileUploadService.class.getClassLoader().getResourceAsStream("config/config.Properties");
-		Properties props = new Properties();
-		props.load(is);
-		is.close();
-		return props.getProperty(Constants.SERVER_LOCATION_PROPERTY_NAME);
+			fos = new FileOutputStream(file);
+			int len;
+			byte[] buffer = new byte[1024];
+			while ((len = inputStream.read(buffer)) > 0) {
+				fos.write(buffer, 0, len);
+			}
+			isSuccess = true;
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(fos != null) {
+					fos.close();
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		return isSuccess;
 	}
 
 	private void logFolderDetails(String folderPathToLog, String description) throws Exception {
 		System.out.println("inside log method");
-		BufferedWriter bw = null;
 		FileWriter fw = null;
-		File logFile = getLogFileDataStream();
+		String serverLocation = readServerLocationFromProps();
+		File logFile = new File(serverLocation + File.separator + Constants.FOLDER_LOG_FILE_NAME);
+		if(!logFile.exists()) {
+			logFile.createNewFile();
+		}
+		
 		try {
-			updateLogFile(logFile, description, folderPathToLog);
+			fw = new FileWriter(logFile, true);
+			fw.write(folderPathToLog+"="+description);
+			fw.write(System.lineSeparator());
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 			throw new Exception("Exception occured while logging folder details"+e.getMessage());
 		} finally {
 			try {
-				if (bw != null)
-					bw.close();
-				if (fw != null)
+				if (fw != null) {
 					fw.close();
+				}
 			} catch (IOException ex) {
 				ex.printStackTrace();
 			}
 		}
 	}
 
-	private void updateLogFile(File logFile, String description, String folderPathToLog) throws IOException {
-		FileWriter fw = new FileWriter(logFile, true);
-		fw.write(folderPathToLog+"="+description);
-		fw.write(System.lineSeparator());
-		fw.close();
-	}
-
-	private File getLogFileDataStream() {
-		ClassLoader classLoader = getClass().getClassLoader();
-		File logFile = new File(classLoader.getResource("data/"+FOLDER_LOG_FILE_NAME).getFile());
-		return logFile;
-	}
-	private String getLogFilePathFromResource() throws URISyntaxException {
-		ClassLoader classLoader = getClass().getClassLoader();
-		URI uri = classLoader.getResource("data/"+FOLDER_LOG_FILE_NAME).toURI();
-		System.out.println("uri value: "+uri.toString());
-		return uri.toString();
-	}
 }

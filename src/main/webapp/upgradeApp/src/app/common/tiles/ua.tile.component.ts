@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { FetchFileService } from '../../fetch-file.service';
 
 import { Router, ActivatedRoute } from '@angular/router';
 import { TileItem } from '../dto/tileitem';
@@ -11,31 +12,28 @@ import { TileItem } from '../dto/tileitem';
 })
 
 export class UATilesComponent{
-    constructor(){       
-    }
+    tileItems : TileItem[];
 
-   
+    @Input() tileFileName: string;
     
-    tileItems:TileItem [] = [
-       {  
-        key:"Total",
-        value:"0000004956",
-        color:"red"
-        },
-        {  
-        key:"Core Modifications",
-        value:"0000000000",
-        color:"blue"
-        },
-        {  
-        key:"DDIC",
-        value:"0000001244",
-        color:"yellow"
-        },
-        {  
-        key:"Non-DDIC",
-        value:"0000003712",
-        color:"green"
-        }
-    ];
+    constructor(private FetchFileService: FetchFileService){}
+
+    ngOnInit() {
+        this.tileItems = [];
+        this.getTilesData();
+    }
+    getTilesData(): void {
+        
+        this.tileFileName = this.tileFileName.trim();
+        
+        if (!this.tileFileName) { return; }
+        
+        this.FetchFileService.getFileData(this.tileFileName)
+         .subscribe(
+            tableResponse => this.tileItems = tableResponse.fileContentMappedData
+        );
+
+      
+    }
+  
 }

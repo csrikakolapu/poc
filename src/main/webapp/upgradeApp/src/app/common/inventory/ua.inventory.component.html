@@ -1,5 +1,5 @@
 <div class="view-wrapper col-xs-12 s4-container">
-	<ua-tiles></ua-tiles>
+	<ua-tiles [tileFileName] = "tileFileName"></ua-tiles>
 	<div class="graph-label-container col-xs-12">
 		<div class="col-xs-6">
 			<b>Custom Inventory Breakup</b>
@@ -9,41 +9,12 @@
 		</div>
 	</div>
 	<div class="inventory-graph-container col-xs-12">
-		<div class="col-xs-6 graph-box padding-top-10">
-			<div class="pull-left col-xs-9">&nbsp;</div>
-			<div class="pull-right col-xs-3 switch-block-container no-padding"> 
-				<a class="switch-block col-xs-6 border-right text-center" href="javascript:void(0)" (click)="chart.view1='pieChart'" ng-class="chart.view1=='pieChart'?'active':''" title="Pie">
-					<span class="fa-lg fa fa-pie-chart fa-lg"></span>
-				</a>
-				<a class="switch-block col-xs-6 text-center" ng-class="chart.view1=='table'?'active':''" href="javascript:void(0)" (click)="chart.view1='table'" title="Tabular">
-					<span class="fa fa-table fa-lg"></span>
-				</a>
-			</div>
-			<div class="center-section clear-both">
-				<ua-d3-pie-chart *ngIf="chart.view1=='pieChart'" [data]="chartData.chart1"></ua-d3-pie-chart>
-				<div class="tabular-data" *ngIf="chart.view1=='table'">
-					<ua-chart-table [tableData]="chartData.chart1"></ua-chart-table>
-				</div>
-			</div>
-		</div>
-		<div class="col-xs-6 graph-box padding-top-10">
-			<div class="pull-left col-xs-9">&nbsp;</div>
-			<div class="pull-right col-xs-3 switch-block-container no-padding"> 
-				<a class="switch-block col-xs-6 border-right text-center" href="javascript:void(0)" (click)="chart.view2='donutchart'" ng-class="chart.view2=='donutchart'?'active':''" title="Pie">
-					<span class="fa-lg fa fa-pie-chart fa-lg"></span>
-				</a>
-				<a class="switch-block col-xs-6 text-center" ng-class="chart.view2=='table'?'active':''" href="javascript:void(0)" (click)="chart.view2='table'" title="Tabular">
-					<span class="fa fa-table fa-lg"></span>
-				</a>
-			</div>
-			<div class="center-section clear-both">
-				<ua-donut-chart *ngIf="chart.view2=='donutchart'" [data]="chartData.chart2"></ua-donut-chart>
-				<div class="tabular-data" *ngIf="chart.view2=='table'">
-					<ua-chart-table [tableData]="chartData.chart2"></ua-chart-table>
-				</div>
-			</div>
-		</div>
+		<ua-interactive-chart [filePrefixSuffix]="filePrefixSuffix" [keyName]="keyName" (selectedSectionName)="fetchTable($event)"></ua-interactive-chart>
 	</div>
-	
-	<ua-table  fileName="S4HANA_DATA"></ua-table>
+	<div class="col-xs-3 pull-right text-right">
+				<a class="btn btn-primary" (click)="showTable = !showTable">Show/Hide Total Data</a>
+			</div>
+	<div class="col-xs-12" *ngIf="showTable">
+		<ua-table  [fileName] = "tableFileName"></ua-table>
+	</div>
 </div>
