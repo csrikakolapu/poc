@@ -7,8 +7,13 @@ public final class Constants {
 	public static final String DELIMETER_SPACE = " ";
 	public static final String DELIMETER_COLON = ";";
 	public static final String DELIMETER_TAB = "\t ";
+	public static final String FOLDER_LOG_FILE_NAME = "FolderUploadLog.properties";
 	
 	private Constants() {
 		
 	}
+
+
+
+
 }
