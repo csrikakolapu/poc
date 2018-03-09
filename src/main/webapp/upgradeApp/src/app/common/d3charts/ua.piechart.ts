@@ -22,9 +22,12 @@ export class UAD3PieChartComponent implements OnInit {
     regularArc;
     @Input() data : any[];
     @Input() keyName : string;
+    @Input() isInteractive:boolean;
     @Output() selectedSectionName = new EventEmitter<string>();
+    @Output() totalCount =  new EventEmitter<number>();
 
     ngOnInit() {
+        let total = 0;
         this.options = {
             chart: {
                 type: 'pieChart',
@@ -52,22 +55,36 @@ export class UAD3PieChartComponent implements OnInit {
         }
         this.bulgedArc = d3.svg.arc().outerRadius(105);
         this.regularArc = d3.svg.arc().outerRadius(100);
+        setTimeout(()=>{
+            for (let i = 0; i < this.data.length; i++) {
+                total+= parseInt(this.data[i].value);
+            }
+            this.totalCount.emit(total);
+        },500);
+        
+        
+
     }
 
     callBackFunction(chart) : void{
         var prevArc = null;
         var _this = this;
         
-        chart.pie.dispatch.on('elementClick', function(e){
-            _this.selectedSectionName.emit(e.data[_this.keyName]);
-            if(prevArc){
-                d3.select(prevArc).classed('clicked', false);
-                d3.select(prevArc).select("path").transition().duration(70).attr('d', _this.regularArc);
-            }
-            d3.select(e.element).classed('clicked', true);
-            d3.select(e.element).select("path").transition().duration(70).attr('d', _this.bulgedArc);     
-            prevArc = e.element;                   
-        });
+        if(_this.isInteractive){
+
+            chart.pie.dispatch.on('elementClick', function(e){
+                _this.selectedSectionName.emit(e.data[_this.keyName]);
+                if(prevArc){
+                    d3.select(prevArc).classed('clicked', false);
+                    d3.select(prevArc).select("path").transition().duration(70).attr('d', _this.regularArc);
+                }
+                d3.select(e.element).classed('clicked', true);
+                d3.select(e.element).select("path").transition().duration(70).attr('d', _this.bulgedArc);     
+                prevArc = e.element;                   
+            });
+        }else{
+            //return false;
+        }
     }
    
 }

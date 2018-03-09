@@ -13,6 +13,9 @@ export class UAInventoryComponent implements OnInit {
     tileFileName : string ;
     tableFileName:string ;
     showTable:boolean;
+    isInteractive:boolean;
+    view1:string;
+    view2:string;
 
     ngOnInit() {
     	this.filePrefixSuffix = new fileNamingConvention("INV_ECC", "_SUMMARY", "_SUMMARY", "");
@@ -20,6 +23,9 @@ export class UAInventoryComponent implements OnInit {
         this.tileFileName = 'INV_ECC_COUNT';
         this.tableFileName = 'INV_ECC_';
         this.showTable =  false;
+        this.isInteractive =true;
+        this.view1 ='pieChart';
+        this.view2 ='donutchart';
     }
 
     fetchTable(selectedSectionName:string){

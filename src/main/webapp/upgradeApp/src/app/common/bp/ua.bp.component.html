@@ -1,0 +1,19 @@
+<div class="bp-container view-wrapper col-xs-12">
+	<div class="col-xs-12 no-padding">
+		<div class="col-xs-2 bp-column top-column">
+			<p>Total count</p>
+			<div class="center-section text-center">
+				<h1 class="count text-center">{{bpCount}}</h1>
+				<span>BP count</span>
+			</div>
+		</div>
+		<div class="inventory-graph-container col-xs-10 no-padding">
+			<ua-interactive-chart (totalCount)= "updateBpCount($event)"[filePrefixSuffix]="filePrefixSuffix" [keyName]="keyName" [isInteractive]="isInteractive" [view1]="view1" [view2]="view2" ></ua-interactive-chart>
+		</div>
+	</div>
+	<div class="col-xs-3 pull-right text-right margin-15">
+		<a class="btn btn-primary" (click)="showTable = !showTable">Show/Hide Total Data</a>
+	</div>
+	<div class="col-xs-12" *ngIf="showTable">
+		<ua-table  [fileName] = "tableFileName"></ua-table>
+	</div>

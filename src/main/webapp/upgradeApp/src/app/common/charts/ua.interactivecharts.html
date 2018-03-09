@@ -9,7 +9,7 @@
 		</a>
 	</div>
 	<div class="center-section clear-both">
-		<ua-d3-pie-chart *ngIf="chart.view1=='pieChart'" [data]="chartData.chart1" [keyName]="keyName" (selectedSectionName)="pieClicked($event)"></ua-d3-pie-chart>
+		<ua-d3-pie-chart *ngIf="chart.view1=='pieChart'" [data]="chartData.chart1" [keyName]="keyName" (selectedSectionName)="pieClicked($event)" (totalCount)="pieTotal($event)" [isInteractive]="isInteractive"></ua-d3-pie-chart>
 		<div class="tabular-data" *ngIf="chart.view1=='table'">
 			<ua-chart-table [tableData]="chartData.chart1"></ua-chart-table>
 		</div>
@@ -32,3 +32,23 @@
 		</div>
 	</div>
 </div>
+<div class="col-xs-6 graph-box padding-top-10">
+	<div class="pull-left col-xs-8">&nbsp;</div>
+	<div class="pull-right col-xs-4 switch-block-container no-padding"> 
+		<a class="switch-block col-xs-4 border-right text-center" href="javascript:void(0)" (click)="updateChartData('COMPLEXITY')" ng-class="chart.view2=='COMPLEXITY'?'active':''" title="Complexity">
+			<span class="fa-lg fa fa-pie-chart fa-lg"></span>
+		</a>
+		<a class="switch-block col-xs-4 border-right text-center" href="javascript:void(0)" (click)="updateChartData('MIGRATION')" ng-class="chart.view2=='MIGRATION'?'active':''" title="Migration">
+			<span class="fa-lg fa fa-pie-chart fa-lg"></span>
+		</a>
+		<a class="switch-block col-xs-4 text-center" ng-class="chart.view2=='table'?'active':''" href="javascript:void(0)" (click)="chart.view2='table'" title="Tabular">
+			<span class="fa fa-table fa-lg"></span>
+		</a>
+	</div>
+	<div class="center-section clear-both">
+		<ua-discrete-bar *ngIf="chart.view2 !='table'" [data]="chartData.chart2"></ua-discrete-bar>
+		<div class="tabular-data" *ngIf="chart.view2=='table'">
+			<ua-chart-table [tableData]="chartData.chart2"></ua-chart-table>
+		</div>
+	</div>
+</div> 

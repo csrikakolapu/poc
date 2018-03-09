@@ -1,9 +1,5 @@
-description	label 	value
-
+description	label	value
 Sales and Distribution	SD	10
-
 Material Management	MM	12
-
 Finance and Controlling	FC	13
-
 Production planning	PP	10
