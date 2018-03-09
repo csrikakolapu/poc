@@ -19,6 +19,9 @@ export class UAInteractiveChartComponent implements OnInit{
     @Input() isInteractive : boolean;
     @Input() view1 : string;
     @Input() view2 : string;
+    showPieChart : boolean;
+    showDonutChart : boolean;
+    showBarChart : boolean;
     
     constructor(private FetchFileService: FetchFileService){}
 
@@ -29,6 +32,12 @@ export class UAInteractiveChartComponent implements OnInit{
             showAs : 'chart'
         };
         this.chartData = {};
+
+        this.showPieChart = false;
+        this.showDonutChart = false;
+        this.showBarChart = false;
+
+        this.identifyChartSection();
 
         this.FetchFileService.getFileData(this.filePrefixSuffix.filePrefix + this.filePrefixSuffix.chartOneSuffix).subscribe(response => {
             this.chartData.chart1 = response.fileContentMappedData;
@@ -56,7 +65,17 @@ export class UAInteractiveChartComponent implements OnInit{
         });
 
     }
-
+    identifyChartSection(){
+        if(this.view1 == 'pieChart' || this.view2 == 'pieChart' ){
+            this.showPieChart = true;
+        }
+        if(this.view1 == 'donutchart' || this.view2 == 'donutchart' ){
+            this.showDonutChart = true;
+        }
+        if(this.view1 == 'barChart' || this.view2 == 'barChart' ){
+            this.showBarChart = true;
+        }
+    }
     pieTotal(count:number){
         this.totalCount.emit(count);
     }

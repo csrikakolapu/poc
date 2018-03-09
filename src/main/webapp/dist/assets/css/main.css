@@ -330,3 +330,19 @@ tr:nth-child(odd) {
       font-size: 16px; }
   .s4-container .table-container {
     margin-top: 20px; }
+
+.legend-overlay{
+    position: absolute;
+    background: #fff;
+    top: 45px;
+    right: 15px;
+    border: 1px solid #afa1a1;
+    border-radius: 5px;
+}
+.legend-overlay ul{
+  padding-left:0;
+}
+.legend-overlay li {
+    padding: 10px 15px;
+    list-style: none;
+}
