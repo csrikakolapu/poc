@@ -50,7 +50,7 @@ export class UAInteractiveChartComponent implements OnInit{
             }
             if(this.isInteractive){
 
-                var fileKey = this.filePrefixSuffix.filePrefix + '_' + this.selectedSection + this.filePrefixSuffix.chartOneSuffix;
+                var fileKey = this.filePrefixSuffix.filePrefix + '_' + this.selectedSection + this.filePrefixSuffix.chartTwoSuffix;
                 this.FetchFileService.getFileData(fileKey).subscribe(response => {
                     this.chartData.chart2 = response.fileContentMappedData;
                 });
@@ -82,7 +82,7 @@ export class UAInteractiveChartComponent implements OnInit{
     pieClicked(sectionName:string){
         this.selectedSection = sectionName;
         this.selectedSectionName.emit(this.selectedSection);
-        var fileKey = this.filePrefixSuffix.filePrefix + '_' +this.selectedSection + this.filePrefixSuffix.chartOneSuffix;
+        var fileKey = this.filePrefixSuffix.filePrefix + '_' +this.selectedSection + this.filePrefixSuffix.chartTwoSuffix;
         this.FetchFileService.getFileData(fileKey).subscribe(response => {
             this.chartData.chart2 = response.fileContentMappedData;
         });

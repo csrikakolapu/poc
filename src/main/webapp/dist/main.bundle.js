@@ -100,18 +100,20 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__common_table_ua_charttable_component__ = __webpack_require__("../../../../../src/app/common/table/ua.charttable.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__common_charts_ua_piechart__ = __webpack_require__("../../../../../src/app/common/charts/ua.piechart.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__common_charts_ua_interactivecharts__ = __webpack_require__("../../../../../src/app/common/charts/ua.interactivecharts.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__file_data_transform_pipe__ = __webpack_require__("../../../../../src/app/file-data-transform-pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28_d3__ = __webpack_require__("../../../../d3/d3.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28_d3___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_28_d3__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29_nvd3__ = __webpack_require__("../../../../nvd3/build/nv.d3.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29_nvd3___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_29_nvd3__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__fetch_file_service__ = __webpack_require__("../../../../../src/app/fetch-file.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__common_sfour_ua_readinesscheck_component__ = __webpack_require__("../../../../../src/app/common/sfour/ua.readinesscheck.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__file_data_transform_pipe__ = __webpack_require__("../../../../../src/app/file-data-transform-pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29_d3__ = __webpack_require__("../../../../d3/d3.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29_d3___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_29_d3__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30_nvd3__ = __webpack_require__("../../../../nvd3/build/nv.d3.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30_nvd3___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_30_nvd3__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__fetch_file_service__ = __webpack_require__("../../../../../src/app/fetch-file.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -155,7 +157,7 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_20_ng2_nvd3__["NvD3Module"]
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_30__fetch_file_service__["a" /* FetchFileService */]],
+            providers: [__WEBPACK_IMPORTED_MODULE_31__fetch_file_service__["a" /* FetchFileService */]],
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */],
                 __WEBPACK_IMPORTED_MODULE_6__common_header_uaheader_component__["a" /* UAHeaderComponent */],
@@ -178,7 +180,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_23__common_d3charts_ua_donutchart__["a" /* UADonutChartComponent */],
                 __WEBPACK_IMPORTED_MODULE_25__common_charts_ua_piechart__["a" /* UAPieChartComponent */],
                 __WEBPACK_IMPORTED_MODULE_26__common_charts_ua_interactivecharts__["a" /* UAInteractiveChartComponent */],
-                __WEBPACK_IMPORTED_MODULE_27__file_data_transform_pipe__["a" /* KeysPipe */]
+                __WEBPACK_IMPORTED_MODULE_28__file_data_transform_pipe__["a" /* KeysPipe */],
+                __WEBPACK_IMPORTED_MODULE_27__common_sfour_ua_readinesscheck_component__["a" /* UAReadinessCheckComponent */]
             ],
             bootstrap: [
                 __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]
@@ -365,7 +368,7 @@ var UAInteractiveChartComponent = (function () {
                 _this.updateChartData('COMPLEXITY');
             }
             if (_this.isInteractive) {
-                var fileKey = _this.filePrefixSuffix.filePrefix + '_' + _this.selectedSection + _this.filePrefixSuffix.chartOneSuffix;
+                var fileKey = _this.filePrefixSuffix.filePrefix + '_' + _this.selectedSection + _this.filePrefixSuffix.chartTwoSuffix;
                 _this.FetchFileService.getFileData(fileKey).subscribe(function (response) {
                     _this.chartData.chart2 = response.fileContentMappedData;
                 });
@@ -396,7 +399,7 @@ var UAInteractiveChartComponent = (function () {
         var _this = this;
         this.selectedSection = sectionName;
         this.selectedSectionName.emit(this.selectedSection);
-        var fileKey = this.filePrefixSuffix.filePrefix + '_' + this.selectedSection + this.filePrefixSuffix.chartOneSuffix;
+        var fileKey = this.filePrefixSuffix.filePrefix + '_' + this.selectedSection + this.filePrefixSuffix.chartTwoSuffix;
         this.FetchFileService.getFileData(fileKey).subscribe(function (response) {
             _this.chartData.chart2 = response.fileContentMappedData;
         });
@@ -1037,7 +1040,7 @@ var UAImpactComponent = (function () {
 /***/ "../../../../../src/app/common/inventory/ua.inventory.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"view-wrapper col-xs-12 s4-container\">\r\n\t<ua-tiles [tileFileName] = \"tileFileName\"></ua-tiles>\r\n\t<div class=\"graph-label-container col-xs-12\">\r\n\t\t<div class=\"col-xs-6\">\r\n\t\t\t<b>Custom Inventory Breakup</b>\r\n\t\t</div>\r\n\t\t<div class=\"col-xs-6\">\r\n\t\t\t<b>Custom Developments - Object Breakup</b>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"inventory-graph-container col-xs-12\">\r\n\t\t<ua-interactive-chart [filePrefixSuffix]=\"filePrefixSuffix\" [keyName]=\"keyName\" (selectedSectionName)=\"fetchTable($event)\" [isInteractive]=\"isInteractive\" [view1]=\"view1\" [view2]=\"view2\" ></ua-interactive-chart>\r\n\t</div>\r\n\t<div class=\"col-xs-3 pull-right text-right margin-15\">\r\n\t\t\t\t<a class=\"btn btn-primary\" (click)=\"showTable = !showTable\">Show/Hide Total Data</a>\r\n\t\t\t</div>\r\n\t<div class=\"col-xs-12\" *ngIf=\"showTable\">\r\n\t\t<ua-table  [fileName] = \"tableFileName\"></ua-table>\r\n\t</div>\r\n</div>"
+module.exports = "<div class=\"view-wrapper col-xs-12 s4-container\">\r\n\t<ua-tiles [tileFileName] = \"tileFileName\"></ua-tiles>\r\n\t<div class=\"graph-label-container col-xs-12\">\r\n\t\t<div class=\"col-xs-6\">\r\n\t\t\t<b>Custom Inventory Breakup</b>\r\n\t\t</div>\r\n\t\t<div class=\"col-xs-6\">\r\n\t\t\t<b>Custom Developments - Object Breakup</b>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"inventory-graph-container col-xs-12\">\r\n\t\t<ua-interactive-chart [filePrefixSuffix]=\"filePrefixSuffix\" [keyName]=\"keyName\" (selectedSectionName)=\"fetchTable($event)\" [isInteractive]=\"isInteractive\" [view1]=\"view1\" [view2]=\"view2\" ></ua-interactive-chart>\r\n\t</div>\r\n\t<div class=\"table-container col-xs-12 no-padding\">\r\n\t\t<div class=\"col-xs-3 pull-right text-right\">\r\n\t\t\t<a class=\"btn btn-primary\" (click)=\"showTable = !showTable\">Show/Hide Total Data</a>\r\n\t\t</div>\r\n\t\t<div class=\"col-xs-12 no-border\" *ngIf=\"showTable\">\r\n\t\t\t<ua-table  [fileName] = \"tableFileName\"></ua-table>\r\n\t\t</div>\r\n\t</div>\r\n</div>"
 
 /***/ }),
 
@@ -1186,10 +1189,62 @@ var UAAnalysisRootComponent = (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/common/sfour/ua.readinesscheck.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"view-wrapper col-xs-12 s4-container\">\r\n\t<ua-tiles [tileFileName] = \"tileFileName\"></ua-tiles>\r\n\r\n\t<div class=\"s4-graph-container col-xs-12\">\r\n\t\t<ua-interactive-chart [filePrefixSuffix]=\"filePrefixSuffix\" [keyName]=\"keyName\" (selectedSectionName)=\"fetchTable($event)\" [isInteractive]=\"isInteractive\" [view1]=\"view1\" [view2]=\"view2\" ></ua-interactive-chart>\r\n\t</div>\r\n\t<div class=\"table-container col-xs-12 no-padding\">\r\n\t\t<div class=\"col-xs-3 pull-right text-right\">\r\n\t\t\t<a class=\"btn btn-primary\" (click)=\"showTable = !showTable\">Show/Hide Total Data</a>\r\n\t\t</div>\r\n\t\t<div class=\"col-xs-12 no-border\" *ngIf=\"showTable\">\r\n\t\t\t<ua-table  [fileName] = \"tableFileName\"></ua-table>\r\n\t\t</div>\r\n\t</div>\r\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/common/sfour/ua.readinesscheck.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UAReadinessCheckComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dto_fileNamingConvention__ = __webpack_require__("../../../../../src/app/common/dto/fileNamingConvention.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+var UAReadinessCheckComponent = (function () {
+    function UAReadinessCheckComponent() {
+    }
+    UAReadinessCheckComponent.prototype.ngOnInit = function () {
+        this.filePrefixSuffix = new __WEBPACK_IMPORTED_MODULE_1__dto_fileNamingConvention__["a" /* fileNamingConvention */]("READINESS", "_SUMMARY", "_IMPACT", "_DATA");
+        this.keyName = "AREANAME";
+        this.tileFileName = 'READINESS_COUNT_SUMMARY';
+        //this.tableFileName = 'INV_ECC_';
+        this.showTable = false;
+        this.isInteractive = true;
+        this.view1 = 'pieChart';
+        this.view2 = 'donutchart';
+    };
+    UAReadinessCheckComponent.prototype.fetchTable = function (selectedSectionName) {
+        console.log('table for-' + selectedSectionName);
+        this.tableFileName = this.filePrefixSuffix.filePrefix + '_' + selectedSectionName + this.filePrefixSuffix.tableSuffix;
+    };
+    UAReadinessCheckComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: "ua-readiness-check",
+            template: __webpack_require__("../../../../../src/app/common/sfour/ua.readinesscheck.component.html")
+        })
+    ], UAReadinessCheckComponent);
+    return UAReadinessCheckComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/common/sfour/ua.sfourhana.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ua-subtabs [subTabItems]=\"subTabItems\" (selectedTab)=\"tabChange($event)\"></ua-subtabs>\r\n<div *ngIf=\"selectedTab==='busFunctions'\">\r\n\tBF tab\r\n</div>\r\n<div *ngIf=\"selectedTab==='readycheck'\">\r\n\treadiness tab\r\n</div>\r\n<div *ngIf=\"selectedTab==='SYCM'\">\r\n\tSYCM tab\r\n</div>"
+module.exports = "<ua-subtabs [subTabItems]=\"subTabItems\" (selectedTab)=\"tabChange($event)\"></ua-subtabs>\r\n<div *ngIf=\"selectedTab==='busFunctions'\">\r\n\tBF tab\r\n</div>\r\n<div *ngIf=\"selectedTab==='readycheck'\">\r\n\t<ua-readiness-check></ua-readiness-check>\r\n</div>\r\n<div *ngIf=\"selectedTab==='SYCM'\">\r\n\tSYCM tab\r\n</div>"
 
 /***/ }),
 
@@ -1223,7 +1278,7 @@ var UASFourHanaComponent = (function () {
             },
             {
                 key: "SYCM",
-                value: "Code Incompatibilities ",
+                value: "Code Incompatibilities",
                 required: true
             }
         ];
@@ -1249,7 +1304,7 @@ var UASFourHanaComponent = (function () {
 /***/ "../../../../../src/app/common/subtabs/ua.subtabs.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ul class=\"sub-nav  col-xs-12\">\r\n\t<ng-container *ngFor= \"let subTabItem of subTabItems\">\r\n\t\t<li  *ngIf=\"subTabItem.required\" (click)=\"tabSelect(subTabItem.key)\"><a >{{subTabItem.value}} </a></li>\r\n\t</ng-container>\r\n</ul>"
+module.exports = "<ul class=\"sub-nav  col-xs-12\">\r\n\t<ng-container *ngFor= \"let subTabItem of subTabItems\">\r\n\t\t<li *ngIf=\"subTabItem.required\" (click)=\"tabSelect(subTabItem.key)\" [ngClass]=\"{'active':tabName===subTabItem.key}\">\r\n\t\t\t<a>{{subTabItem.value}}</a>\r\n\t\t</li>\r\n\t</ng-container>\r\n</ul>"
 
 /***/ }),
 
@@ -1273,7 +1328,11 @@ var UASubTabsComponent = (function () {
     function UASubTabsComponent() {
         this.selectedTab = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
     }
+    UASubTabsComponent.prototype.ngOnInit = function () {
+        this.tabName = this.subTabItems[0].key;
+    };
     UASubTabsComponent.prototype.tabSelect = function (tabKey) {
+        this.tabName = tabKey;
         this.selectedTab.emit(tabKey);
     };
     __decorate([
