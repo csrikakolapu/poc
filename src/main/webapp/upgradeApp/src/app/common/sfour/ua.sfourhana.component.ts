@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component,OnInit } from "@angular/core";
 import { SubTabItem } from '../dto/subtabitem';
 
 
@@ -7,23 +7,27 @@ import { SubTabItem } from '../dto/subtabitem';
     templateUrl:"./ua.sfourhana.component.html"
 })
 
-export class UASFourHanaComponent{
+export class UASFourHanaComponent implements OnInit {
     
-      subTabItems:SubTabItem [] = [
-       {  
-        key:"busFunctions",
-        value:"Business Functions",
-        required:true
-        },
-        {  
-        key:"readycheck",
-        value:"Readiness Check",
-        required:true
-        },
-        {  
-        key:"SYCM",
-        value:"Code Incompatibilities ",
-        required:true
-        }
-    ];
+    subTabItems:SubTabItem [];
+
+    ngOnInit() {
+        this.subTabItems = [
+            {  
+                key:"busFunctions",
+                value:"Business Functions",
+                required:true
+            },
+            {  
+                key:"readycheck",
+                value:"Readiness Check",
+                required:true
+            },
+            {  
+                key:"SYCM",
+                value:"Code Incompatibilities ",
+                required:true
+            }
+        ];
+    }
 }
