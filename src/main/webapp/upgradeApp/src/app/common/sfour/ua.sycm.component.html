@@ -1,0 +1,15 @@
+<div class="view-wrapper col-xs-12 s4-container">
+    <ua-tiles [tileFileName] = "tileFileName"></ua-tiles>
+
+    <div class="s4-graph-container col-xs-12">
+        <ua-interactive-chart [filePrefixSuffix]="filePrefixSuffix" [keyName]="keyName" (selectedSectionName)="fetchTable($event)" [isInteractive]="isInteractive" [view1]="view1" [view2]="view2" [chartToggle]="chartToggle" [dataByTypeList]="dataByTypeList"></ua-interactive-chart>
+    </div>
+    <div class="table-container col-xs-12 no-padding">
+        <div class="col-xs-3 pull-right text-right">
+            <a class="btn btn-primary" (click)="showTable = !showTable">Show/Hide Total Data</a>
+        </div>
+        <div class="col-xs-12 no-border" *ngIf="showTable">
+            <ua-table  [fileName] = "tableFileName"></ua-table>
+        </div>
+    </div>
+</div>

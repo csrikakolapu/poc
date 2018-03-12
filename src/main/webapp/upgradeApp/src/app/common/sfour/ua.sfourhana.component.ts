@@ -26,11 +26,11 @@ export class UASFourHanaComponent implements OnInit {
             },
             {  
                 key:"SYCM",
-                value:"Code Incompatibilities ",
+                value:"Code Incompatibilities",
                 required:true
             }
         ];
-        
+
         this.selectedTab = 'busFunctions';
     }
 

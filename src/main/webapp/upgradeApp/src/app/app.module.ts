@@ -29,6 +29,8 @@ import { UADonutChartComponent } from './common/d3charts/ua.donutchart';
 import { UAChartTableComponent } from './common/table/ua.charttable.component';
 import { UAPieChartComponent } from './common/charts/ua.piechart';
 import { UAInteractiveChartComponent } from './common/charts/ua.interactivecharts';
+import { UAReadinessCheckComponent } from './common/sfour/ua.readinesscheck.component';
+import { UASycmComponent } from './common/sfour/ua.sycm.component';
 
 import { KeysPipe } from './file-data-transform-pipe';
 
@@ -68,8 +70,9 @@ import { FetchFileService } from './fetch-file.service';
     UADonutChartComponent,
     UAPieChartComponent,
     UAInteractiveChartComponent,
-    KeysPipe
-    
+    KeysPipe,
+    UAReadinessCheckComponent,
+    UASycmComponent
   ],
   bootstrap: [
     AppComponent 

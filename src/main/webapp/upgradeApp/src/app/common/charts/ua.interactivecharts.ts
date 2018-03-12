@@ -11,7 +11,6 @@ import { fileNamingConvention } from '../dto/fileNamingConvention'
 export class UAInteractiveChartComponent implements OnInit{
     chart;
     chartData;
-
     selectedSection: string;
     @Output() selectedSectionName = new EventEmitter<string>();
     @Output() totalCount =  new EventEmitter<number>();
@@ -20,17 +19,16 @@ export class UAInteractiveChartComponent implements OnInit{
     @Input() isInteractive : boolean;
     @Input() view1 : string;
     @Input() view2 : string;
-    @Input() filterType : string;
+    @Input() chartToggle : boolean;
+    @Input() dataByTypeList : string[];
     showPieChart : boolean;
     showDonutChart : boolean;
     showBarChart : boolean;
+    dataByType: string;
     
     constructor(private FetchFileService: FetchFileService){}
 
     ngOnInit() {
-        
-        let chartTwoFileName;
-
         this.chart = {
             view1: this.view1,
             view2: this.view2,
@@ -41,6 +39,8 @@ export class UAInteractiveChartComponent implements OnInit{
         this.showPieChart = false;
         this.showDonutChart = false;
         this.showBarChart = false;
+
+        this.dataByType = 'COMPLEXITY';
 
         this.identifyChartSection();
 
@@ -53,23 +53,8 @@ export class UAInteractiveChartComponent implements OnInit{
             if(this.chart.view2 == 'barChart'){
                 this.updateChartData('COMPLEXITY');
             }
-            if(this.isInteractive){
-                if(this.filterType){
-                     chartTwoFileName = this.selectedSection+'_'+this.filterType;
-                }else{
-                     chartTwoFileName = this.selectedSection;
-                }
-                var fileKey = this.filePrefixSuffix.filePrefix + '_' + chartTwoFileName + this.filePrefixSuffix.chartOneSuffix;
-                this.FetchFileService.getFileData(fileKey).subscribe(response => {
-                    this.chartData.chart2 = response.fileContentMappedData;
-                });
-            }else{
-                var fileKey = this.filePrefixSuffix.filePrefix + this.filePrefixSuffix.chartOneSuffix+ '_'+this.filePrefixSuffix.chartTwoSuffix;
-                this.FetchFileService.getFileData(fileKey).subscribe(response => {
-                    this.chartData.chart2 = response.fileContentMappedData;
-                });
-            }
 
+            this.fetchChartTwoData();
 
         });
 
@@ -91,15 +76,7 @@ export class UAInteractiveChartComponent implements OnInit{
     pieClicked(sectionName:string){
         this.selectedSection = sectionName;
         this.selectedSectionName.emit(this.selectedSection);
-        if(this.filterType){
-            var fileKey = this.filePrefixSuffix.filePrefix + '_' +this.selectedSection +'_'+this.filterType+this.filePrefixSuffix.chartOneSuffix;  
-        }else{
-             var fileKey = this.filePrefixSuffix.filePrefix + '_' +this.selectedSection+this.filePrefixSuffix.chartOneSuffix;
-        }
-        
-        this.FetchFileService.getFileData(fileKey).subscribe(response => {
-            this.chartData.chart2 = response.fileContentMappedData;
-        });
+        this.fetchChartTwoData();
     }
     updateChartData(type:string){
         this.chart.showAs = type;
@@ -160,4 +137,26 @@ export class UAInteractiveChartComponent implements OnInit{
         },500);
     }
 
+    setDataByType(type){
+        this.dataByType = type;
+        this.fetchChartTwoData();
+    }
+
+    fetchChartTwoData(){
+        var fileKey = '';
+        if(this.isInteractive){
+            if(this.chartToggle){
+                fileKey = this.filePrefixSuffix.filePrefix + '_' + this.selectedSection + '_' + this.dataByType + this.filePrefixSuffix.chartTwoSuffix;
+            }
+            else{
+                fileKey = this.filePrefixSuffix.filePrefix + '_' + this.selectedSection + this.filePrefixSuffix.chartTwoSuffix;
+            }
+        }else{
+            fileKey = this.filePrefixSuffix.filePrefix + this.filePrefixSuffix.chartOneSuffix+ '_'+this.filePrefixSuffix.chartTwoSuffix;
+        }
+
+        this.FetchFileService.getFileData(fileKey).subscribe(response => {
+            this.chartData.chart2 = response.fileContentMappedData;
+        });
+    }
 }

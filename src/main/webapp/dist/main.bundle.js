@@ -100,18 +100,22 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__common_table_ua_charttable_component__ = __webpack_require__("../../../../../src/app/common/table/ua.charttable.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__common_charts_ua_piechart__ = __webpack_require__("../../../../../src/app/common/charts/ua.piechart.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__common_charts_ua_interactivecharts__ = __webpack_require__("../../../../../src/app/common/charts/ua.interactivecharts.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__file_data_transform_pipe__ = __webpack_require__("../../../../../src/app/file-data-transform-pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28_d3__ = __webpack_require__("../../../../d3/d3.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28_d3___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_28_d3__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29_nvd3__ = __webpack_require__("../../../../nvd3/build/nv.d3.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29_nvd3___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_29_nvd3__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__fetch_file_service__ = __webpack_require__("../../../../../src/app/fetch-file.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__common_sfour_ua_readinesscheck_component__ = __webpack_require__("../../../../../src/app/common/sfour/ua.readinesscheck.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__common_sfour_ua_sycm_component__ = __webpack_require__("../../../../../src/app/common/sfour/ua.sycm.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__file_data_transform_pipe__ = __webpack_require__("../../../../../src/app/file-data-transform-pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30_d3__ = __webpack_require__("../../../../d3/d3.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30_d3___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_30_d3__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31_nvd3__ = __webpack_require__("../../../../nvd3/build/nv.d3.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31_nvd3___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_31_nvd3__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__fetch_file_service__ = __webpack_require__("../../../../../src/app/fetch-file.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -155,7 +159,7 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_20_ng2_nvd3__["NvD3Module"]
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_30__fetch_file_service__["a" /* FetchFileService */]],
+            providers: [__WEBPACK_IMPORTED_MODULE_32__fetch_file_service__["a" /* FetchFileService */]],
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */],
                 __WEBPACK_IMPORTED_MODULE_6__common_header_uaheader_component__["a" /* UAHeaderComponent */],
@@ -178,7 +182,9 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_23__common_d3charts_ua_donutchart__["a" /* UADonutChartComponent */],
                 __WEBPACK_IMPORTED_MODULE_25__common_charts_ua_piechart__["a" /* UAPieChartComponent */],
                 __WEBPACK_IMPORTED_MODULE_26__common_charts_ua_interactivecharts__["a" /* UAInteractiveChartComponent */],
-                __WEBPACK_IMPORTED_MODULE_27__file_data_transform_pipe__["a" /* KeysPipe */]
+                __WEBPACK_IMPORTED_MODULE_29__file_data_transform_pipe__["a" /* KeysPipe */],
+                __WEBPACK_IMPORTED_MODULE_27__common_sfour_ua_readinesscheck_component__["a" /* UAReadinessCheckComponent */],
+                __WEBPACK_IMPORTED_MODULE_28__common_sfour_ua_sycm_component__["a" /* UASycmComponent */]
             ],
             bootstrap: [
                 __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]
@@ -315,7 +321,7 @@ var UABarChartComponent = (function () {
 /***/ "../../../../../src/app/common/charts/ua.interactivecharts.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-xs-6 graph-box padding-top-10\" *ngIf=\"showPieChart\">\r\n\t<div class=\"pull-left col-xs-9\">&nbsp;</div>\r\n\t<div class=\"pull-right col-xs-3 switch-block-container no-padding\"> \r\n\t\t<a class=\"switch-block col-xs-6 border-right text-center\" href=\"javascript:void(0)\" (click)=\"chart.view1='pieChart'\" ng-class=\"chart.view1=='pieChart'?'active':''\" title=\"Pie\">\r\n\t\t\t<span class=\"fa-lg fa fa-pie-chart fa-lg\"></span>\r\n\t\t</a>\r\n\t\t<a class=\"switch-block col-xs-6 text-center\" ng-class=\"chart.view1=='table'?'active':''\" href=\"javascript:void(0)\" (click)=\"chart.view1='table'\" title=\"Tabular\">\r\n\t\t\t<span class=\"fa fa-table fa-lg\"></span>\r\n\t\t</a>\r\n\t</div>\r\n\t<div class=\"center-section clear-both\">\r\n\t\t<ua-d3-pie-chart *ngIf=\"chart.view1=='pieChart'\" [data]=\"chartData.chart1\" [keyName]=\"keyName\" (selectedSectionName)=\"pieClicked($event)\" (totalCount)=\"pieTotal($event)\" [isInteractive]=\"isInteractive\"></ua-d3-pie-chart>\r\n\t\t<div class=\"tabular-data\" *ngIf=\"chart.view1=='table'\">\r\n\t\t\t<ua-chart-table [tableData]=\"chartData.chart1\"></ua-chart-table>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n<div class=\"col-xs-6 graph-box padding-top-10\" *ngIf=\"showDonutChart\">\r\n\t<div class=\"pull-left col-xs-9\">&nbsp;</div>\r\n\t<div class=\"pull-right col-xs-3 switch-block-container no-padding\"> \r\n\t\t<a class=\"switch-block col-xs-6 border-right text-center\" href=\"javascript:void(0)\" (click)=\"chart.view2='donutchart'\" ng-class=\"chart.view2=='donutchart'?'active':''\" title=\"Pie\">\r\n\t\t\t<span class=\"fa-lg fa fa-pie-chart fa-lg\"></span>\r\n\t\t</a>\r\n\t\t<a class=\"switch-block col-xs-6 text-center\" ng-class=\"chart.view2=='table'?'active':''\" href=\"javascript:void(0)\" (click)=\"chart.view2='table'\" title=\"Tabular\">\r\n\t\t\t<span class=\"fa fa-table fa-lg\"></span>\r\n\t\t</a>\r\n\t</div>\r\n\t<div class=\"center-section clear-both\">\r\n\t\t<ua-donut-chart *ngIf=\"chart.view2=='donutchart'\" [data]=\"chartData.chart2\"></ua-donut-chart>\r\n\t\t<div class=\"tabular-data\" *ngIf=\"chart.view2=='table'\">\r\n\t\t\t<ua-chart-table [tableData]=\"chartData.chart2\"></ua-chart-table>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n<div class=\"col-xs-6 graph-box padding-top-10\" *ngIf=\"showBarChart\">\r\n\t<div class=\"pull-left col-xs-8\">&nbsp;</div>\r\n\t<div class=\"pull-right col-xs-4 switch-block-container no-padding\"> \r\n\t\t<a class=\"switch-block col-xs-4 border-right text-center\" href=\"javascript:void(0)\" (click)=\"updateChartData('COMPLEXITY')\" ng-class=\"chart.view2=='COMPLEXITY'?'active':''\" title=\"Complexity\">\r\n\t\t\t<span class=\"fa-lg fa fa-pie-chart fa-lg\"></span>\r\n\t\t</a>\r\n\t\t<a class=\"switch-block col-xs-4 border-right text-center\" href=\"javascript:void(0)\" (click)=\"updateChartData('MIGRATION')\" ng-class=\"chart.view2=='MIGRATION'?'active':''\" title=\"Migration\">\r\n\t\t\t<span class=\"fa-lg fa fa-pie-chart fa-lg\"></span>\r\n\t\t</a>\r\n\t\t<a class=\"switch-block col-xs-4 text-center\" ng-class=\"chart.view2=='table'?'active':''\" href=\"javascript:void(0)\" (click)=\"chart.view2='table'\" title=\"Tabular\">\r\n\t\t\t<span class=\"fa fa-table fa-lg\"></span>\r\n\t\t</a>\r\n\t</div>\r\n\t<div class=\"center-section clear-both\">\r\n\t\t<ua-discrete-bar  [data]=\"chartData.chart2\"></ua-discrete-bar>\r\n\t\t<div class=\"legend-overlay\"  *ngIf=\"chart.view2 =='table'\">\r\n\t\t\t<ul>\r\n\t\t\t\t\r\n\t\t\t\t<li *ngFor=\"let legend of chartData.chart2[0].values\">{{legend.label}} - {{legend.description}}</li>\r\n\t\t\t\t\r\n\t\t\t</ul>\r\n\t\t</div>\r\n\t</div>\r\n</div> "
+module.exports = "<div class=\"col-xs-6 graph-box padding-top-10\" *ngIf=\"showPieChart\">\r\n\t<div class=\"pull-left col-xs-9\">&nbsp;</div>\r\n\t<div class=\"pull-right col-xs-3 switch-block-container no-padding\"> \r\n\t\t<a class=\"switch-block col-xs-6 border-right text-center\" href=\"javascript:void(0)\" (click)=\"chart.view1='pieChart'\" ng-class=\"chart.view1=='pieChart'?'active':''\" title=\"Pie\">\r\n\t\t\t<span class=\"fa-lg fa fa-pie-chart fa-lg\"></span>\r\n\t\t</a>\r\n\t\t<a class=\"switch-block col-xs-6 text-center\" ng-class=\"chart.view1=='table'?'active':''\" href=\"javascript:void(0)\" (click)=\"chart.view1='table'\" title=\"Tabular\">\r\n\t\t\t<span class=\"fa fa-table fa-lg\"></span>\r\n\t\t</a>\r\n\t</div>\r\n\t<div class=\"center-section clear-both\">\r\n\t\t<ua-d3-pie-chart *ngIf=\"chart.view1=='pieChart'\" [data]=\"chartData.chart1\" [keyName]=\"keyName\" (selectedSectionName)=\"pieClicked($event)\" (totalCount)=\"pieTotal($event)\" [isInteractive]=\"isInteractive\"></ua-d3-pie-chart>\r\n\t\t<div class=\"tabular-data\" *ngIf=\"chart.view1=='table'\">\r\n\t\t\t<ua-chart-table [tableData]=\"chartData.chart1\"></ua-chart-table>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n<div class=\"col-xs-6 graph-box padding-top-10\" *ngIf=\"showDonutChart\">\r\n\t<div class=\"pull-left col-xs-9\">&nbsp;</div>\r\n\r\n\t<div class=\"pull-right col-xs-3 switch-block-container no-padding\" *ngIf=\"!chartToggle\"> \r\n\t\t<a class=\"switch-block col-xs-6 border-right text-center\" href=\"javascript:void(0)\" (click)=\"chart.view2='donutchart'\" ng-class=\"chart.view2=='donutchart'?'active':''\" title=\"Donut\">\r\n\t\t\t<span class=\"fa-lg fa fa-pie-chart fa-lg\"></span>\r\n\t\t</a>\r\n\t\t<a class=\"switch-block col-xs-6 text-center\" ng-class=\"chart.view2=='table'?'active':''\" href=\"javascript:void(0)\" (click)=\"chart.view2='table'\" title=\"Tabular\">\r\n\t\t\t<span class=\"fa fa-table fa-lg\"></span>\r\n\t\t</a>\r\n\t</div>\r\n\r\n\t<div class=\"pull-right col-xs-6 switch-block-container no-padding\" *ngIf=\"chartToggle\"> \r\n\t\t<div class=\"col-xs-9 no-padding\">\r\n\t\t    <a class=\"switch-block border-right text-center\" href=\"javascript:void(0)\" (click)=\"setDataByType(dataByTypeItem)\" title=\"Chart\" [ngClass]=\"{'active': dataByType === dataByTypeItem, 'col-xs-6': dataByTypeList.length == 2, 'col-xs-4': dataByTypeList.length == 3}\" *ngFor=\"let dataByTypeItem of dataByTypeList\">\r\n\t\t\t\t<span class=\"fa\">{{dataByTypeItem}}</span>\r\n\t\t\t</a>\r\n\t\t</div>\r\n\t\t<div class=\"col-xs-3 no-padding\">\r\n\t\t\t<a class=\"switch-block col-xs-6 border-right text-center\" href=\"javascript:void(0)\" (click)=\"chart.view2='donutchart'\" ng-class=\"chart.view2=='donutchart'?'active':''\" title=\"Donut\">\r\n\t\t\t\t<span class=\"fa-lg fa fa-pie-chart fa-lg\"></span>\r\n\t\t\t</a>\r\n\t\t\t<a class=\"switch-block col-xs-6 text-center\" ng-class=\"chart.view2=='table'?'active':''\" href=\"javascript:void(0)\" (click)=\"chart.view2='table'\" title=\"Tabular\">\r\n\t\t\t\t<span class=\"fa fa-table fa-lg\"></span>\r\n\t\t\t</a>\r\n\t\t</div>\r\n\t</div>\r\n\r\n\t<div class=\"center-section clear-both\">\r\n\t\t<ua-donut-chart *ngIf=\"chart.view2=='donutchart'\" [data]=\"chartData.chart2\"></ua-donut-chart>\r\n\t\t<div class=\"tabular-data\" *ngIf=\"chart.view2=='table'\">\r\n\t\t\t<ua-chart-table [tableData]=\"chartData.chart2\"></ua-chart-table>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n<div class=\"col-xs-6 graph-box padding-top-10\" *ngIf=\"showBarChart\">\r\n\t<div class=\"pull-left col-xs-8\">&nbsp;</div>\r\n\t<div class=\"pull-right col-xs-4 switch-block-container no-padding\"> \r\n\t\t<a class=\"switch-block col-xs-4 border-right text-center\" href=\"javascript:void(0)\" (click)=\"updateChartData('COMPLEXITY')\" ng-class=\"chart.view2=='COMPLEXITY'?'active':''\" title=\"Complexity\">\r\n\t\t\t<span class=\"fa-lg fa fa-pie-chart fa-lg\"></span>\r\n\t\t</a>\r\n\t\t<a class=\"switch-block col-xs-4 border-right text-center\" href=\"javascript:void(0)\" (click)=\"updateChartData('MIGRATION')\" ng-class=\"chart.view2=='MIGRATION'?'active':''\" title=\"Migration\">\r\n\t\t\t<span class=\"fa-lg fa fa-pie-chart fa-lg\"></span>\r\n\t\t</a>\r\n\t\t<a class=\"switch-block col-xs-4 text-center\" ng-class=\"chart.view2=='table'?'active':''\" href=\"javascript:void(0)\" (click)=\"chart.view2='table'\" title=\"Tabular\">\r\n\t\t\t<span class=\"fa fa-table fa-lg\"></span>\r\n\t\t</a>\r\n\t</div>\r\n\t<div class=\"center-section clear-both\">\r\n\t\t<ua-discrete-bar  [data]=\"chartData.chart2\"></ua-discrete-bar>\r\n\t\t<div class=\"legend-overlay\"  *ngIf=\"chart.view2 =='table'\">\r\n\t\t\t<ul>\r\n\t\t\t\t\r\n\t\t\t\t<li *ngFor=\"let legend of chartData.chart2[0].values\">{{legend.label}} - {{legend.description}}</li>\r\n\t\t\t\t\r\n\t\t\t</ul>\r\n\t\t</div>\r\n\t</div>\r\n</div> "
 
 /***/ }),
 
@@ -356,6 +362,7 @@ var UAInteractiveChartComponent = (function () {
         this.showPieChart = false;
         this.showDonutChart = false;
         this.showBarChart = false;
+        this.dataByType = 'COMPLEXITY';
         this.identifyChartSection();
         this.FetchFileService.getFileData(this.filePrefixSuffix.filePrefix + this.filePrefixSuffix.chartOneSuffix).subscribe(function (response) {
             _this.chartData.chart1 = response.fileContentMappedData;
@@ -364,18 +371,7 @@ var UAInteractiveChartComponent = (function () {
             if (_this.chart.view2 == 'barChart') {
                 _this.updateChartData('COMPLEXITY');
             }
-            if (_this.isInteractive) {
-                var fileKey = _this.filePrefixSuffix.filePrefix + '_' + _this.selectedSection + _this.filePrefixSuffix.chartOneSuffix;
-                _this.FetchFileService.getFileData(fileKey).subscribe(function (response) {
-                    _this.chartData.chart2 = response.fileContentMappedData;
-                });
-            }
-            else {
-                var fileKey = _this.filePrefixSuffix.filePrefix + _this.filePrefixSuffix.chartOneSuffix + '_' + _this.filePrefixSuffix.chartTwoSuffix;
-                _this.FetchFileService.getFileData(fileKey).subscribe(function (response) {
-                    _this.chartData.chart2 = response.fileContentMappedData;
-                });
-            }
+            _this.fetchChartTwoData();
         });
     };
     UAInteractiveChartComponent.prototype.identifyChartSection = function () {
@@ -393,13 +389,9 @@ var UAInteractiveChartComponent = (function () {
         this.totalCount.emit(count);
     };
     UAInteractiveChartComponent.prototype.pieClicked = function (sectionName) {
-        var _this = this;
         this.selectedSection = sectionName;
         this.selectedSectionName.emit(this.selectedSection);
-        var fileKey = this.filePrefixSuffix.filePrefix + '_' + this.selectedSection + this.filePrefixSuffix.chartOneSuffix;
-        this.FetchFileService.getFileData(fileKey).subscribe(function (response) {
-            _this.chartData.chart2 = response.fileContentMappedData;
-        });
+        this.fetchChartTwoData();
     };
     UAInteractiveChartComponent.prototype.updateChartData = function (type) {
         var _this = this;
@@ -461,6 +453,28 @@ var UAInteractiveChartComponent = (function () {
             _this.chartData.chart2 = typeData;
         }, 500);
     };
+    UAInteractiveChartComponent.prototype.setDataByType = function (type) {
+        this.dataByType = type;
+        this.fetchChartTwoData();
+    };
+    UAInteractiveChartComponent.prototype.fetchChartTwoData = function () {
+        var _this = this;
+        var fileKey = '';
+        if (this.isInteractive) {
+            if (this.chartToggle) {
+                fileKey = this.filePrefixSuffix.filePrefix + '_' + this.selectedSection + '_' + this.dataByType + this.filePrefixSuffix.chartTwoSuffix;
+            }
+            else {
+                fileKey = this.filePrefixSuffix.filePrefix + '_' + this.selectedSection + this.filePrefixSuffix.chartTwoSuffix;
+            }
+        }
+        else {
+            fileKey = this.filePrefixSuffix.filePrefix + this.filePrefixSuffix.chartOneSuffix + '_' + this.filePrefixSuffix.chartTwoSuffix;
+        }
+        this.FetchFileService.getFileData(fileKey).subscribe(function (response) {
+            _this.chartData.chart2 = response.fileContentMappedData;
+        });
+    };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
         __metadata("design:type", Object)
@@ -489,6 +503,14 @@ var UAInteractiveChartComponent = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", String)
     ], UAInteractiveChartComponent.prototype, "view2", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Boolean)
+    ], UAInteractiveChartComponent.prototype, "chartToggle", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", Array)
+    ], UAInteractiveChartComponent.prototype, "dataByTypeList", void 0);
     UAInteractiveChartComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "ua-interactive-chart",
@@ -1037,7 +1059,7 @@ var UAImpactComponent = (function () {
 /***/ "../../../../../src/app/common/inventory/ua.inventory.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"view-wrapper col-xs-12 s4-container\">\r\n\t<ua-tiles [tileFileName] = \"tileFileName\"></ua-tiles>\r\n\t<div class=\"graph-label-container col-xs-12\">\r\n\t\t<div class=\"col-xs-6\">\r\n\t\t\t<b>Custom Inventory Breakup</b>\r\n\t\t</div>\r\n\t\t<div class=\"col-xs-6\">\r\n\t\t\t<b>Custom Developments - Object Breakup</b>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"inventory-graph-container col-xs-12\">\r\n\t\t<ua-interactive-chart [filePrefixSuffix]=\"filePrefixSuffix\" [keyName]=\"keyName\" (selectedSectionName)=\"fetchTable($event)\" [isInteractive]=\"isInteractive\" [view1]=\"view1\" [view2]=\"view2\" ></ua-interactive-chart>\r\n\t</div>\r\n\t<div class=\"col-xs-3 pull-right text-right margin-15\">\r\n\t\t\t\t<a class=\"btn btn-primary\" (click)=\"showTable = !showTable\">Show/Hide Total Data</a>\r\n\t\t\t</div>\r\n\t<div class=\"col-xs-12\" *ngIf=\"showTable\">\r\n\t\t<ua-table  [fileName] = \"tableFileName\"></ua-table>\r\n\t</div>\r\n</div>"
+module.exports = "<div class=\"view-wrapper col-xs-12 s4-container\">\r\n\t<ua-tiles [tileFileName] = \"tileFileName\"></ua-tiles>\r\n\t<div class=\"graph-label-container col-xs-12\">\r\n\t\t<div class=\"col-xs-6\">\r\n\t\t\t<b>Custom Inventory Breakup</b>\r\n\t\t</div>\r\n\t\t<div class=\"col-xs-6\">\r\n\t\t\t<b>Custom Developments - Object Breakup</b>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"inventory-graph-container col-xs-12\">\r\n\t\t<ua-interactive-chart [filePrefixSuffix]=\"filePrefixSuffix\" [keyName]=\"keyName\" (selectedSectionName)=\"fetchTable($event)\" [isInteractive]=\"isInteractive\" [view1]=\"view1\" [view2]=\"view2\" ></ua-interactive-chart>\r\n\t</div>\r\n\t<div class=\"table-container col-xs-12 no-padding\">\r\n\t\t<div class=\"col-xs-3 pull-right text-right\">\r\n\t\t\t<a class=\"btn btn-primary\" (click)=\"showTable = !showTable\">Show/Hide Total Data</a>\r\n\t\t</div>\r\n\t\t<div class=\"col-xs-12 no-border\" *ngIf=\"showTable\">\r\n\t\t\t<ua-table  [fileName] = \"tableFileName\"></ua-table>\r\n\t\t</div>\r\n\t</div>\r\n</div>"
 
 /***/ }),
 
@@ -1186,10 +1208,61 @@ var UAAnalysisRootComponent = (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/common/sfour/ua.readinesscheck.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"view-wrapper col-xs-12 s4-container\">\r\n\t<ua-tiles [tileFileName] = \"tileFileName\"></ua-tiles>\r\n\r\n\t<div class=\"s4-graph-container col-xs-12\">\r\n\t\t<ua-interactive-chart [filePrefixSuffix]=\"filePrefixSuffix\" [keyName]=\"keyName\" (selectedSectionName)=\"fetchTable($event)\" [isInteractive]=\"isInteractive\" [view1]=\"view1\" [view2]=\"view2\" ></ua-interactive-chart>\r\n\t</div>\r\n\t<div class=\"table-container col-xs-12 no-padding\">\r\n\t\t<div class=\"col-xs-3 pull-right text-right\">\r\n\t\t\t<a class=\"btn btn-primary\" (click)=\"showTable = !showTable\">Show/Hide Total Data</a>\r\n\t\t</div>\r\n\t\t<div class=\"col-xs-12 no-border\" *ngIf=\"showTable\">\r\n\t\t\t<ua-table  [fileName] = \"tableFileName\"></ua-table>\r\n\t\t</div>\r\n\t</div>\r\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/common/sfour/ua.readinesscheck.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UAReadinessCheckComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dto_fileNamingConvention__ = __webpack_require__("../../../../../src/app/common/dto/fileNamingConvention.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+var UAReadinessCheckComponent = (function () {
+    function UAReadinessCheckComponent() {
+    }
+    UAReadinessCheckComponent.prototype.ngOnInit = function () {
+        this.filePrefixSuffix = new __WEBPACK_IMPORTED_MODULE_1__dto_fileNamingConvention__["a" /* fileNamingConvention */]("READINESS", "_SUMMARY", "_IMPACT", "_DATA");
+        this.keyName = "AREANAME";
+        this.tileFileName = 'READINESS_COUNT_SUMMARY';
+        this.showTable = false;
+        this.isInteractive = true;
+        this.view1 = 'pieChart';
+        this.view2 = 'donutchart';
+    };
+    UAReadinessCheckComponent.prototype.fetchTable = function (selectedSectionName) {
+        console.log('table for-' + selectedSectionName);
+        this.tableFileName = this.filePrefixSuffix.filePrefix + '_' + selectedSectionName + this.filePrefixSuffix.tableSuffix;
+    };
+    UAReadinessCheckComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: "ua-readiness-check",
+            template: __webpack_require__("../../../../../src/app/common/sfour/ua.readinesscheck.component.html")
+        })
+    ], UAReadinessCheckComponent);
+    return UAReadinessCheckComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/common/sfour/ua.sfourhana.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ua-subtabs [subTabItems]=\"subTabItems\" (selectedTab)=\"tabChange($event)\"></ua-subtabs>\r\n<div *ngIf=\"selectedTab==='busFunctions'\">\r\n\tBF tab\r\n</div>\r\n<div *ngIf=\"selectedTab==='readycheck'\">\r\n\treadiness tab\r\n</div>\r\n<div *ngIf=\"selectedTab==='SYCM'\">\r\n\tSYCM tab\r\n</div>"
+module.exports = "<ua-subtabs [subTabItems]=\"subTabItems\" (selectedTab)=\"tabChange($event)\"></ua-subtabs>\r\n<div *ngIf=\"selectedTab==='busFunctions'\">\r\n\tBF tab\r\n</div>\r\n<div *ngIf=\"selectedTab==='readycheck'\">\r\n\t<ua-readiness-check></ua-readiness-check>\r\n</div>\r\n<div *ngIf=\"selectedTab==='SYCM'\">\r\n\t<ua-sycm></ua-sycm>\r\n</div>"
 
 /***/ }),
 
@@ -1223,7 +1296,7 @@ var UASFourHanaComponent = (function () {
             },
             {
                 key: "SYCM",
-                value: "Code Incompatibilities ",
+                value: "Code Incompatibilities",
                 required: true
             }
         ];
@@ -1246,10 +1319,63 @@ var UASFourHanaComponent = (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/common/sfour/ua.sycm.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"view-wrapper col-xs-12 s4-container\">\r\n    <ua-tiles [tileFileName] = \"tileFileName\"></ua-tiles>\r\n\r\n    <div class=\"s4-graph-container col-xs-12\">\r\n        <ua-interactive-chart [filePrefixSuffix]=\"filePrefixSuffix\" [keyName]=\"keyName\" (selectedSectionName)=\"fetchTable($event)\" [isInteractive]=\"isInteractive\" [view1]=\"view1\" [view2]=\"view2\" [chartToggle]=\"chartToggle\" [dataByTypeList]=\"dataByTypeList\"></ua-interactive-chart>\r\n    </div>\r\n    <div class=\"table-container col-xs-12 no-padding\">\r\n        <div class=\"col-xs-3 pull-right text-right\">\r\n            <a class=\"btn btn-primary\" (click)=\"showTable = !showTable\">Show/Hide Total Data</a>\r\n        </div>\r\n        <div class=\"col-xs-12 no-border\" *ngIf=\"showTable\">\r\n            <ua-table  [fileName] = \"tableFileName\"></ua-table>\r\n        </div>\r\n    </div>\r\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/common/sfour/ua.sycm.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UASycmComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dto_fileNamingConvention__ = __webpack_require__("../../../../../src/app/common/dto/fileNamingConvention.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+var UASycmComponent = (function () {
+    function UASycmComponent() {
+    }
+    UASycmComponent.prototype.ngOnInit = function () {
+        this.filePrefixSuffix = new __WEBPACK_IMPORTED_MODULE_1__dto_fileNamingConvention__["a" /* fileNamingConvention */]("SYCM", "_SUMMARY", "_SUMMARY", "_DATA");
+        this.keyName = "OBJTYPE";
+        this.tileFileName = 'SYCM_COUNT_SUMMARY';
+        this.showTable = false;
+        this.isInteractive = true;
+        this.view1 = 'pieChart';
+        this.view2 = 'donutchart';
+        this.chartToggle = true;
+        this.dataByTypeList = ['COMPLEXITY', 'CATEGORY'];
+    };
+    UASycmComponent.prototype.fetchTable = function (selectedSectionName) {
+        console.log('table for-' + selectedSectionName);
+        this.tableFileName = this.filePrefixSuffix.filePrefix + '_' + selectedSectionName + this.filePrefixSuffix.tableSuffix;
+    };
+    UASycmComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: "ua-sycm",
+            template: __webpack_require__("../../../../../src/app/common/sfour/ua.sycm.component.html")
+        })
+    ], UASycmComponent);
+    return UASycmComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/common/subtabs/ua.subtabs.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ul class=\"sub-nav  col-xs-12\">\r\n\t<ng-container *ngFor= \"let subTabItem of subTabItems\">\r\n\t\t<li  *ngIf=\"subTabItem.required\" (click)=\"tabSelect(subTabItem.key)\"><a >{{subTabItem.value}} </a></li>\r\n\t</ng-container>\r\n</ul>"
+module.exports = "<ul class=\"sub-nav  col-xs-12\">\r\n\t<ng-container *ngFor= \"let subTabItem of subTabItems\">\r\n\t\t<li *ngIf=\"subTabItem.required\" (click)=\"tabSelect(subTabItem.key)\" [ngClass]=\"{'active':tabName===subTabItem.key}\">\r\n\t\t\t<a>{{subTabItem.value}}</a>\r\n\t\t</li>\r\n\t</ng-container>\r\n</ul>"
 
 /***/ }),
 
@@ -1273,7 +1399,11 @@ var UASubTabsComponent = (function () {
     function UASubTabsComponent() {
         this.selectedTab = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
     }
+    UASubTabsComponent.prototype.ngOnInit = function () {
+        this.tabName = this.subTabItems[0].key;
+    };
     UASubTabsComponent.prototype.tabSelect = function (tabKey) {
+        this.tabName = tabKey;
         this.selectedTab.emit(tabKey);
     };
     __decorate([
