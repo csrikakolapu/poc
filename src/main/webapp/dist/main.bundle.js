@@ -973,7 +973,7 @@ module.exports = "<ua-header></ua-header>\r\n<router-outlet></router-outlet>"
 /***/ "../../../../../src/app/common/impact/ua.impact.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n\tImpact page\r\n</div>\r\n\r\n<ua-subtabs [subTabItems]=\"subTabItems\"></ua-subtabs>"
+module.exports = "<div>\r\n\tImpact page\r\n</div>\r\n\r\n<ua-subtabs [subTabItems]=\"subTabItems\" (selectedTab)=\"tabChange($event)\"></ua-subtabs>"
 
 /***/ }),
 
@@ -1016,6 +1016,10 @@ var UAImpactComponent = (function () {
                 required: false
             }
         ];
+    };
+    UAImpactComponent.prototype.tabChange = function (tabKey) {
+        this.selectedTab = tabKey;
+        console.log(this.selectedTab);
     };
     UAImpactComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -1185,7 +1189,7 @@ var UAAnalysisRootComponent = (function () {
 /***/ "../../../../../src/app/common/sfour/ua.sfourhana.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>S4tab</div>\r\n<ua-subtabs [subTabItems]=\"subTabItems\"></ua-subtabs>"
+module.exports = "<ua-subtabs [subTabItems]=\"subTabItems\" (selectedTab)=\"tabChange($event)\"></ua-subtabs>\r\n<div *ngIf=\"selectedTab==='busFunctions'\">\r\n\tBF tab\r\n</div>\r\n<div *ngIf=\"selectedTab==='readycheck'\">\r\n\treadiness tab\r\n</div>\r\n<div *ngIf=\"selectedTab==='SYCM'\">\r\n\tSYCM tab\r\n</div>"
 
 /***/ }),
 
@@ -1223,6 +1227,11 @@ var UASFourHanaComponent = (function () {
                 required: true
             }
         ];
+        this.selectedTab = 'busFunctions';
+    };
+    UASFourHanaComponent.prototype.tabChange = function (tabKey) {
+        this.selectedTab = tabKey;
+        console.log(this.selectedTab);
     };
     UASFourHanaComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
@@ -1240,7 +1249,7 @@ var UASFourHanaComponent = (function () {
 /***/ "../../../../../src/app/common/subtabs/ua.subtabs.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ul class=\"sub-nav  col-xs-12\">\r\n\t<ng-container *ngFor= \"let subTabItem of subTabItems\">\r\n\t\t<li  *ngIf=\"subTabItem.required\"><a >{{subTabItem.value}} </a></li>\r\n\t</ng-container>\r\n</ul>"
+module.exports = "<ul class=\"sub-nav  col-xs-12\">\r\n\t<ng-container *ngFor= \"let subTabItem of subTabItems\">\r\n\t\t<li  *ngIf=\"subTabItem.required\" (click)=\"tabSelect(subTabItem.key)\"><a >{{subTabItem.value}} </a></li>\r\n\t</ng-container>\r\n</ul>"
 
 /***/ }),
 
@@ -1262,11 +1271,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var UASubTabsComponent = (function () {
     function UASubTabsComponent() {
+        this.selectedTab = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"]();
     }
+    UASubTabsComponent.prototype.tabSelect = function (tabKey) {
+        this.selectedTab.emit(tabKey);
+    };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
         __metadata("design:type", Array)
     ], UASubTabsComponent.prototype, "subTabItems", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
+        __metadata("design:type", Object)
+    ], UASubTabsComponent.prototype, "selectedTab", void 0);
     UASubTabsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "ua-subtabs",

@@ -1,5 +1,5 @@
 <ul class="sub-nav  col-xs-12">
 	<ng-container *ngFor= "let subTabItem of subTabItems">
-		<li  *ngIf="subTabItem.required"><a >{{subTabItem.value}} </a></li>
+		<li  *ngIf="subTabItem.required" (click)="tabSelect(subTabItem.key)"><a >{{subTabItem.value}} </a></li>
 	</ng-container>
 </ul>

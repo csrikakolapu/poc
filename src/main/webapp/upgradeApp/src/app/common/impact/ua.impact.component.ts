@@ -9,6 +9,7 @@ import { SubTabItem } from '../dto/subtabitem';
 export class UAImpactComponent implements OnInit {
 
     subTabItems:SubTabItem [];
+    selectedTab:string;
 
     ngOnInit() {
         this.subTabItems = [
@@ -33,6 +34,11 @@ export class UAImpactComponent implements OnInit {
                 required:false
             }
         ];
+    }
+
+    tabChange(tabKey:string){
+        this.selectedTab = tabKey;
+        console.log(this.selectedTab);
     }
     
 }

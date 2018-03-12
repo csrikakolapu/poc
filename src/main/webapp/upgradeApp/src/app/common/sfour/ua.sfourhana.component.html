@@ -1,2 +1,10 @@
-<div>S4tab</div>
-<ua-subtabs [subTabItems]="subTabItems"></ua-subtabs>
+<ua-subtabs [subTabItems]="subTabItems" (selectedTab)="tabChange($event)"></ua-subtabs>
+<div *ngIf="selectedTab==='busFunctions'">
+	BF tab
+</div>
+<div *ngIf="selectedTab==='readycheck'">
+	readiness tab
+</div>
+<div *ngIf="selectedTab==='SYCM'">
+	SYCM tab
+</div>

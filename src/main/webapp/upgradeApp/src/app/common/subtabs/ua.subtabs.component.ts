@@ -1,4 +1,4 @@
-import { Component,Input } from '@angular/core';
+import { Component,Input,EventEmitter, Output } from '@angular/core';
 
 import { Router, ActivatedRoute } from '@angular/router';
 import { SubTabItem } from '../dto/subtabitem';
@@ -12,4 +12,9 @@ import { SubTabItem } from '../dto/subtabitem';
 
 export class UASubTabsComponent{
     @Input() subTabItems : SubTabItem[];
+    @Output() selectedTab = new EventEmitter<string>();
+
+    tabSelect(tabKey:string){
+    	this.selectedTab.emit(tabKey);
+    }
 }

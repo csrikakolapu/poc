@@ -10,6 +10,7 @@ import { SubTabItem } from '../dto/subtabitem';
 export class UASFourHanaComponent implements OnInit {
     
     subTabItems:SubTabItem [];
+    selectedTab:string;
 
     ngOnInit() {
         this.subTabItems = [
@@ -29,5 +30,12 @@ export class UASFourHanaComponent implements OnInit {
                 required:true
             }
         ];
+        
+        this.selectedTab = 'busFunctions';
+    }
+
+    tabChange(tabKey:string){
+        this.selectedTab = tabKey;
+        console.log(this.selectedTab);
     }
 }
