@@ -30,6 +30,7 @@ import { UAChartTableComponent } from './common/table/ua.charttable.component';
 import { UAPieChartComponent } from './common/charts/ua.piechart';
 import { UAInteractiveChartComponent } from './common/charts/ua.interactivecharts';
 import { UAReadinessCheckComponent } from './common/sfour/ua.readinesscheck.component';
+import { UASycmComponent } from './common/sfour/ua.sycm.component';
 
 import { KeysPipe } from './file-data-transform-pipe';
 
@@ -70,8 +71,8 @@ import { FetchFileService } from './fetch-file.service';
     UAPieChartComponent,
     UAInteractiveChartComponent,
     KeysPipe,
-    UAReadinessCheckComponent
-    
+    UAReadinessCheckComponent,
+    UASycmComponent
   ],
   bootstrap: [
     AppComponent 

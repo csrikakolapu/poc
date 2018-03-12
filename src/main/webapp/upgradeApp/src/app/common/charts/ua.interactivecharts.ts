@@ -19,9 +19,12 @@ export class UAInteractiveChartComponent implements OnInit{
     @Input() isInteractive : boolean;
     @Input() view1 : string;
     @Input() view2 : string;
+    @Input() chartToggle : boolean;
+    @Input() dataByTypeList : string[];
     showPieChart : boolean;
     showDonutChart : boolean;
     showBarChart : boolean;
+    dataByType: string;
     
     constructor(private FetchFileService: FetchFileService){}
 
@@ -37,6 +40,8 @@ export class UAInteractiveChartComponent implements OnInit{
         this.showDonutChart = false;
         this.showBarChart = false;
 
+        this.dataByType = 'COMPLEXITY';
+
         this.identifyChartSection();
 
         this.FetchFileService.getFileData(this.filePrefixSuffix.filePrefix + this.filePrefixSuffix.chartOneSuffix).subscribe(response => {
@@ -48,19 +53,8 @@ export class UAInteractiveChartComponent implements OnInit{
             if(this.chart.view2 == 'barChart'){
                 this.updateChartData('COMPLEXITY');
             }
-            if(this.isInteractive){
 
-                var fileKey = this.filePrefixSuffix.filePrefix + '_' + this.selectedSection + this.filePrefixSuffix.chartTwoSuffix;
-                this.FetchFileService.getFileData(fileKey).subscribe(response => {
-                    this.chartData.chart2 = response.fileContentMappedData;
-                });
-            }else{
-                var fileKey = this.filePrefixSuffix.filePrefix + this.filePrefixSuffix.chartOneSuffix+ '_'+this.filePrefixSuffix.chartTwoSuffix;
-                this.FetchFileService.getFileData(fileKey).subscribe(response => {
-                    this.chartData.chart2 = response.fileContentMappedData;
-                });
-            }
-
+            this.fetchChartTwoData();
 
         });
 
@@ -82,10 +76,7 @@ export class UAInteractiveChartComponent implements OnInit{
     pieClicked(sectionName:string){
         this.selectedSection = sectionName;
         this.selectedSectionName.emit(this.selectedSection);
-        var fileKey = this.filePrefixSuffix.filePrefix + '_' +this.selectedSection + this.filePrefixSuffix.chartTwoSuffix;
-        this.FetchFileService.getFileData(fileKey).subscribe(response => {
-            this.chartData.chart2 = response.fileContentMappedData;
-        });
+        this.fetchChartTwoData();
     }
     updateChartData(type:string){
         this.chart.showAs = type;
@@ -146,4 +137,26 @@ export class UAInteractiveChartComponent implements OnInit{
         },500);
     }
 
+    setDataByType(type){
+        this.dataByType = type;
+        this.fetchChartTwoData();
+    }
+
+    fetchChartTwoData(){
+        var fileKey = '';
+        if(this.isInteractive){
+            if(this.chartToggle){
+                fileKey = this.filePrefixSuffix.filePrefix + '_' + this.selectedSection + '_' + this.dataByType + this.filePrefixSuffix.chartTwoSuffix;
+            }
+            else{
+                fileKey = this.filePrefixSuffix.filePrefix + '_' + this.selectedSection + this.filePrefixSuffix.chartTwoSuffix;
+            }
+        }else{
+            fileKey = this.filePrefixSuffix.filePrefix + this.filePrefixSuffix.chartOneSuffix+ '_'+this.filePrefixSuffix.chartTwoSuffix;
+        }
+
+        this.FetchFileService.getFileData(fileKey).subscribe(response => {
+            this.chartData.chart2 = response.fileContentMappedData;
+        });
+    }
 }

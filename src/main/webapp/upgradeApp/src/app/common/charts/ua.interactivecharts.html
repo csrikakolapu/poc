@@ -17,14 +17,32 @@
 </div>
 <div class="col-xs-6 graph-box padding-top-10" *ngIf="showDonutChart">
 	<div class="pull-left col-xs-9">&nbsp;</div>
-	<div class="pull-right col-xs-3 switch-block-container no-padding"> 
-		<a class="switch-block col-xs-6 border-right text-center" href="javascript:void(0)" (click)="chart.view2='donutchart'" ng-class="chart.view2=='donutchart'?'active':''" title="Pie">
+
+	<div class="pull-right col-xs-3 switch-block-container no-padding" *ngIf="!chartToggle"> 
+		<a class="switch-block col-xs-6 border-right text-center" href="javascript:void(0)" (click)="chart.view2='donutchart'" ng-class="chart.view2=='donutchart'?'active':''" title="Donut">
 			<span class="fa-lg fa fa-pie-chart fa-lg"></span>
 		</a>
 		<a class="switch-block col-xs-6 text-center" ng-class="chart.view2=='table'?'active':''" href="javascript:void(0)" (click)="chart.view2='table'" title="Tabular">
 			<span class="fa fa-table fa-lg"></span>
 		</a>
 	</div>
+
+	<div class="pull-right col-xs-6 switch-block-container no-padding" *ngIf="chartToggle"> 
+		<div class="col-xs-9 no-padding">
+		    <a class="switch-block border-right text-center" href="javascript:void(0)" (click)="setDataByType(dataByTypeItem)" title="Chart" [ngClass]="{'active': dataByType === dataByTypeItem, 'col-xs-6': dataByTypeList.length == 2, 'col-xs-4': dataByTypeList.length == 3}" *ngFor="let dataByTypeItem of dataByTypeList">
+				<span class="fa">{{dataByTypeItem}}</span>
+			</a>
+		</div>
+		<div class="col-xs-3 no-padding">
+			<a class="switch-block col-xs-6 border-right text-center" href="javascript:void(0)" (click)="chart.view2='donutchart'" ng-class="chart.view2=='donutchart'?'active':''" title="Donut">
+				<span class="fa-lg fa fa-pie-chart fa-lg"></span>
+			</a>
+			<a class="switch-block col-xs-6 text-center" ng-class="chart.view2=='table'?'active':''" href="javascript:void(0)" (click)="chart.view2='table'" title="Tabular">
+				<span class="fa fa-table fa-lg"></span>
+			</a>
+		</div>
+	</div>
+
 	<div class="center-section clear-both">
 		<ua-donut-chart *ngIf="chart.view2=='donutchart'" [data]="chartData.chart2"></ua-donut-chart>
 		<div class="tabular-data" *ngIf="chart.view2=='table'">
