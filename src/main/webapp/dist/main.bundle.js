@@ -1343,7 +1343,7 @@ var UAImpactTypeComponent = (function () {
         this.view1 = 'pieChart';
         this.view2 = 'donutchart';
         this.chartToggle = true;
-        this.dataByTypeList = ['COMPLEXITY', 'CATEGORY', 'ERROR'];
+        this.dataByTypeList = ['COMPLEXITY', 'SEVERITY', 'ERRORTYPE'];
     };
     UAImpactTypeComponent.prototype.fetchTable = function (selectedSectionName) {
         this.tableFileName = this.filePrefixSuffix.filePrefix + '_' + selectedSectionName;

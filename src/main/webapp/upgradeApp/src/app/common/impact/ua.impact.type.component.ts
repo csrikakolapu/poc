@@ -36,7 +36,7 @@ export class UAImpactTypeComponent implements OnInit {
         this.view1 ='pieChart';
         this.view2 ='donutchart';
         this.chartToggle = true;
-        this.dataByTypeList = ['COMPLEXITY', 'CATEGORY','ERROR'];
+        this.dataByTypeList = ['COMPLEXITY', 'SEVERITY','ERRORTYPE'];
     }
     fetchTable(selectedSectionName:string){
         this.tableFileName = this.filePrefixSuffix.filePrefix+'_'+selectedSectionName;
