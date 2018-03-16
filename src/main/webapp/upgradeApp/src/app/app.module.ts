@@ -17,6 +17,7 @@ import { UAAnalysisNavTabsComponent } from './common/navtabs/ua.analysis.navtabs
 import { UABarChartComponent } from './common/charts/ua.barchart';
 import { UAInventoryComponent } from './common/inventory/ua.inventory.component';
 import { UAImpactComponent } from './common/impact/ua.impact.component';
+import { UAImpactTypeComponent } from './common/impact/ua.impact.type.component';
 import { UABPComponent } from './common/bp/ua.bp.component';
 import { UASFourHanaComponent } from './common/sfour/ua.sfourhana.component';
 import { UATilesComponent } from './common/tiles/ua.tile.component';
@@ -31,6 +32,8 @@ import { UAPieChartComponent } from './common/charts/ua.piechart';
 import { UAInteractiveChartComponent } from './common/charts/ua.interactivecharts';
 import { UAReadinessCheckComponent } from './common/sfour/ua.readinesscheck.component';
 import { UASycmComponent } from './common/sfour/ua.sycm.component';
+
+
 
 import { KeysPipe } from './file-data-transform-pipe';
 
@@ -59,6 +62,7 @@ import { FetchFileService } from './fetch-file.service';
     UABarChartComponent,
     UAInventoryComponent,
     UAImpactComponent,
+    UAImpactTypeComponent,
     UABPComponent,
     UASFourHanaComponent,
     UATilesComponent,

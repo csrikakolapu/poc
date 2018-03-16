@@ -17,25 +17,28 @@ export class UASFourHanaComponent implements OnInit {
             {  
                 key:"busFunctions",
                 value:"Business Functions",
-                required:true
+                required:true,
+                filePrefix:''
             },
             {  
                 key:"readycheck",
                 value:"Readiness Check",
-                required:true
+                required:true,
+                filePrefix:''
             },
             {  
                 key:"SYCM",
                 value:"Code Incompatibilities",
-                required:true
+                required:true,
+                filePrefix:''
             }
         ];
 
         this.selectedTab = 'busFunctions';
     }
 
-    tabChange(tabKey:string){
-        this.selectedTab = tabKey;
+    tabChange(tabKey){
+        this.selectedTab = tabKey.key;
         console.log(this.selectedTab);
     }
 }

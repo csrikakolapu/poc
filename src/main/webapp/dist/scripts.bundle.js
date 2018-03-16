@@ -77,5 +77,5 @@ if (typeof window !== 'undefined') {
  */
 Chart.canvasHelpers = Chart.helpers.canvas;
 
-
+;
 //# sourceMappingURL=scripts.bundle.js.map

@@ -1,4 +1,4 @@
-Obj	key	value
+obj	key	value
 PROG	Programs	1670
 ENH	Enhancements	207
 BDC	BDC objects	42

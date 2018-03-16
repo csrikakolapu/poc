@@ -12,15 +12,16 @@ import { SubTabItem } from '../dto/subtabitem';
 
 export class UASubTabsComponent implements OnInit{
     @Input() subTabItems : SubTabItem[];
-    @Output() selectedTab = new EventEmitter<string>();
+    @Output() selectedTab = new EventEmitter<any>();
     tabName: string;
 
     ngOnInit() {
     	this.tabName = this.subTabItems[0].key;
+        this.selectedTab.emit(this.subTabItems[0]);
     }
 
-    tabSelect(tabKey:string){
-    	this.tabName = tabKey;
+    tabSelect(tabKey){
+    	this.tabName = tabKey.key;
     	this.selectedTab.emit(tabKey);
     }
 }

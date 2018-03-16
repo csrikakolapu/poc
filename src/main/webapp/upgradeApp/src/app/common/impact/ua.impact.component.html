@@ -1,19 +1,6 @@
 <ua-subtabs [subTabItems]="subTabItems" (selectedTab)="tabChange($event)"></ua-subtabs>
 
-<ua-impact-type [filePrefix]="filePrefix" [selectedTab]="selectedTab"></ua-impact-type>
+<ng-container *ngFor= "let subTabItem of subTabItems">
+	<ua-impact-type *ngIf="selectedTab == subTabItem.key" [filePrefix]="filePrefix" [selectedTab]="selectedTab"></ua-impact-type>	
+</ng-container>
 
-
-<!-- <div class="view-container" ng-show="selected == 'performance'">
-	<div  class="iA-container view-wrapper col-xs-12">
-		<ua-tiles [tileFileName] = "tileFileName"></ua-tiles>
-	</div>	
-	<div class="inventory-graph-container col-xs-12">
-		<ua-interactive-chart [filePrefixSuffix]="filePrefixSuffix" [keyName]="keyName" (selectedSectionName)="fetchTable($event)" [isInteractive]="isInteractive" [view1]="view1" [view2]="view2" ></ua-interactive-chart>
-	</div>
-	<div class="col-xs-3 pull-right text-right margin-15">
-				<a class="btn btn-primary" (click)="showTable = !showTable">Show/Hide Total Data</a>
-			</div>
-	<div class="col-xs-12" *ngIf="showTable">
-		<ua-table  [fileName] = "tableFileName"></ua-table>
-	</div>
-</div> -->

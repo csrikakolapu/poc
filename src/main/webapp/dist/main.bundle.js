@@ -1,6 +1,259 @@
 webpackJsonp(["main"],{
 
-/***/ "../../../../../src/$$_lazy_route_resource lazy recursive":
+/***/ "./node_modules/moment/locale recursive ^\\.\\/.*$":
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./af": "./node_modules/moment/locale/af.js",
+	"./af.js": "./node_modules/moment/locale/af.js",
+	"./ar": "./node_modules/moment/locale/ar.js",
+	"./ar-dz": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-dz.js": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-kw": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-kw.js": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-ly": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ly.js": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ma": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-ma.js": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-sa": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-sa.js": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-tn": "./node_modules/moment/locale/ar-tn.js",
+	"./ar-tn.js": "./node_modules/moment/locale/ar-tn.js",
+	"./ar.js": "./node_modules/moment/locale/ar.js",
+	"./az": "./node_modules/moment/locale/az.js",
+	"./az.js": "./node_modules/moment/locale/az.js",
+	"./be": "./node_modules/moment/locale/be.js",
+	"./be.js": "./node_modules/moment/locale/be.js",
+	"./bg": "./node_modules/moment/locale/bg.js",
+	"./bg.js": "./node_modules/moment/locale/bg.js",
+	"./bn": "./node_modules/moment/locale/bn.js",
+	"./bn.js": "./node_modules/moment/locale/bn.js",
+	"./bo": "./node_modules/moment/locale/bo.js",
+	"./bo.js": "./node_modules/moment/locale/bo.js",
+	"./br": "./node_modules/moment/locale/br.js",
+	"./br.js": "./node_modules/moment/locale/br.js",
+	"./bs": "./node_modules/moment/locale/bs.js",
+	"./bs.js": "./node_modules/moment/locale/bs.js",
+	"./ca": "./node_modules/moment/locale/ca.js",
+	"./ca.js": "./node_modules/moment/locale/ca.js",
+	"./cs": "./node_modules/moment/locale/cs.js",
+	"./cs.js": "./node_modules/moment/locale/cs.js",
+	"./cv": "./node_modules/moment/locale/cv.js",
+	"./cv.js": "./node_modules/moment/locale/cv.js",
+	"./cy": "./node_modules/moment/locale/cy.js",
+	"./cy.js": "./node_modules/moment/locale/cy.js",
+	"./da": "./node_modules/moment/locale/da.js",
+	"./da.js": "./node_modules/moment/locale/da.js",
+	"./de": "./node_modules/moment/locale/de.js",
+	"./de-at": "./node_modules/moment/locale/de-at.js",
+	"./de-at.js": "./node_modules/moment/locale/de-at.js",
+	"./de-ch": "./node_modules/moment/locale/de-ch.js",
+	"./de-ch.js": "./node_modules/moment/locale/de-ch.js",
+	"./de.js": "./node_modules/moment/locale/de.js",
+	"./dv": "./node_modules/moment/locale/dv.js",
+	"./dv.js": "./node_modules/moment/locale/dv.js",
+	"./el": "./node_modules/moment/locale/el.js",
+	"./el.js": "./node_modules/moment/locale/el.js",
+	"./en-au": "./node_modules/moment/locale/en-au.js",
+	"./en-au.js": "./node_modules/moment/locale/en-au.js",
+	"./en-ca": "./node_modules/moment/locale/en-ca.js",
+	"./en-ca.js": "./node_modules/moment/locale/en-ca.js",
+	"./en-gb": "./node_modules/moment/locale/en-gb.js",
+	"./en-gb.js": "./node_modules/moment/locale/en-gb.js",
+	"./en-ie": "./node_modules/moment/locale/en-ie.js",
+	"./en-ie.js": "./node_modules/moment/locale/en-ie.js",
+	"./en-nz": "./node_modules/moment/locale/en-nz.js",
+	"./en-nz.js": "./node_modules/moment/locale/en-nz.js",
+	"./eo": "./node_modules/moment/locale/eo.js",
+	"./eo.js": "./node_modules/moment/locale/eo.js",
+	"./es": "./node_modules/moment/locale/es.js",
+	"./es-do": "./node_modules/moment/locale/es-do.js",
+	"./es-do.js": "./node_modules/moment/locale/es-do.js",
+	"./es.js": "./node_modules/moment/locale/es.js",
+	"./et": "./node_modules/moment/locale/et.js",
+	"./et.js": "./node_modules/moment/locale/et.js",
+	"./eu": "./node_modules/moment/locale/eu.js",
+	"./eu.js": "./node_modules/moment/locale/eu.js",
+	"./fa": "./node_modules/moment/locale/fa.js",
+	"./fa.js": "./node_modules/moment/locale/fa.js",
+	"./fi": "./node_modules/moment/locale/fi.js",
+	"./fi.js": "./node_modules/moment/locale/fi.js",
+	"./fo": "./node_modules/moment/locale/fo.js",
+	"./fo.js": "./node_modules/moment/locale/fo.js",
+	"./fr": "./node_modules/moment/locale/fr.js",
+	"./fr-ca": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ca.js": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ch": "./node_modules/moment/locale/fr-ch.js",
+	"./fr-ch.js": "./node_modules/moment/locale/fr-ch.js",
+	"./fr.js": "./node_modules/moment/locale/fr.js",
+	"./fy": "./node_modules/moment/locale/fy.js",
+	"./fy.js": "./node_modules/moment/locale/fy.js",
+	"./gd": "./node_modules/moment/locale/gd.js",
+	"./gd.js": "./node_modules/moment/locale/gd.js",
+	"./gl": "./node_modules/moment/locale/gl.js",
+	"./gl.js": "./node_modules/moment/locale/gl.js",
+	"./gom-latn": "./node_modules/moment/locale/gom-latn.js",
+	"./gom-latn.js": "./node_modules/moment/locale/gom-latn.js",
+	"./he": "./node_modules/moment/locale/he.js",
+	"./he.js": "./node_modules/moment/locale/he.js",
+	"./hi": "./node_modules/moment/locale/hi.js",
+	"./hi.js": "./node_modules/moment/locale/hi.js",
+	"./hr": "./node_modules/moment/locale/hr.js",
+	"./hr.js": "./node_modules/moment/locale/hr.js",
+	"./hu": "./node_modules/moment/locale/hu.js",
+	"./hu.js": "./node_modules/moment/locale/hu.js",
+	"./hy-am": "./node_modules/moment/locale/hy-am.js",
+	"./hy-am.js": "./node_modules/moment/locale/hy-am.js",
+	"./id": "./node_modules/moment/locale/id.js",
+	"./id.js": "./node_modules/moment/locale/id.js",
+	"./is": "./node_modules/moment/locale/is.js",
+	"./is.js": "./node_modules/moment/locale/is.js",
+	"./it": "./node_modules/moment/locale/it.js",
+	"./it.js": "./node_modules/moment/locale/it.js",
+	"./ja": "./node_modules/moment/locale/ja.js",
+	"./ja.js": "./node_modules/moment/locale/ja.js",
+	"./jv": "./node_modules/moment/locale/jv.js",
+	"./jv.js": "./node_modules/moment/locale/jv.js",
+	"./ka": "./node_modules/moment/locale/ka.js",
+	"./ka.js": "./node_modules/moment/locale/ka.js",
+	"./kk": "./node_modules/moment/locale/kk.js",
+	"./kk.js": "./node_modules/moment/locale/kk.js",
+	"./km": "./node_modules/moment/locale/km.js",
+	"./km.js": "./node_modules/moment/locale/km.js",
+	"./kn": "./node_modules/moment/locale/kn.js",
+	"./kn.js": "./node_modules/moment/locale/kn.js",
+	"./ko": "./node_modules/moment/locale/ko.js",
+	"./ko.js": "./node_modules/moment/locale/ko.js",
+	"./ky": "./node_modules/moment/locale/ky.js",
+	"./ky.js": "./node_modules/moment/locale/ky.js",
+	"./lb": "./node_modules/moment/locale/lb.js",
+	"./lb.js": "./node_modules/moment/locale/lb.js",
+	"./lo": "./node_modules/moment/locale/lo.js",
+	"./lo.js": "./node_modules/moment/locale/lo.js",
+	"./lt": "./node_modules/moment/locale/lt.js",
+	"./lt.js": "./node_modules/moment/locale/lt.js",
+	"./lv": "./node_modules/moment/locale/lv.js",
+	"./lv.js": "./node_modules/moment/locale/lv.js",
+	"./me": "./node_modules/moment/locale/me.js",
+	"./me.js": "./node_modules/moment/locale/me.js",
+	"./mi": "./node_modules/moment/locale/mi.js",
+	"./mi.js": "./node_modules/moment/locale/mi.js",
+	"./mk": "./node_modules/moment/locale/mk.js",
+	"./mk.js": "./node_modules/moment/locale/mk.js",
+	"./ml": "./node_modules/moment/locale/ml.js",
+	"./ml.js": "./node_modules/moment/locale/ml.js",
+	"./mr": "./node_modules/moment/locale/mr.js",
+	"./mr.js": "./node_modules/moment/locale/mr.js",
+	"./ms": "./node_modules/moment/locale/ms.js",
+	"./ms-my": "./node_modules/moment/locale/ms-my.js",
+	"./ms-my.js": "./node_modules/moment/locale/ms-my.js",
+	"./ms.js": "./node_modules/moment/locale/ms.js",
+	"./my": "./node_modules/moment/locale/my.js",
+	"./my.js": "./node_modules/moment/locale/my.js",
+	"./nb": "./node_modules/moment/locale/nb.js",
+	"./nb.js": "./node_modules/moment/locale/nb.js",
+	"./ne": "./node_modules/moment/locale/ne.js",
+	"./ne.js": "./node_modules/moment/locale/ne.js",
+	"./nl": "./node_modules/moment/locale/nl.js",
+	"./nl-be": "./node_modules/moment/locale/nl-be.js",
+	"./nl-be.js": "./node_modules/moment/locale/nl-be.js",
+	"./nl.js": "./node_modules/moment/locale/nl.js",
+	"./nn": "./node_modules/moment/locale/nn.js",
+	"./nn.js": "./node_modules/moment/locale/nn.js",
+	"./pa-in": "./node_modules/moment/locale/pa-in.js",
+	"./pa-in.js": "./node_modules/moment/locale/pa-in.js",
+	"./pl": "./node_modules/moment/locale/pl.js",
+	"./pl.js": "./node_modules/moment/locale/pl.js",
+	"./pt": "./node_modules/moment/locale/pt.js",
+	"./pt-br": "./node_modules/moment/locale/pt-br.js",
+	"./pt-br.js": "./node_modules/moment/locale/pt-br.js",
+	"./pt.js": "./node_modules/moment/locale/pt.js",
+	"./ro": "./node_modules/moment/locale/ro.js",
+	"./ro.js": "./node_modules/moment/locale/ro.js",
+	"./ru": "./node_modules/moment/locale/ru.js",
+	"./ru.js": "./node_modules/moment/locale/ru.js",
+	"./sd": "./node_modules/moment/locale/sd.js",
+	"./sd.js": "./node_modules/moment/locale/sd.js",
+	"./se": "./node_modules/moment/locale/se.js",
+	"./se.js": "./node_modules/moment/locale/se.js",
+	"./si": "./node_modules/moment/locale/si.js",
+	"./si.js": "./node_modules/moment/locale/si.js",
+	"./sk": "./node_modules/moment/locale/sk.js",
+	"./sk.js": "./node_modules/moment/locale/sk.js",
+	"./sl": "./node_modules/moment/locale/sl.js",
+	"./sl.js": "./node_modules/moment/locale/sl.js",
+	"./sq": "./node_modules/moment/locale/sq.js",
+	"./sq.js": "./node_modules/moment/locale/sq.js",
+	"./sr": "./node_modules/moment/locale/sr.js",
+	"./sr-cyrl": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr-cyrl.js": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr.js": "./node_modules/moment/locale/sr.js",
+	"./ss": "./node_modules/moment/locale/ss.js",
+	"./ss.js": "./node_modules/moment/locale/ss.js",
+	"./sv": "./node_modules/moment/locale/sv.js",
+	"./sv.js": "./node_modules/moment/locale/sv.js",
+	"./sw": "./node_modules/moment/locale/sw.js",
+	"./sw.js": "./node_modules/moment/locale/sw.js",
+	"./ta": "./node_modules/moment/locale/ta.js",
+	"./ta.js": "./node_modules/moment/locale/ta.js",
+	"./te": "./node_modules/moment/locale/te.js",
+	"./te.js": "./node_modules/moment/locale/te.js",
+	"./tet": "./node_modules/moment/locale/tet.js",
+	"./tet.js": "./node_modules/moment/locale/tet.js",
+	"./th": "./node_modules/moment/locale/th.js",
+	"./th.js": "./node_modules/moment/locale/th.js",
+	"./tl-ph": "./node_modules/moment/locale/tl-ph.js",
+	"./tl-ph.js": "./node_modules/moment/locale/tl-ph.js",
+	"./tlh": "./node_modules/moment/locale/tlh.js",
+	"./tlh.js": "./node_modules/moment/locale/tlh.js",
+	"./tr": "./node_modules/moment/locale/tr.js",
+	"./tr.js": "./node_modules/moment/locale/tr.js",
+	"./tzl": "./node_modules/moment/locale/tzl.js",
+	"./tzl.js": "./node_modules/moment/locale/tzl.js",
+	"./tzm": "./node_modules/moment/locale/tzm.js",
+	"./tzm-latn": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm-latn.js": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm.js": "./node_modules/moment/locale/tzm.js",
+	"./uk": "./node_modules/moment/locale/uk.js",
+	"./uk.js": "./node_modules/moment/locale/uk.js",
+	"./ur": "./node_modules/moment/locale/ur.js",
+	"./ur.js": "./node_modules/moment/locale/ur.js",
+	"./uz": "./node_modules/moment/locale/uz.js",
+	"./uz-latn": "./node_modules/moment/locale/uz-latn.js",
+	"./uz-latn.js": "./node_modules/moment/locale/uz-latn.js",
+	"./uz.js": "./node_modules/moment/locale/uz.js",
+	"./vi": "./node_modules/moment/locale/vi.js",
+	"./vi.js": "./node_modules/moment/locale/vi.js",
+	"./x-pseudo": "./node_modules/moment/locale/x-pseudo.js",
+	"./x-pseudo.js": "./node_modules/moment/locale/x-pseudo.js",
+	"./yo": "./node_modules/moment/locale/yo.js",
+	"./yo.js": "./node_modules/moment/locale/yo.js",
+	"./zh-cn": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-cn.js": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-hk": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-hk.js": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-tw": "./node_modules/moment/locale/zh-tw.js",
+	"./zh-tw.js": "./node_modules/moment/locale/zh-tw.js"
+};
+function webpackContext(req) {
+	return __webpack_require__(webpackContextResolve(req));
+};
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) // check for number or string
+		throw new Error("Cannot find module '" + req + "'.");
+	return id;
+};
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./node_modules/moment/locale recursive ^\\.\\/.*$";
+
+/***/ }),
+
+/***/ "./src/$$_lazy_route_resource lazy recursive":
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -13,34 +266,23 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = "../../../../../src/$$_lazy_route_resource lazy recursive";
+webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
-/***/ "../../../../../src/app/app.component.css":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./src/app/app.component.css":
+/***/ (function(module, exports) {
 
-exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/*** EXPORTS FROM exports-loader ***/
-module.exports = module.exports.toString();
+module.exports = ""
 
 /***/ }),
 
-/***/ "../../../../../src/app/app.component.ts":
+/***/ "./src/app/app.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -55,8 +297,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-root',
-            template: __webpack_require__("../../../../../src/app/common/homepage.html"),
-            styles: [__webpack_require__("../../../../../src/app/app.component.css")]
+            template: __webpack_require__("./src/app/common/homepage.html"),
+            styles: [__webpack_require__("./src/app/app.component.css")]
         })
     ], AppComponent);
     return AppComponent;
@@ -66,54 +308,56 @@ var AppComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/app.module.ts":
+/***/ "./src/app/app.module.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/esm5/platform-browser.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ua_app_routing_module__ = __webpack_require__("../../../../../src/app/ua.app.routing.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_charts__ = __webpack_require__("../../../../ng2-charts/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__("./src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ua_app_routing_module__ = __webpack_require__("./src/app/ua.app.routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_charts__ = __webpack_require__("./node_modules/ng2-charts/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_ng2_charts__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_header_uaheader_component__ = __webpack_require__("../../../../../src/app/common/header/uaheader.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__common_executions_ua_executionroot_component__ = __webpack_require__("../../../../../src/app/common/executions/ua.executionroot.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__common_executions_ua_executions_component__ = __webpack_require__("../../../../../src/app/common/executions/ua.executions.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__common_executions_ua_new_execution_component__ = __webpack_require__("../../../../../src/app/common/executions/ua.new.execution.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__common_navtabs_ua_analysis_root_component__ = __webpack_require__("../../../../../src/app/common/navtabs/ua.analysis.root.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__common_navtabs_ua_analysis_navtabs_component__ = __webpack_require__("../../../../../src/app/common/navtabs/ua.analysis.navtabs.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__common_charts_ua_barchart__ = __webpack_require__("../../../../../src/app/common/charts/ua.barchart.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__common_inventory_ua_inventory_component__ = __webpack_require__("../../../../../src/app/common/inventory/ua.inventory.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__common_impact_ua_impact_component__ = __webpack_require__("../../../../../src/app/common/impact/ua.impact.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__common_bp_ua_bp_component__ = __webpack_require__("../../../../../src/app/common/bp/ua.bp.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__common_sfour_ua_sfourhana_component__ = __webpack_require__("../../../../../src/app/common/sfour/ua.sfourhana.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__common_tiles_ua_tile_component__ = __webpack_require__("../../../../../src/app/common/tiles/ua.tile.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__common_subtabs_ua_subtabs_component__ = __webpack_require__("../../../../../src/app/common/subtabs/ua.subtabs.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__common_table_ua_table_component__ = __webpack_require__("../../../../../src/app/common/table/ua.table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_ng2_nvd3__ = __webpack_require__("../../../../ng2-nvd3/build/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20_ng2_nvd3___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_20_ng2_nvd3__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__common_d3charts_ua_discretebar__ = __webpack_require__("../../../../../src/app/common/d3charts/ua.discretebar.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__common_d3charts_ua_piechart__ = __webpack_require__("../../../../../src/app/common/d3charts/ua.piechart.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__common_d3charts_ua_donutchart__ = __webpack_require__("../../../../../src/app/common/d3charts/ua.donutchart.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__common_table_ua_charttable_component__ = __webpack_require__("../../../../../src/app/common/table/ua.charttable.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__common_charts_ua_piechart__ = __webpack_require__("../../../../../src/app/common/charts/ua.piechart.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__common_charts_ua_interactivecharts__ = __webpack_require__("../../../../../src/app/common/charts/ua.interactivecharts.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__common_sfour_ua_readinesscheck_component__ = __webpack_require__("../../../../../src/app/common/sfour/ua.readinesscheck.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__common_sfour_ua_sycm_component__ = __webpack_require__("../../../../../src/app/common/sfour/ua.sycm.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__file_data_transform_pipe__ = __webpack_require__("../../../../../src/app/file-data-transform-pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30_d3__ = __webpack_require__("../../../../d3/d3.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30_d3___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_30_d3__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31_nvd3__ = __webpack_require__("../../../../nvd3/build/nv.d3.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31_nvd3___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_31_nvd3__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__fetch_file_service__ = __webpack_require__("../../../../../src/app/fetch-file.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_header_uaheader_component__ = __webpack_require__("./src/app/common/header/uaheader.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__common_executions_ua_executionroot_component__ = __webpack_require__("./src/app/common/executions/ua.executionroot.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__common_executions_ua_executions_component__ = __webpack_require__("./src/app/common/executions/ua.executions.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__common_executions_ua_new_execution_component__ = __webpack_require__("./src/app/common/executions/ua.new.execution.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__common_navtabs_ua_analysis_root_component__ = __webpack_require__("./src/app/common/navtabs/ua.analysis.root.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__common_navtabs_ua_analysis_navtabs_component__ = __webpack_require__("./src/app/common/navtabs/ua.analysis.navtabs.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__common_charts_ua_barchart__ = __webpack_require__("./src/app/common/charts/ua.barchart.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__common_inventory_ua_inventory_component__ = __webpack_require__("./src/app/common/inventory/ua.inventory.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__common_impact_ua_impact_component__ = __webpack_require__("./src/app/common/impact/ua.impact.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__common_impact_ua_impact_type_component__ = __webpack_require__("./src/app/common/impact/ua.impact.type.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__common_bp_ua_bp_component__ = __webpack_require__("./src/app/common/bp/ua.bp.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__common_sfour_ua_sfourhana_component__ = __webpack_require__("./src/app/common/sfour/ua.sfourhana.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__common_tiles_ua_tile_component__ = __webpack_require__("./src/app/common/tiles/ua.tile.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__common_subtabs_ua_subtabs_component__ = __webpack_require__("./src/app/common/subtabs/ua.subtabs.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__common_table_ua_table_component__ = __webpack_require__("./src/app/common/table/ua.table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_ng2_nvd3__ = __webpack_require__("./node_modules/ng2-nvd3/build/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_ng2_nvd3___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_21_ng2_nvd3__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__common_d3charts_ua_discretebar__ = __webpack_require__("./src/app/common/d3charts/ua.discretebar.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__common_d3charts_ua_piechart__ = __webpack_require__("./src/app/common/d3charts/ua.piechart.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__common_d3charts_ua_donutchart__ = __webpack_require__("./src/app/common/d3charts/ua.donutchart.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__common_table_ua_charttable_component__ = __webpack_require__("./src/app/common/table/ua.charttable.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__common_charts_ua_piechart__ = __webpack_require__("./src/app/common/charts/ua.piechart.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__common_charts_ua_interactivecharts__ = __webpack_require__("./src/app/common/charts/ua.interactivecharts.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__common_sfour_ua_readinesscheck_component__ = __webpack_require__("./src/app/common/sfour/ua.readinesscheck.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__common_sfour_ua_sycm_component__ = __webpack_require__("./src/app/common/sfour/ua.sycm.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__file_data_transform_pipe__ = __webpack_require__("./src/app/file-data-transform-pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31_d3__ = __webpack_require__("./node_modules/d3/d3.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31_d3___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_31_d3__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32_nvd3__ = __webpack_require__("./node_modules/nvd3/build/nv.d3.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32_nvd3___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_32_nvd3__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__fetch_file_service__ = __webpack_require__("./src/app/fetch-file.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -157,9 +401,9 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_4__ua_app_routing_module__["a" /* UAAppRoutingModule */],
                 __WEBPACK_IMPORTED_MODULE_5_ng2_charts__["ChartsModule"],
                 __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["b" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_20_ng2_nvd3__["NvD3Module"]
+                __WEBPACK_IMPORTED_MODULE_21_ng2_nvd3__["NvD3Module"]
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_32__fetch_file_service__["a" /* FetchFileService */]],
+            providers: [__WEBPACK_IMPORTED_MODULE_33__fetch_file_service__["a" /* FetchFileService */]],
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */],
                 __WEBPACK_IMPORTED_MODULE_6__common_header_uaheader_component__["a" /* UAHeaderComponent */],
@@ -171,20 +415,21 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_12__common_charts_ua_barchart__["a" /* UABarChartComponent */],
                 __WEBPACK_IMPORTED_MODULE_13__common_inventory_ua_inventory_component__["a" /* UAInventoryComponent */],
                 __WEBPACK_IMPORTED_MODULE_14__common_impact_ua_impact_component__["a" /* UAImpactComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__common_bp_ua_bp_component__["a" /* UABPComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__common_sfour_ua_sfourhana_component__["a" /* UASFourHanaComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__common_tiles_ua_tile_component__["a" /* UATilesComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__common_subtabs_ua_subtabs_component__["a" /* UASubTabsComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__common_table_ua_table_component__["a" /* UATableComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__common_d3charts_ua_discretebar__["a" /* UADiscreteBarComponent */],
-                __WEBPACK_IMPORTED_MODULE_22__common_d3charts_ua_piechart__["a" /* UAD3PieChartComponent */],
-                __WEBPACK_IMPORTED_MODULE_24__common_table_ua_charttable_component__["a" /* UAChartTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_23__common_d3charts_ua_donutchart__["a" /* UADonutChartComponent */],
-                __WEBPACK_IMPORTED_MODULE_25__common_charts_ua_piechart__["a" /* UAPieChartComponent */],
-                __WEBPACK_IMPORTED_MODULE_26__common_charts_ua_interactivecharts__["a" /* UAInteractiveChartComponent */],
-                __WEBPACK_IMPORTED_MODULE_29__file_data_transform_pipe__["a" /* KeysPipe */],
-                __WEBPACK_IMPORTED_MODULE_27__common_sfour_ua_readinesscheck_component__["a" /* UAReadinessCheckComponent */],
-                __WEBPACK_IMPORTED_MODULE_28__common_sfour_ua_sycm_component__["a" /* UASycmComponent */]
+                __WEBPACK_IMPORTED_MODULE_15__common_impact_ua_impact_type_component__["a" /* UAImpactTypeComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__common_bp_ua_bp_component__["a" /* UABPComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__common_sfour_ua_sfourhana_component__["a" /* UASFourHanaComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__common_tiles_ua_tile_component__["a" /* UATilesComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__common_subtabs_ua_subtabs_component__["a" /* UASubTabsComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__common_table_ua_table_component__["a" /* UATableComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__common_d3charts_ua_discretebar__["a" /* UADiscreteBarComponent */],
+                __WEBPACK_IMPORTED_MODULE_23__common_d3charts_ua_piechart__["a" /* UAD3PieChartComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__common_table_ua_charttable_component__["a" /* UAChartTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__common_d3charts_ua_donutchart__["a" /* UADonutChartComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__common_charts_ua_piechart__["a" /* UAPieChartComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__common_charts_ua_interactivecharts__["a" /* UAInteractiveChartComponent */],
+                __WEBPACK_IMPORTED_MODULE_30__file_data_transform_pipe__["a" /* KeysPipe */],
+                __WEBPACK_IMPORTED_MODULE_28__common_sfour_ua_readinesscheck_component__["a" /* UAReadinessCheckComponent */],
+                __WEBPACK_IMPORTED_MODULE_29__common_sfour_ua_sycm_component__["a" /* UASycmComponent */]
             ],
             bootstrap: [
                 __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]
@@ -198,20 +443,20 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/bp/ua.bp.component.html":
+/***/ "./src/app/common/bp/ua.bp.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "<div class=\"bp-container view-wrapper col-xs-12\">\r\n\t<div class=\"col-xs-12 no-padding\">\r\n\t\t<div class=\"col-xs-2 bp-column top-column\">\r\n\t\t\t<p>Total count</p>\r\n\t\t\t<div class=\"center-section text-center\">\r\n\t\t\t\t<h1 class=\"count text-center\">{{bpCount}}</h1>\r\n\t\t\t\t<span>BP count</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t\t<div class=\"inventory-graph-container col-xs-10 no-padding\">\r\n\t\t\t<ua-interactive-chart (totalCount)= \"updateBpCount($event)\"[filePrefixSuffix]=\"filePrefixSuffix\" [keyName]=\"keyName\" [isInteractive]=\"isInteractive\" [view1]=\"view1\" [view2]=\"view2\" ></ua-interactive-chart>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"col-xs-3 pull-right text-right margin-15\">\r\n\t\t<a class=\"btn btn-primary\" (click)=\"showTable = !showTable\">Show/Hide Total Data</a>\r\n\t</div>\r\n\t<div class=\"col-xs-12\" *ngIf=\"showTable\">\r\n\t\t<ua-table  [fileName] = \"tableFileName\"></ua-table>\r\n\t</div>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/bp/ua.bp.component.ts":
+/***/ "./src/app/common/bp/ua.bp.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UABPComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dto_fileNamingConvention__ = __webpack_require__("../../../../../src/app/common/dto/fileNamingConvention.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dto_fileNamingConvention__ = __webpack_require__("./src/app/common/dto/fileNamingConvention.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -239,7 +484,7 @@ var UABPComponent = (function () {
     UABPComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "ua-businessprocess",
-            template: __webpack_require__("../../../../../src/app/common/bp/ua.bp.component.html")
+            template: __webpack_require__("./src/app/common/bp/ua.bp.component.html")
         })
     ], UABPComponent);
     return UABPComponent;
@@ -249,19 +494,19 @@ var UABPComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/charts/ua.barchart.html":
+/***/ "./src/app/common/charts/ua.barchart.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div style=\"width:500px; height:500px\">\r\n    <div style=\"display: block\">\r\n      <canvas baseChart\r\n              [datasets]=\"barChartData\"\r\n              [labels]=\"barChartLabels\"\r\n              [options]=\"barChartOptions\"\r\n              [legend]=\"barChartLegend\"\r\n              [chartType]=\"barChartType\"\r\n              (chartHover)=\"chartHovered($event)\"\r\n              (chartClick)=\"chartClicked($event)\"></canvas>\r\n    </div>\r\n    \r\n  </div>"
+module.exports = "<div style=\"width:500px; height:500px\">\n    <div style=\"display: block\">\n      <canvas baseChart\n              [datasets]=\"barChartData\"\n              [labels]=\"barChartLabels\"\n              [options]=\"barChartOptions\"\n              [legend]=\"barChartLegend\"\n              [chartType]=\"barChartType\"\n              (chartHover)=\"chartHovered($event)\"\n              (chartClick)=\"chartClicked($event)\"></canvas>\n    </div>\n    \n  </div>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/charts/ua.barchart.ts":
+/***/ "./src/app/common/charts/ua.barchart.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UABarChartComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -308,7 +553,7 @@ var UABarChartComponent = (function () {
     UABarChartComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'ua-bar-chart',
-            template: __webpack_require__("../../../../../src/app/common/charts/ua.barchart.html")
+            template: __webpack_require__("./src/app/common/charts/ua.barchart.html")
         })
     ], UABarChartComponent);
     return UABarChartComponent;
@@ -318,21 +563,21 @@ var UABarChartComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/charts/ua.interactivecharts.html":
+/***/ "./src/app/common/charts/ua.interactivecharts.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"col-xs-6 graph-box padding-top-10\" *ngIf=\"showPieChart\">\r\n\t<div class=\"pull-left col-xs-9\">&nbsp;</div>\r\n\t<div class=\"pull-right col-xs-3 switch-block-container no-padding\"> \r\n\t\t<a class=\"switch-block col-xs-6 border-right text-center\" href=\"javascript:void(0)\" (click)=\"chart.view1='pieChart'\" ng-class=\"chart.view1=='pieChart'?'active':''\" title=\"Pie\">\r\n\t\t\t<span class=\"fa-lg fa fa-pie-chart fa-lg\"></span>\r\n\t\t</a>\r\n\t\t<a class=\"switch-block col-xs-6 text-center\" ng-class=\"chart.view1=='table'?'active':''\" href=\"javascript:void(0)\" (click)=\"chart.view1='table'\" title=\"Tabular\">\r\n\t\t\t<span class=\"fa fa-table fa-lg\"></span>\r\n\t\t</a>\r\n\t</div>\r\n\t<div class=\"center-section clear-both\">\r\n\t\t<ua-d3-pie-chart *ngIf=\"chart.view1=='pieChart'\" [data]=\"chartData.chart1\" [keyName]=\"keyName\" (selectedSectionName)=\"pieClicked($event)\" (totalCount)=\"pieTotal($event)\" [isInteractive]=\"isInteractive\"></ua-d3-pie-chart>\r\n\t\t<div class=\"tabular-data\" *ngIf=\"chart.view1=='table'\">\r\n\t\t\t<ua-chart-table [tableData]=\"chartData.chart1\"></ua-chart-table>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n<div class=\"col-xs-6 graph-box padding-top-10\" *ngIf=\"showDonutChart\">\r\n\t<div class=\"pull-left col-xs-9\">&nbsp;</div>\r\n\r\n\t<div class=\"pull-right col-xs-3 switch-block-container no-padding\" *ngIf=\"!chartToggle\"> \r\n\t\t<a class=\"switch-block col-xs-6 border-right text-center\" href=\"javascript:void(0)\" (click)=\"chart.view2='donutchart'\" ng-class=\"chart.view2=='donutchart'?'active':''\" title=\"Donut\">\r\n\t\t\t<span class=\"fa-lg fa fa-pie-chart fa-lg\"></span>\r\n\t\t</a>\r\n\t\t<a class=\"switch-block col-xs-6 text-center\" ng-class=\"chart.view2=='table'?'active':''\" href=\"javascript:void(0)\" (click)=\"chart.view2='table'\" title=\"Tabular\">\r\n\t\t\t<span class=\"fa fa-table fa-lg\"></span>\r\n\t\t</a>\r\n\t</div>\r\n\r\n\t<div class=\"pull-right col-xs-6 switch-block-container no-padding\" *ngIf=\"chartToggle\"> \r\n\t\t<div class=\"col-xs-9 no-padding\">\r\n\t\t    <a class=\"switch-block border-right text-center\" href=\"javascript:void(0)\" (click)=\"setDataByType(dataByTypeItem)\" title=\"Chart\" [ngClass]=\"{'active': dataByType === dataByTypeItem, 'col-xs-6': dataByTypeList.length == 2, 'col-xs-4': dataByTypeList.length == 3}\" *ngFor=\"let dataByTypeItem of dataByTypeList\">\r\n\t\t\t\t<span class=\"fa\">{{dataByTypeItem}}</span>\r\n\t\t\t</a>\r\n\t\t</div>\r\n\t\t<div class=\"col-xs-3 no-padding\">\r\n\t\t\t<a class=\"switch-block col-xs-6 border-right text-center\" href=\"javascript:void(0)\" (click)=\"chart.view2='donutchart'\" ng-class=\"chart.view2=='donutchart'?'active':''\" title=\"Donut\">\r\n\t\t\t\t<span class=\"fa-lg fa fa-pie-chart fa-lg\"></span>\r\n\t\t\t</a>\r\n\t\t\t<a class=\"switch-block col-xs-6 text-center\" ng-class=\"chart.view2=='table'?'active':''\" href=\"javascript:void(0)\" (click)=\"chart.view2='table'\" title=\"Tabular\">\r\n\t\t\t\t<span class=\"fa fa-table fa-lg\"></span>\r\n\t\t\t</a>\r\n\t\t</div>\r\n\t</div>\r\n\r\n\t<div class=\"center-section clear-both\">\r\n\t\t<ua-donut-chart *ngIf=\"chart.view2=='donutchart'\" [data]=\"chartData.chart2\"></ua-donut-chart>\r\n\t\t<div class=\"tabular-data\" *ngIf=\"chart.view2=='table'\">\r\n\t\t\t<ua-chart-table [tableData]=\"chartData.chart2\"></ua-chart-table>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n<div class=\"col-xs-6 graph-box padding-top-10\" *ngIf=\"showBarChart\">\r\n\t<div class=\"pull-left col-xs-8\">&nbsp;</div>\r\n\t<div class=\"pull-right col-xs-4 switch-block-container no-padding\"> \r\n\t\t<a class=\"switch-block col-xs-4 border-right text-center\" href=\"javascript:void(0)\" (click)=\"updateChartData('COMPLEXITY')\" ng-class=\"chart.view2=='COMPLEXITY'?'active':''\" title=\"Complexity\">\r\n\t\t\t<span class=\"fa-lg fa fa-pie-chart fa-lg\"></span>\r\n\t\t</a>\r\n\t\t<a class=\"switch-block col-xs-4 border-right text-center\" href=\"javascript:void(0)\" (click)=\"updateChartData('MIGRATION')\" ng-class=\"chart.view2=='MIGRATION'?'active':''\" title=\"Migration\">\r\n\t\t\t<span class=\"fa-lg fa fa-pie-chart fa-lg\"></span>\r\n\t\t</a>\r\n\t\t<a class=\"switch-block col-xs-4 text-center\" ng-class=\"chart.view2=='table'?'active':''\" href=\"javascript:void(0)\" (click)=\"chart.view2='table'\" title=\"Tabular\">\r\n\t\t\t<span class=\"fa fa-table fa-lg\"></span>\r\n\t\t</a>\r\n\t</div>\r\n\t<div class=\"center-section clear-both\">\r\n\t\t<ua-discrete-bar  [data]=\"chartData.chart2\"></ua-discrete-bar>\r\n\t\t<div class=\"legend-overlay\"  *ngIf=\"chart.view2 =='table'\">\r\n\t\t\t<ul>\r\n\t\t\t\t\r\n\t\t\t\t<li *ngFor=\"let legend of chartData.chart2[0].values\">{{legend.label}} - {{legend.description}}</li>\r\n\t\t\t\t\r\n\t\t\t</ul>\r\n\t\t</div>\r\n\t</div>\r\n</div> "
+module.exports = "<div class=\"col-xs-6 graph-box padding-top-10\" *ngIf=\"showPieChart\">\n\t<div class=\"pull-left col-xs-9\">&nbsp;</div>\n\t<div class=\"pull-right col-xs-3 switch-block-container no-padding\"> \n\t\t<a class=\"switch-block col-xs-6 border-right text-center\" href=\"javascript:void(0)\" (click)=\"chart.view1='pieChart'\" ng-class=\"chart.view1=='pieChart'?'active':''\" title=\"Pie\">\n\t\t\t<span class=\"fa-lg fa fa-pie-chart fa-lg\"></span>\n\t\t</a>\n\t\t<a class=\"switch-block col-xs-6 text-center\" ng-class=\"chart.view1=='table'?'active':''\" href=\"javascript:void(0)\" (click)=\"chart.view1='table'\" title=\"Tabular\">\n\t\t\t<span class=\"fa fa-table fa-lg\"></span>\n\t\t</a>\n\t</div>\n\t<div class=\"center-section clear-both\">\n\t\t<ua-d3-pie-chart *ngIf=\"chart.view1=='pieChart'\" [data]=\"chartData.chart1\" [keyName]=\"keyName\" (selectedSectionName)=\"pieClicked($event)\" (totalCount)=\"pieTotal($event)\" [isInteractive]=\"isInteractive\"></ua-d3-pie-chart>\n\t\t<div class=\"tabular-data\" *ngIf=\"chart.view1=='table'\">\n\t\t\t<ua-chart-table [tableData]=\"chartData.chart1\"></ua-chart-table>\n\t\t</div>\n\t</div>\n</div>\n<div class=\"col-xs-6 graph-box padding-top-10\" *ngIf=\"showDonutChart\">\n\t<div class=\"pull-left col-xs-9\">&nbsp;</div>\n\n\t<div class=\"pull-right col-xs-3 switch-block-container no-padding\" *ngIf=\"!chartToggle\"> \n\t\t<a class=\"switch-block col-xs-6 border-right text-center\" href=\"javascript:void(0)\" (click)=\"chart.view2='donutchart'\" ng-class=\"chart.view2=='donutchart'?'active':''\" title=\"Donut\">\n\t\t\t<span class=\"fa-lg fa fa-pie-chart fa-lg\"></span>\n\t\t</a>\n\t\t<a class=\"switch-block col-xs-6 text-center\" ng-class=\"chart.view2=='table'?'active':''\" href=\"javascript:void(0)\" (click)=\"chart.view2='table'\" title=\"Tabular\">\n\t\t\t<span class=\"fa fa-table fa-lg\"></span>\n\t\t</a>\n\t</div>\n\n\t<div class=\"pull-right col-xs-6 switch-block-container no-padding\" *ngIf=\"chartToggle\"> \n\t\t<div class=\"col-xs-9 no-padding\">\n\t\t    <a class=\"switch-block border-right text-center\" href=\"javascript:void(0)\" (click)=\"setDataByType(dataByTypeItem)\" title=\"Chart\" [ngClass]=\"{'active': dataByType === dataByTypeItem, 'col-xs-6': dataByTypeList.length == 2, 'col-xs-4': dataByTypeList.length == 3}\" *ngFor=\"let dataByTypeItem of dataByTypeList\">\n\t\t\t\t<span class=\"fa\">{{dataByTypeItem}}</span>\n\t\t\t</a>\n\t\t</div>\n\t\t<div class=\"col-xs-3 no-padding\">\n\t\t\t<a class=\"switch-block col-xs-6 border-right text-center\" href=\"javascript:void(0)\" (click)=\"chart.view2='donutchart'\" ng-class=\"chart.view2=='donutchart'?'active':''\" title=\"Donut\">\n\t\t\t\t<span class=\"fa-lg fa fa-pie-chart fa-lg\"></span>\n\t\t\t</a>\n\t\t\t<a class=\"switch-block col-xs-6 text-center\" ng-class=\"chart.view2=='table'?'active':''\" href=\"javascript:void(0)\" (click)=\"chart.view2='table'\" title=\"Tabular\">\n\t\t\t\t<span class=\"fa fa-table fa-lg\"></span>\n\t\t\t</a>\n\t\t</div>\n\t</div>\n\n\t<div class=\"center-section clear-both\">\n\t\t<ua-donut-chart *ngIf=\"chart.view2=='donutchart'\" [data]=\"chartData.chart2\"></ua-donut-chart>\n\t\t<div class=\"tabular-data\" *ngIf=\"chart.view2=='table'\">\n\t\t\t<ua-chart-table [tableData]=\"chartData.chart2\"></ua-chart-table>\n\t\t</div>\n\t</div>\n</div>\n<div class=\"col-xs-6 graph-box padding-top-10\" *ngIf=\"showBarChart\">\n\t<div class=\"pull-left col-xs-8\">&nbsp;</div>\n\t<div class=\"pull-right col-xs-4 switch-block-container no-padding\"> \n\t\t<a class=\"switch-block col-xs-4 border-right text-center\" href=\"javascript:void(0)\" (click)=\"updateChartData('COMPLEXITY')\" ng-class=\"chart.view2=='COMPLEXITY'?'active':''\" title=\"Complexity\">\n\t\t\t<span class=\"fa-lg fa fa-pie-chart fa-lg\"></span>\n\t\t</a>\n\t\t<a class=\"switch-block col-xs-4 border-right text-center\" href=\"javascript:void(0)\" (click)=\"updateChartData('MIGRATION')\" ng-class=\"chart.view2=='MIGRATION'?'active':''\" title=\"Migration\">\n\t\t\t<span class=\"fa-lg fa fa-pie-chart fa-lg\"></span>\n\t\t</a>\n\t\t<a class=\"switch-block col-xs-4 text-center\" ng-class=\"chart.view2=='table'?'active':''\" href=\"javascript:void(0)\" (click)=\"chart.view2='table'\" title=\"Tabular\">\n\t\t\t<span class=\"fa fa-table fa-lg\"></span>\n\t\t</a>\n\t</div>\n\t<div class=\"center-section clear-both\">\n\t\t<ua-discrete-bar  [data]=\"chartData.chart2\"></ua-discrete-bar>\n\t\t<div class=\"legend-overlay\"  *ngIf=\"chart.view2 =='table'\">\n\t\t\t<ul>\n\t\t\t\t\n\t\t\t\t<li *ngFor=\"let legend of chartData.chart2[0].values\">{{legend.label}} - {{legend.description}}</li>\n\t\t\t\t\n\t\t\t</ul>\n\t\t</div>\n\t</div>\n</div> "
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/charts/ua.interactivecharts.ts":
+/***/ "./src/app/common/charts/ua.interactivecharts.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UAInteractiveChartComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__fetch_file_service__ = __webpack_require__("../../../../../src/app/fetch-file.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dto_fileNamingConvention__ = __webpack_require__("../../../../../src/app/common/dto/fileNamingConvention.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__fetch_file_service__ = __webpack_require__("./src/app/fetch-file.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dto_fileNamingConvention__ = __webpack_require__("./src/app/common/dto/fileNamingConvention.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -514,7 +759,7 @@ var UAInteractiveChartComponent = (function () {
     UAInteractiveChartComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "ua-interactive-chart",
-            template: __webpack_require__("../../../../../src/app/common/charts/ua.interactivecharts.html")
+            template: __webpack_require__("./src/app/common/charts/ua.interactivecharts.html")
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__fetch_file_service__["a" /* FetchFileService */]])
     ], UAInteractiveChartComponent);
@@ -525,19 +770,19 @@ var UAInteractiveChartComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/charts/ua.piechart.html":
+/***/ "./src/app/common/charts/ua.piechart.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div style=\"width:500px; height:500px\">\r\n<div style=\"display: block\">\r\n    <canvas baseChart\r\n            [data]=\"pieChartData\"\r\n            [labels]=\"pieChartLabels\"\r\n            [chartType]=\"pieChartType\"\r\n            (chartHover)=\"chartHovered($event)\"\r\n            (chartClick)=\"chartClicked($event)\"></canvas>\r\n  </div>\r\n</div>"
+module.exports = "<div style=\"width:500px; height:500px\">\n<div style=\"display: block\">\n    <canvas baseChart\n            [data]=\"pieChartData\"\n            [labels]=\"pieChartLabels\"\n            [chartType]=\"pieChartType\"\n            (chartHover)=\"chartHovered($event)\"\n            (chartClick)=\"chartClicked($event)\"></canvas>\n  </div>\n</div>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/charts/ua.piechart.ts":
+/***/ "./src/app/common/charts/ua.piechart.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UAPieChartComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -565,7 +810,7 @@ var UAPieChartComponent = (function () {
     UAPieChartComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'ua-pie-chart',
-            template: __webpack_require__("../../../../../src/app/common/charts/ua.piechart.html")
+            template: __webpack_require__("./src/app/common/charts/ua.piechart.html")
         })
     ], UAPieChartComponent);
     return UAPieChartComponent;
@@ -575,12 +820,12 @@ var UAPieChartComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/d3charts/ua.discretebar.ts":
+/***/ "./src/app/common/d3charts/ua.discretebar.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UADiscreteBarComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -638,7 +883,7 @@ var UADiscreteBarComponent = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'ua-discrete-bar',
             template: "\n        <div>\n        <nvd3 [options]=\"options\" [data]=\"data\"></nvd3>\n        </div>\n    ",
-            styles: [__webpack_require__("../../../../nvd3/build/nv.d3.css")],
+            styles: [__webpack_require__("./node_modules/nvd3/build/nv.d3.css")],
             encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None
         })
     ], UADiscreteBarComponent);
@@ -649,12 +894,12 @@ var UADiscreteBarComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/d3charts/ua.donutchart.ts":
+/***/ "./src/app/common/d3charts/ua.donutchart.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UADonutChartComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -703,7 +948,7 @@ var UADonutChartComponent = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'ua-donut-chart',
             template: "\n        <div>\n        <nvd3 [options]=\"options\" [data]=\"data\"></nvd3>\n        </div>\n    ",
-            styles: [__webpack_require__("../../../../nvd3/build/nv.d3.css")],
+            styles: [__webpack_require__("./node_modules/nvd3/build/nv.d3.css")],
             encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None
         })
     ], UADonutChartComponent);
@@ -714,12 +959,12 @@ var UADonutChartComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/d3charts/ua.piechart.ts":
+/***/ "./src/app/common/d3charts/ua.piechart.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UAD3PieChartComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -814,7 +1059,7 @@ var UAD3PieChartComponent = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'ua-d3-pie-chart',
             template: "\n        <div>\n        <nvd3 [options]=\"options\" [data]=\"data\"></nvd3>\n        </div>\n    ",
-            styles: [__webpack_require__("../../../../nvd3/build/nv.d3.css")],
+            styles: [__webpack_require__("./node_modules/nvd3/build/nv.d3.css")],
             encapsulation: __WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewEncapsulation"].None
         })
     ], UAD3PieChartComponent);
@@ -825,7 +1070,7 @@ var UAD3PieChartComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/dto/fileNamingConvention.ts":
+/***/ "./src/app/common/dto/fileNamingConvention.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -848,12 +1093,12 @@ var fileNamingConvention = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/executions/ua.executionroot.component.ts":
+/***/ "./src/app/common/executions/ua.executionroot.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UAExecutionRootComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -877,19 +1122,19 @@ var UAExecutionRootComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/executions/ua.executions.component.html":
+/***/ "./src/app/common/executions/ua.executions.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "<h1> Place holder for display the list of executions </h1>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/executions/ua.executions.component.ts":
+/***/ "./src/app/common/executions/ua.executions.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UAExecutionsComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -903,7 +1148,7 @@ var UAExecutionsComponent = (function () {
     UAExecutionsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "ua-executions",
-            template: __webpack_require__("../../../../../src/app/common/executions/ua.executions.component.html")
+            template: __webpack_require__("./src/app/common/executions/ua.executions.component.html")
         })
     ], UAExecutionsComponent);
     return UAExecutionsComponent;
@@ -913,12 +1158,12 @@ var UAExecutionsComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/executions/ua.new.execution.component.ts":
+/***/ "./src/app/common/executions/ua.new.execution.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UANewExecutionComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -932,7 +1177,7 @@ var UANewExecutionComponent = (function () {
     UANewExecutionComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "ua-new-execution",
-            template: __webpack_require__("../../../../../src/app/common/executions/ua.new.execution.html")
+            template: __webpack_require__("./src/app/common/executions/ua.new.execution.html")
         })
     ], UANewExecutionComponent);
     return UANewExecutionComponent;
@@ -942,26 +1187,26 @@ var UANewExecutionComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/executions/ua.new.execution.html":
+/***/ "./src/app/common/executions/ua.new.execution.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1>place holder for new executions</h1>\r\n<a routerLink=\"/analysis/inventory\" routerLinkActive=\"active\">inventory</a> \r\n<ua-pie-chart></ua-pie-chart>\r\n<ua-bar-chart></ua-bar-chart>\r\n<router-outlet></router-outlet>\r\n"
+module.exports = "<h1>place holder for new executions</h1>\n<a routerLink=\"/analysis/inventory\" routerLinkActive=\"active\">inventory</a> \n<ua-pie-chart></ua-pie-chart>\n<ua-bar-chart></ua-bar-chart>\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/header/uaheader.component.html":
+/***/ "./src/app/common/header/uaheader.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<header>\r\n    <nav class=\"navbar navbar-default navbar-static-top navbackground col-xs-12 navbarmyapp\" role=\"navigation\" >\r\n\t\r\n \r\n        <ul class = \"nav logo-navbar-nav col-xs-12\">\r\n           <li class=\"col-xs-4\">\r\n              <a>\r\n                  <span><img src=\"upgradeApp/dist/assets/icons/brand.svg\" alt=\"Deloitte\" width=\"135\" height=\"20\"/></span>\r\n              </a>\r\n           </li>\r\n           \r\n          \r\n          <li class=\"col-xs-4 tool-logo text-center padding-top-5\">\r\n              <span><img src=\"upgradeApp/dist/assets/icons/toolLogo.png\" alt=\"Uplgrade Analyzer \"/></span>\r\n          </li>\r\n          <li class=\"col-xs-4 pull-right client-section\">\r\n              <a><div class=\"pull-right\">Hi , Client Name !!</div></a>\r\n          </li>\r\n          \r\n          \r\n        </ul> \r\n    </nav>\r\n</header>"
+module.exports = "<header>\n    <nav class=\"navbar navbar-default navbar-static-top navbackground col-xs-12 navbarmyapp\" role=\"navigation\" >\n\t\n \n        <ul class = \"nav logo-navbar-nav col-xs-12\">\n           <li class=\"col-xs-4\">\n              <a>\n                  <span><img src=\"upgradeApp/dist/assets/icons/brand.svg\" alt=\"Deloitte\" width=\"135\" height=\"20\"/></span>\n              </a>\n           </li>\n           \n          \n          <li class=\"col-xs-4 tool-logo text-center padding-top-5\">\n              <span><img src=\"upgradeApp/dist/assets/icons/toolLogo.png\" alt=\"Uplgrade Analyzer \"/></span>\n          </li>\n          <li class=\"col-xs-4 pull-right client-section\">\n              <a><div class=\"pull-right\">Hi , Client Name !!</div></a>\n          </li>\n          \n          \n        </ul> \n    </nav>\n</header>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/header/uaheader.component.ts":
+/***/ "./src/app/common/header/uaheader.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UAHeaderComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -975,7 +1220,7 @@ var UAHeaderComponent = (function () {
     UAHeaderComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "ua-header",
-            template: __webpack_require__("../../../../../src/app/common/header/uaheader.component.html")
+            template: __webpack_require__("./src/app/common/header/uaheader.component.html")
         })
     ], UAHeaderComponent);
     return UAHeaderComponent;
@@ -985,26 +1230,26 @@ var UAHeaderComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/homepage.html":
+/***/ "./src/app/common/homepage.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ua-header></ua-header>\r\n<router-outlet></router-outlet>"
+module.exports = "<ua-header></ua-header>\n<router-outlet></router-outlet>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/impact/ua.impact.component.html":
+/***/ "./src/app/common/impact/ua.impact.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n\tImpact page\r\n</div>\r\n\r\n<ua-subtabs [subTabItems]=\"subTabItems\" (selectedTab)=\"tabChange($event)\"></ua-subtabs>"
+module.exports = "<ua-subtabs [subTabItems]=\"subTabItems\" (selectedTab)=\"tabChange($event)\"></ua-subtabs>\n\n<ng-container *ngFor= \"let subTabItem of subTabItems\">\n\t<ua-impact-type *ngIf=\"selectedTab == subTabItem.key\" [filePrefix]=\"filePrefix\" [selectedTab]=\"selectedTab\"></ua-impact-type>\t\n</ng-container>\n\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/impact/ua.impact.component.ts":
+/***/ "./src/app/common/impact/ua.impact.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UAImpactComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1020,33 +1265,38 @@ var UAImpactComponent = (function () {
             {
                 key: "defects",
                 value: "Incompatibilities",
+                filePrefix: 'DEF',
                 required: true
             },
             {
                 key: "performance_nh",
                 value: "Performance Non-Hana",
+                filePrefix: 'PER_NON_HANA',
                 required: true
             },
             {
                 key: "performance_h",
                 value: "Performance Hana",
+                filePrefix: 'PER_HANA',
                 required: true
             },
             {
                 key: "usage",
+                filePrefix: 'USG',
                 value: "Usage",
                 required: false
             }
         ];
     };
-    UAImpactComponent.prototype.tabChange = function (tabKey) {
-        this.selectedTab = tabKey;
+    UAImpactComponent.prototype.tabChange = function (tab) {
+        this.selectedTab = tab.key;
+        this.filePrefix = tab.filePrefix;
         console.log(this.selectedTab);
     };
     UAImpactComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "ua-impact",
-            template: __webpack_require__("../../../../../src/app/common/impact/ua.impact.component.html")
+            template: __webpack_require__("./src/app/common/impact/ua.impact.component.html")
         })
     ], UAImpactComponent);
     return UAImpactComponent;
@@ -1056,20 +1306,83 @@ var UAImpactComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/inventory/ua.inventory.component.html":
+/***/ "./src/app/common/impact/ua.impact.type.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"view-wrapper col-xs-12 s4-container\">\r\n\t<ua-tiles [tileFileName] = \"tileFileName\"></ua-tiles>\r\n\t<div class=\"graph-label-container col-xs-12\">\r\n\t\t<div class=\"col-xs-6\">\r\n\t\t\t<b>Custom Inventory Breakup</b>\r\n\t\t</div>\r\n\t\t<div class=\"col-xs-6\">\r\n\t\t\t<b>Custom Developments - Object Breakup</b>\r\n\t\t</div>\r\n\t</div>\r\n\t<div class=\"inventory-graph-container col-xs-12\">\r\n\t\t<ua-interactive-chart [filePrefixSuffix]=\"filePrefixSuffix\" [keyName]=\"keyName\" (selectedSectionName)=\"fetchTable($event)\" [isInteractive]=\"isInteractive\" [view1]=\"view1\" [view2]=\"view2\" ></ua-interactive-chart>\r\n\t</div>\r\n\t<div class=\"table-container col-xs-12 no-padding\">\r\n\t\t<div class=\"col-xs-3 pull-right text-right\">\r\n\t\t\t<a class=\"btn btn-primary\" (click)=\"showTable = !showTable\">Show/Hide Total Data</a>\r\n\t\t</div>\r\n\t\t<div class=\"col-xs-12 no-border\" *ngIf=\"showTable\">\r\n\t\t\t<ua-table  [fileName] = \"tableFileName\"></ua-table>\r\n\t\t</div>\r\n\t</div>\r\n</div>"
+module.exports = "\n<div class=\"view-container\" >\n\t<div  class=\"iA-container view-wrapper col-xs-12\">\n\t\t<ua-tiles [tileFileName] = \"tileFileName\"></ua-tiles>\n\t</div>\t\n\t<div class=\"inventory-graph-container col-xs-12\">\n\t\t<ua-interactive-chart [filePrefixSuffix]=\"filePrefixSuffix\" [keyName]=\"keyName\" (selectedSectionName)=\"fetchTable($event)\" [isInteractive]=\"isInteractive\" [view1]=\"view1\" [view2]=\"view2\"  [dataByTypeList]=\"dataByTypeList\" [chartToggle]=\"chartToggle\"></ua-interactive-chart>\n\t</div>\n\t<div class=\"col-xs-3 pull-right text-right margin-15\">\n\t\t\t\t<a class=\"btn btn-primary\" (click)=\"showTable = !showTable\">Show/Hide Total Data</a>\n\t\t\t</div>\n\t<div class=\"col-xs-12\" *ngIf=\"showTable\">\n\t\t<ua-table  [fileName] = \"tableFileName\"></ua-table>\n\t</div>\n</div>\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/inventory/ua.inventory.component.ts":
+/***/ "./src/app/common/impact/ua.impact.type.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UAImpactTypeComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dto_fileNamingConvention__ = __webpack_require__("./src/app/common/dto/fileNamingConvention.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var UAImpactTypeComponent = (function () {
+    function UAImpactTypeComponent() {
+    }
+    UAImpactTypeComponent.prototype.ngOnInit = function () {
+        this.filePrefixSuffix = new __WEBPACK_IMPORTED_MODULE_1__dto_fileNamingConvention__["a" /* fileNamingConvention */](this.filePrefix + "_ECC", "_SUMMARY", "_SUMMARY", "_SUMMARY");
+        this.keyName = "obj";
+        this.tileFileName = this.filePrefixSuffix.filePrefix + '_COUNT_SUMMARY';
+        this.showTable = false;
+        this.isInteractive = true;
+        this.view1 = 'pieChart';
+        this.view2 = 'donutchart';
+        this.chartToggle = true;
+        this.dataByTypeList = ['COMPLEXITY', 'CATEGORY', 'ERROR'];
+    };
+    UAImpactTypeComponent.prototype.fetchTable = function (selectedSectionName) {
+        this.tableFileName = this.filePrefixSuffix.filePrefix + '_' + selectedSectionName;
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", String)
+    ], UAImpactTypeComponent.prototype, "filePrefix", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", String)
+    ], UAImpactTypeComponent.prototype, "selectedTab", void 0);
+    UAImpactTypeComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: "ua-impact-type",
+            template: __webpack_require__("./src/app/common/impact/ua.impact.type.component.html")
+        })
+    ], UAImpactTypeComponent);
+    return UAImpactTypeComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/common/inventory/ua.inventory.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"view-wrapper col-xs-12 s4-container\">\n\t<ua-tiles [tileFileName] = \"tileFileName\"></ua-tiles>\n\t<div class=\"graph-label-container col-xs-12\">\n\t\t<div class=\"col-xs-6\">\n\t\t\t<b>Custom Inventory Breakup</b>\n\t\t</div>\n\t\t<div class=\"col-xs-6\">\n\t\t\t<b>Custom Developments - Object Breakup</b>\n\t\t</div>\n\t</div>\n\t<div class=\"inventory-graph-container col-xs-12\">\n\t\t<ua-interactive-chart [filePrefixSuffix]=\"filePrefixSuffix\" [keyName]=\"keyName\" (selectedSectionName)=\"fetchTable($event)\" [isInteractive]=\"isInteractive\" [view1]=\"view1\" [view2]=\"view2\" ></ua-interactive-chart>\n\t</div>\n\t<div class=\"table-container col-xs-12 no-padding\">\n\t\t<div class=\"col-xs-3 pull-right text-right\">\n\t\t\t<a class=\"btn btn-primary\" (click)=\"showTable = !showTable\">Show/Hide Total Data</a>\n\t\t</div>\n\t\t<div class=\"col-xs-12 no-border\" *ngIf=\"showTable\">\n\t\t\t<ua-table  [fileName] = \"tableFileName\"></ua-table>\n\t\t</div>\n\t</div>\n</div>"
+
+/***/ }),
+
+/***/ "./src/app/common/inventory/ua.inventory.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UAInventoryComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dto_fileNamingConvention__ = __webpack_require__("../../../../../src/app/common/dto/fileNamingConvention.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dto_fileNamingConvention__ = __webpack_require__("./src/app/common/dto/fileNamingConvention.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1098,7 +1411,7 @@ var UAInventoryComponent = (function () {
     UAInventoryComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "ua-inventory",
-            template: __webpack_require__("../../../../../src/app/common/inventory/ua.inventory.component.html")
+            template: __webpack_require__("./src/app/common/inventory/ua.inventory.component.html")
         })
     ], UAInventoryComponent);
     return UAInventoryComponent;
@@ -1108,20 +1421,20 @@ var UAInventoryComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/navtabs/ua.analysis.navtabs.component.html":
+/***/ "./src/app/common/navtabs/ua.analysis.navtabs.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n\t<nav class=\"navbar navbar-default navbar-static-top navbackground col-xs-12 navbarmyapp\" role=\"navigation\" >\r\n\r\n\t\t<ul class = \"nav navbar-nav col-xs-12 clear-both\">\r\n\t\t\t <li  *ngFor= \"let menuItem of navItems\" class = \"nav-tab\">\r\n\t\t\t\t\r\n\t\t\t\t\t\t<a routerLink=\"/analysis{{menuItem.linkCode}}\" routerLinkActive=\"active\">\r\n\t\t\t\t\t<i  class=\"fa  pull-left fa-2x fa-{{menuItem.iconName}}\"></i>\r\n\t\t\t\t\t<span >{{menuItem.description}}</span>\r\n\t\t\t\t</a>\r\n\t\t\t</li>\r\n\t\t\t\r\n\t\t</ul> \r\n\t</nav>\r\n\t<router-outlet></router-outlet>\r\n"
+module.exports = "\n\t<nav class=\"navbar navbar-default navbar-static-top navbackground col-xs-12 navbarmyapp\" role=\"navigation\" >\n\n\t\t<ul class = \"nav navbar-nav col-xs-12 clear-both\">\n\t\t\t <li  *ngFor= \"let menuItem of navItems\" class = \"nav-tab\">\n\t\t\t\t\n\t\t\t\t\t\t<a routerLink=\"/analysis{{menuItem.linkCode}}\" routerLinkActive=\"active\">\n\t\t\t\t\t<i  class=\"fa  pull-left fa-2x fa-{{menuItem.iconName}}\"></i>\n\t\t\t\t\t<span >{{menuItem.description}}</span>\n\t\t\t\t</a>\n\t\t\t</li>\n\t\t\t\n\t\t</ul> \n\t</nav>\n\t<router-outlet></router-outlet>\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/navtabs/ua.analysis.navtabs.component.ts":
+/***/ "./src/app/common/navtabs/ua.analysis.navtabs.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UAAnalysisNavTabsComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1168,7 +1481,7 @@ var UAAnalysisNavTabsComponent = (function () {
     UAAnalysisNavTabsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "ua-navtabs",
-            template: __webpack_require__("../../../../../src/app/common/navtabs/ua.analysis.navtabs.component.html")
+            template: __webpack_require__("./src/app/common/navtabs/ua.analysis.navtabs.component.html")
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]])
     ], UAAnalysisNavTabsComponent);
@@ -1179,12 +1492,12 @@ var UAAnalysisNavTabsComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/navtabs/ua.analysis.root.component.ts":
+/***/ "./src/app/common/navtabs/ua.analysis.root.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UAAnalysisRootComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1208,20 +1521,20 @@ var UAAnalysisRootComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/sfour/ua.readinesscheck.component.html":
+/***/ "./src/app/common/sfour/ua.readinesscheck.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"view-wrapper col-xs-12 s4-container\">\r\n\t<ua-tiles [tileFileName] = \"tileFileName\"></ua-tiles>\r\n\r\n\t<div class=\"s4-graph-container col-xs-12\">\r\n\t\t<ua-interactive-chart [filePrefixSuffix]=\"filePrefixSuffix\" [keyName]=\"keyName\" (selectedSectionName)=\"fetchTable($event)\" [isInteractive]=\"isInteractive\" [view1]=\"view1\" [view2]=\"view2\" ></ua-interactive-chart>\r\n\t</div>\r\n\t<div class=\"table-container col-xs-12 no-padding\">\r\n\t\t<div class=\"col-xs-3 pull-right text-right\">\r\n\t\t\t<a class=\"btn btn-primary\" (click)=\"showTable = !showTable\">Show/Hide Total Data</a>\r\n\t\t</div>\r\n\t\t<div class=\"col-xs-12 no-border\" *ngIf=\"showTable\">\r\n\t\t\t<ua-table  [fileName] = \"tableFileName\"></ua-table>\r\n\t\t</div>\r\n\t</div>\r\n</div>"
+module.exports = "<div class=\"view-wrapper col-xs-12 s4-container\">\n\t<ua-tiles [tileFileName] = \"tileFileName\"></ua-tiles>\n\n\t<div class=\"s4-graph-container col-xs-12\">\n\t\t<ua-interactive-chart [filePrefixSuffix]=\"filePrefixSuffix\" [keyName]=\"keyName\" (selectedSectionName)=\"fetchTable($event)\" [isInteractive]=\"isInteractive\" [view1]=\"view1\" [view2]=\"view2\" ></ua-interactive-chart>\n\t</div>\n\t<div class=\"table-container col-xs-12 no-padding\">\n\t\t<div class=\"col-xs-3 pull-right text-right\">\n\t\t\t<a class=\"btn btn-primary\" (click)=\"showTable = !showTable\">Show/Hide Total Data</a>\n\t\t</div>\n\t\t<div class=\"col-xs-12 no-border\" *ngIf=\"showTable\">\n\t\t\t<ua-table  [fileName] = \"tableFileName\"></ua-table>\n\t\t</div>\n\t</div>\n</div>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/sfour/ua.readinesscheck.component.ts":
+/***/ "./src/app/common/sfour/ua.readinesscheck.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UAReadinessCheckComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dto_fileNamingConvention__ = __webpack_require__("../../../../../src/app/common/dto/fileNamingConvention.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dto_fileNamingConvention__ = __webpack_require__("./src/app/common/dto/fileNamingConvention.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1249,7 +1562,7 @@ var UAReadinessCheckComponent = (function () {
     UAReadinessCheckComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "ua-readiness-check",
-            template: __webpack_require__("../../../../../src/app/common/sfour/ua.readinesscheck.component.html")
+            template: __webpack_require__("./src/app/common/sfour/ua.readinesscheck.component.html")
         })
     ], UAReadinessCheckComponent);
     return UAReadinessCheckComponent;
@@ -1259,19 +1572,19 @@ var UAReadinessCheckComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/sfour/ua.sfourhana.component.html":
+/***/ "./src/app/common/sfour/ua.sfourhana.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ua-subtabs [subTabItems]=\"subTabItems\" (selectedTab)=\"tabChange($event)\"></ua-subtabs>\r\n<div *ngIf=\"selectedTab==='busFunctions'\">\r\n\tBF tab\r\n</div>\r\n<div *ngIf=\"selectedTab==='readycheck'\">\r\n\t<ua-readiness-check></ua-readiness-check>\r\n</div>\r\n<div *ngIf=\"selectedTab==='SYCM'\">\r\n\t<ua-sycm></ua-sycm>\r\n</div>"
+module.exports = "<ua-subtabs [subTabItems]=\"subTabItems\" (selectedTab)=\"tabChange($event)\"></ua-subtabs>\n<div *ngIf=\"selectedTab==='busFunctions'\">\n\tBF tab\n</div>\n<div *ngIf=\"selectedTab==='readycheck'\">\n\t<ua-readiness-check></ua-readiness-check>\n</div>\n<div *ngIf=\"selectedTab==='SYCM'\">\n\t<ua-sycm></ua-sycm>\n</div>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/sfour/ua.sfourhana.component.ts":
+/***/ "./src/app/common/sfour/ua.sfourhana.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UASFourHanaComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1287,29 +1600,32 @@ var UASFourHanaComponent = (function () {
             {
                 key: "busFunctions",
                 value: "Business Functions",
-                required: true
+                required: true,
+                filePrefix: ''
             },
             {
                 key: "readycheck",
                 value: "Readiness Check",
-                required: true
+                required: true,
+                filePrefix: ''
             },
             {
                 key: "SYCM",
                 value: "Code Incompatibilities",
-                required: true
+                required: true,
+                filePrefix: ''
             }
         ];
         this.selectedTab = 'busFunctions';
     };
     UASFourHanaComponent.prototype.tabChange = function (tabKey) {
-        this.selectedTab = tabKey;
+        this.selectedTab = tabKey.key;
         console.log(this.selectedTab);
     };
     UASFourHanaComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "ua-sfourhana",
-            template: __webpack_require__("../../../../../src/app/common/sfour/ua.sfourhana.component.html")
+            template: __webpack_require__("./src/app/common/sfour/ua.sfourhana.component.html")
         })
     ], UASFourHanaComponent);
     return UASFourHanaComponent;
@@ -1319,20 +1635,20 @@ var UASFourHanaComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/sfour/ua.sycm.component.html":
+/***/ "./src/app/common/sfour/ua.sycm.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"view-wrapper col-xs-12 s4-container\">\r\n    <ua-tiles [tileFileName] = \"tileFileName\"></ua-tiles>\r\n\r\n    <div class=\"s4-graph-container col-xs-12\">\r\n        <ua-interactive-chart [filePrefixSuffix]=\"filePrefixSuffix\" [keyName]=\"keyName\" (selectedSectionName)=\"fetchTable($event)\" [isInteractive]=\"isInteractive\" [view1]=\"view1\" [view2]=\"view2\" [chartToggle]=\"chartToggle\" [dataByTypeList]=\"dataByTypeList\"></ua-interactive-chart>\r\n    </div>\r\n    <div class=\"table-container col-xs-12 no-padding\">\r\n        <div class=\"col-xs-3 pull-right text-right\">\r\n            <a class=\"btn btn-primary\" (click)=\"showTable = !showTable\">Show/Hide Total Data</a>\r\n        </div>\r\n        <div class=\"col-xs-12 no-border\" *ngIf=\"showTable\">\r\n            <ua-table  [fileName] = \"tableFileName\"></ua-table>\r\n        </div>\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"view-wrapper col-xs-12 s4-container\">\n    <ua-tiles [tileFileName] = \"tileFileName\"></ua-tiles>\n\n    <div class=\"s4-graph-container col-xs-12\">\n        <ua-interactive-chart [filePrefixSuffix]=\"filePrefixSuffix\" [keyName]=\"keyName\" (selectedSectionName)=\"fetchTable($event)\" [isInteractive]=\"isInteractive\" [view1]=\"view1\" [view2]=\"view2\" [chartToggle]=\"chartToggle\" [dataByTypeList]=\"dataByTypeList\"></ua-interactive-chart>\n    </div>\n    <div class=\"table-container col-xs-12 no-padding\">\n        <div class=\"col-xs-3 pull-right text-right\">\n            <a class=\"btn btn-primary\" (click)=\"showTable = !showTable\">Show/Hide Total Data</a>\n        </div>\n        <div class=\"col-xs-12 no-border\" *ngIf=\"showTable\">\n            <ua-table  [fileName] = \"tableFileName\"></ua-table>\n        </div>\n    </div>\n</div>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/sfour/ua.sycm.component.ts":
+/***/ "./src/app/common/sfour/ua.sycm.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UASycmComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dto_fileNamingConvention__ = __webpack_require__("../../../../../src/app/common/dto/fileNamingConvention.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dto_fileNamingConvention__ = __webpack_require__("./src/app/common/dto/fileNamingConvention.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1362,7 +1678,7 @@ var UASycmComponent = (function () {
     UASycmComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "ua-sycm",
-            template: __webpack_require__("../../../../../src/app/common/sfour/ua.sycm.component.html")
+            template: __webpack_require__("./src/app/common/sfour/ua.sycm.component.html")
         })
     ], UASycmComponent);
     return UASycmComponent;
@@ -1372,19 +1688,19 @@ var UASycmComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/subtabs/ua.subtabs.component.html":
+/***/ "./src/app/common/subtabs/ua.subtabs.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ul class=\"sub-nav  col-xs-12\">\r\n\t<ng-container *ngFor= \"let subTabItem of subTabItems\">\r\n\t\t<li *ngIf=\"subTabItem.required\" (click)=\"tabSelect(subTabItem.key)\" [ngClass]=\"{'active':tabName===subTabItem.key}\">\r\n\t\t\t<a>{{subTabItem.value}}</a>\r\n\t\t</li>\r\n\t</ng-container>\r\n</ul>"
+module.exports = "<ul class=\"sub-nav  col-xs-12\">\n\t<ng-container *ngFor= \"let subTabItem of subTabItems\">\n\t\t<li *ngIf=\"subTabItem.required\" (click)=\"tabSelect(subTabItem)\" [ngClass]=\"{'active':tabName===subTabItem.key}\">\n\t\t\t<a>{{subTabItem.value}}</a>\n\t\t</li>\n\t</ng-container>\n</ul>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/subtabs/ua.subtabs.component.ts":
+/***/ "./src/app/common/subtabs/ua.subtabs.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UASubTabsComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1401,9 +1717,10 @@ var UASubTabsComponent = (function () {
     }
     UASubTabsComponent.prototype.ngOnInit = function () {
         this.tabName = this.subTabItems[0].key;
+        this.selectedTab.emit(this.subTabItems[0]);
     };
     UASubTabsComponent.prototype.tabSelect = function (tabKey) {
-        this.tabName = tabKey;
+        this.tabName = tabKey.key;
         this.selectedTab.emit(tabKey);
     };
     __decorate([
@@ -1417,7 +1734,7 @@ var UASubTabsComponent = (function () {
     UASubTabsComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "ua-subtabs",
-            template: __webpack_require__("../../../../../src/app/common/subtabs/ua.subtabs.component.html")
+            template: __webpack_require__("./src/app/common/subtabs/ua.subtabs.component.html")
         })
     ], UASubTabsComponent);
     return UASubTabsComponent;
@@ -1427,19 +1744,19 @@ var UASubTabsComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/table/ua.charttable.component.html":
+/***/ "./src/app/common/table/ua.charttable.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<table float-thead=\"floatTheadOptions\">\r\n\t<thead >\r\n\t\t<tr class=\"border-bottom\">\r\n\t\t\t<td class=\"col-xs-2 border-right\">S.No.</td>\r\n\t\t\t<td class=\"col-xs-6 border-right\">Component Type</td>\r\n\t\t\t<td class=\"col-xs-4 border-right\">Count</td>\r\n\t\t</tr>\r\n\t</thead>\r\n\t\r\n\t<tbody>\r\n\t\t<tr class=\"\" *ngFor= \"let item of tableData; let i = index\">\r\n\t\t\t<td class=\"col-xs-2 border-right\">{{i+1}}</td>\r\n\t\t\t<td class=\"col-xs-6 border-right\">{{item.key}}</td>\r\n\t\t\t<td class=\"col-xs-4 border-right\">{{item.value}}</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>"
+module.exports = "<table float-thead=\"floatTheadOptions\">\n\t<thead >\n\t\t<tr class=\"border-bottom\">\n\t\t\t<td class=\"col-xs-2 border-right\">S.No.</td>\n\t\t\t<td class=\"col-xs-6 border-right\">Component Type</td>\n\t\t\t<td class=\"col-xs-4 border-right\">Count</td>\n\t\t</tr>\n\t</thead>\n\t\n\t<tbody>\n\t\t<tr class=\"\" *ngFor= \"let item of tableData; let i = index\">\n\t\t\t<td class=\"col-xs-2 border-right\">{{i+1}}</td>\n\t\t\t<td class=\"col-xs-6 border-right\">{{item.key}}</td>\n\t\t\t<td class=\"col-xs-4 border-right\">{{item.value}}</td>\n\t\t</tr>\n\t</tbody>\n</table>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/table/ua.charttable.component.ts":
+/***/ "./src/app/common/table/ua.charttable.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UAChartTableComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1460,7 +1777,7 @@ var UAChartTableComponent = (function () {
     UAChartTableComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "ua-chart-table",
-            template: __webpack_require__("../../../../../src/app/common/table/ua.charttable.component.html")
+            template: __webpack_require__("./src/app/common/table/ua.charttable.component.html")
         }),
         __metadata("design:paramtypes", [])
     ], UAChartTableComponent);
@@ -1471,20 +1788,20 @@ var UAChartTableComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/table/ua.table.component.html":
+/***/ "./src/app/common/table/ua.table.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<!-- \t\t\r\n\t\t<ul> \r\n\t\t\t<ng-container >\r\n\t\t\t\t<li  *ngIf=\"tableItem.required\"><a >{{tableItem.value}} </a></li>\r\n\t\t\t</ng-container>\r\n\t\t</ul>\r\n -->\r\n\r\n\t<div class=\"search-selector pull-left\">\r\n\t\t<span>\r\n\t\t\t<label for=\"categorySelect\">Select a category:</label>\r\n\t\t    <select name=\"categorySelect\" id=\"categorySelect\" ng-model=\"searchCategory\">\r\n\t\t    \t\r\n\t\t    \t\t<option *ngFor= \"let tableItem of tableHeader | Jsonkeys \"  value=\"{{tableItem.key}}\">{{tableItem.value}}</option>\r\n\t\t    \t\r\n\t\t    </select>\r\n\t    </span>\r\n\t    <span>\r\n\t    \t<label for=\"searchText\">Search text:</label>\r\n\t    \t<input name=\"searchText\" type=\"text\" ng-model=\"searchText\">\r\n\t    </span>\r\n\t</div>\r\n\t<div class=\"clearfix\"></div>\r\n\t<div class=\"center-section\">\r\n\t\t<table float-thead=\"floatTheadOptions\" ng-model=\"tabularData\" class=\"col-xs-12\">\r\n\t\t\t<thead>\r\n\t\t\t\t<tr class=\"border-bottom\">\r\n\t\t\t\t\t<td *ngFor= \"let tableItem of tableHeader | Jsonkeys\"  class=\"border-right table-header\">\r\n\t\t\t\t\t\t<span >{{tableItem.value}}</span>\r\n\t\t\t\t\t\t<span class=\"fa fa-sort\"></span>\r\n\t\t\t\t\t\t<span class=\"fa fa-sort-asc\" ></span>\r\n\t\t\t\t\t\t<span class=\"fa fa-sort-desc\"></span>\r\n\t\t\t\t\t</td>\r\n\t\t\t\t</tr>\r\n\t\t\t</thead>\r\n\t\t\t<tbody>\r\n\r\n\t\t\t\t<tr *ngFor= \"let tableBodyItem of  tableData \">\r\n\t\t\t\t\t<td  *ngFor= \"let tbodyItem of  tableBodyItem | Jsonkeys\"  class=\"border-right\">{{tbodyItem.value}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t</tbody>\r\n\t\t</table>\r\n\t</div>\r\n  "
+module.exports = "\n<!-- \t\t\n\t\t<ul> \n\t\t\t<ng-container >\n\t\t\t\t<li  *ngIf=\"tableItem.required\"><a >{{tableItem.value}} </a></li>\n\t\t\t</ng-container>\n\t\t</ul>\n -->\n\n\t<div class=\"search-selector pull-left\">\n\t\t<span>\n\t\t\t<label for=\"categorySelect\">Select a category:</label>\n\t\t    <select name=\"categorySelect\" id=\"categorySelect\" ng-model=\"searchCategory\">\n\t\t    \t\n\t\t    \t\t<option *ngFor= \"let tableItem of tableHeader | Jsonkeys \"  value=\"{{tableItem.key}}\">{{tableItem.value}}</option>\n\t\t    \t\n\t\t    </select>\n\t    </span>\n\t    <span>\n\t    \t<label for=\"searchText\">Search text:</label>\n\t    \t<input name=\"searchText\" type=\"text\" ng-model=\"searchText\">\n\t    </span>\n\t</div>\n\t<div class=\"clearfix\"></div>\n\t<div class=\"center-section\">\n\t\t<table float-thead=\"floatTheadOptions\" ng-model=\"tabularData\" class=\"col-xs-12\">\n\t\t\t<thead>\n\t\t\t\t<tr class=\"border-bottom\">\n\t\t\t\t\t<td *ngFor= \"let tableItem of tableHeader | Jsonkeys\"  class=\"border-right table-header\">\n\t\t\t\t\t\t<span >{{tableItem.value}}</span>\n\t\t\t\t\t\t<span class=\"fa fa-sort\"></span>\n\t\t\t\t\t\t<span class=\"fa fa-sort-asc\" ></span>\n\t\t\t\t\t\t<span class=\"fa fa-sort-desc\"></span>\n\t\t\t\t\t</td>\n\t\t\t\t</tr>\n\t\t\t</thead>\n\t\t\t<tbody>\n\n\t\t\t\t<tr *ngFor= \"let tableBodyItem of  tableData \">\n\t\t\t\t\t<td  *ngFor= \"let tbodyItem of  tableBodyItem | Jsonkeys\"  class=\"border-right\">{{tbodyItem.value}}</td>\n\t\t\t\t</tr>\n\t\t\t</tbody>\n\t\t</table>\n\t</div>\n  "
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/table/ua.table.component.ts":
+/***/ "./src/app/common/table/ua.table.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UATableComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__fetch_file_service__ = __webpack_require__("../../../../../src/app/fetch-file.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__fetch_file_service__ = __webpack_require__("./src/app/fetch-file.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1525,7 +1842,7 @@ var UATableComponent = (function () {
     UATableComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "ua-table",
-            template: __webpack_require__("../../../../../src/app/common/table/ua.table.component.html")
+            template: __webpack_require__("./src/app/common/table/ua.table.component.html")
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__fetch_file_service__["a" /* FetchFileService */]])
     ], UATableComponent);
@@ -1536,20 +1853,20 @@ var UATableComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/tiles/ua.tile.component.html":
+/***/ "./src/app/common/tiles/ua.tile.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<div class=\"totals-container col-xs-12\">\r\n\t<div class=\"totals-box col-xs-2 status-{{tileItem.color}}\"  *ngFor= \"let tileItem of tileItems\">\r\n\t\t<p class=\"totals-numeric\"> {{tileItem.value | number}}</p>\r\n\t\t<p class=\"totals-text\">{{tileItem.key}}</p>\r\n\t</div>\r\n</div>\r\n"
+module.exports = "\n<div class=\"totals-container col-xs-12\">\n\t<div class=\"totals-box col-xs-2 status-{{tileItem.color}}\"  *ngFor= \"let tileItem of tileItems\">\n\t\t<p *ngIf=\"tileItem.value\" class=\"totals-numeric\"> {{tileItem.value | number}}</p>\n\t\t<p *ngIf=\"tileItem.key\" class=\"totals-text\">{{tileItem.key}}</p>\n\t\t<p *ngIf=\"tileItem.count\" class=\"totals-numeric\"> {{tileItem.count | number}}</p>\n\t\t<p *ngIf=\"tileItem.description\" class=\"totals-text\">{{tileItem.description}}</p>\n\n\t</div>\n</div>\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/common/tiles/ua.tile.component.ts":
+/***/ "./src/app/common/tiles/ua.tile.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UATilesComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__fetch_file_service__ = __webpack_require__("../../../../../src/app/fetch-file.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__fetch_file_service__ = __webpack_require__("./src/app/fetch-file.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1585,7 +1902,7 @@ var UATilesComponent = (function () {
     UATilesComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: "ua-tiles",
-            template: __webpack_require__("../../../../../src/app/common/tiles/ua.tile.component.html")
+            template: __webpack_require__("./src/app/common/tiles/ua.tile.component.html")
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__fetch_file_service__["a" /* FetchFileService */]])
     ], UATilesComponent);
@@ -1596,19 +1913,19 @@ var UATilesComponent = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/fetch-file.service.ts":
+/***/ "./src/app/fetch-file.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FetchFileService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__("../../../../rxjs/_esm5/Observable.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_observable_of__ = __webpack_require__("../../../../rxjs/_esm5/add/observable/of.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_throw__ = __webpack_require__("../../../../rxjs/_esm5/add/observable/throw.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/catch.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_do__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/do.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Observable__ = __webpack_require__("./node_modules/rxjs/_esm5/Observable.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_observable_of__ = __webpack_require__("./node_modules/rxjs/_esm5/add/observable/of.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_throw__ = __webpack_require__("./node_modules/rxjs/_esm5/add/observable/throw.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_catch__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/catch.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_map__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_add_operator_do__ = __webpack_require__("./node_modules/rxjs/_esm5/add/operator/do.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1655,12 +1972,12 @@ var FetchFileService = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/file-data-transform-pipe.ts":
+/***/ "./src/app/file-data-transform-pipe.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return KeysPipe; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1688,19 +2005,19 @@ var KeysPipe = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/ua.app.routing.module.ts":
+/***/ "./src/app/ua.app.routing.module.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UAAppRoutingModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_executions_ua_executionroot_component__ = __webpack_require__("../../../../../src/app/common/executions/ua.executionroot.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_navtabs_ua_analysis_root_component__ = __webpack_require__("../../../../../src/app/common/navtabs/ua.analysis.root.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_inventory_ua_inventory_component__ = __webpack_require__("../../../../../src/app/common/inventory/ua.inventory.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_impact_ua_impact_component__ = __webpack_require__("../../../../../src/app/common/impact/ua.impact.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_sfour_ua_sfourhana_component__ = __webpack_require__("../../../../../src/app/common/sfour/ua.sfourhana.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__common_bp_ua_bp_component__ = __webpack_require__("../../../../../src/app/common/bp/ua.bp.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_executions_ua_executionroot_component__ = __webpack_require__("./src/app/common/executions/ua.executionroot.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common_navtabs_ua_analysis_root_component__ = __webpack_require__("./src/app/common/navtabs/ua.analysis.root.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common_inventory_ua_inventory_component__ = __webpack_require__("./src/app/common/inventory/ua.inventory.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common_impact_ua_impact_component__ = __webpack_require__("./src/app/common/impact/ua.impact.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_sfour_ua_sfourhana_component__ = __webpack_require__("./src/app/common/sfour/ua.sfourhana.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__common_bp_ua_bp_component__ = __webpack_require__("./src/app/common/bp/ua.bp.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1743,7 +2060,7 @@ var UAAppRoutingModule = (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/environments/environment.ts":
+/***/ "./src/environments/environment.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1759,15 +2076,15 @@ var environment = {
 
 /***/ }),
 
-/***/ "../../../../../src/main.ts":
+/***/ "./src/main.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__("../../../platform-browser-dynamic/esm5/platform-browser-dynamic.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__("../../../../../src/app/app.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__("./node_modules/@angular/platform-browser-dynamic/esm5/platform-browser-dynamic.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__("./src/app/app.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("./src/environments/environment.ts");
 
 
 
@@ -1781,263 +2098,10 @@ Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ "../../../../moment/locale recursive ^\\.\\/.*$":
-/***/ (function(module, exports, __webpack_require__) {
-
-var map = {
-	"./af": "../../../../moment/locale/af.js",
-	"./af.js": "../../../../moment/locale/af.js",
-	"./ar": "../../../../moment/locale/ar.js",
-	"./ar-dz": "../../../../moment/locale/ar-dz.js",
-	"./ar-dz.js": "../../../../moment/locale/ar-dz.js",
-	"./ar-kw": "../../../../moment/locale/ar-kw.js",
-	"./ar-kw.js": "../../../../moment/locale/ar-kw.js",
-	"./ar-ly": "../../../../moment/locale/ar-ly.js",
-	"./ar-ly.js": "../../../../moment/locale/ar-ly.js",
-	"./ar-ma": "../../../../moment/locale/ar-ma.js",
-	"./ar-ma.js": "../../../../moment/locale/ar-ma.js",
-	"./ar-sa": "../../../../moment/locale/ar-sa.js",
-	"./ar-sa.js": "../../../../moment/locale/ar-sa.js",
-	"./ar-tn": "../../../../moment/locale/ar-tn.js",
-	"./ar-tn.js": "../../../../moment/locale/ar-tn.js",
-	"./ar.js": "../../../../moment/locale/ar.js",
-	"./az": "../../../../moment/locale/az.js",
-	"./az.js": "../../../../moment/locale/az.js",
-	"./be": "../../../../moment/locale/be.js",
-	"./be.js": "../../../../moment/locale/be.js",
-	"./bg": "../../../../moment/locale/bg.js",
-	"./bg.js": "../../../../moment/locale/bg.js",
-	"./bn": "../../../../moment/locale/bn.js",
-	"./bn.js": "../../../../moment/locale/bn.js",
-	"./bo": "../../../../moment/locale/bo.js",
-	"./bo.js": "../../../../moment/locale/bo.js",
-	"./br": "../../../../moment/locale/br.js",
-	"./br.js": "../../../../moment/locale/br.js",
-	"./bs": "../../../../moment/locale/bs.js",
-	"./bs.js": "../../../../moment/locale/bs.js",
-	"./ca": "../../../../moment/locale/ca.js",
-	"./ca.js": "../../../../moment/locale/ca.js",
-	"./cs": "../../../../moment/locale/cs.js",
-	"./cs.js": "../../../../moment/locale/cs.js",
-	"./cv": "../../../../moment/locale/cv.js",
-	"./cv.js": "../../../../moment/locale/cv.js",
-	"./cy": "../../../../moment/locale/cy.js",
-	"./cy.js": "../../../../moment/locale/cy.js",
-	"./da": "../../../../moment/locale/da.js",
-	"./da.js": "../../../../moment/locale/da.js",
-	"./de": "../../../../moment/locale/de.js",
-	"./de-at": "../../../../moment/locale/de-at.js",
-	"./de-at.js": "../../../../moment/locale/de-at.js",
-	"./de-ch": "../../../../moment/locale/de-ch.js",
-	"./de-ch.js": "../../../../moment/locale/de-ch.js",
-	"./de.js": "../../../../moment/locale/de.js",
-	"./dv": "../../../../moment/locale/dv.js",
-	"./dv.js": "../../../../moment/locale/dv.js",
-	"./el": "../../../../moment/locale/el.js",
-	"./el.js": "../../../../moment/locale/el.js",
-	"./en-au": "../../../../moment/locale/en-au.js",
-	"./en-au.js": "../../../../moment/locale/en-au.js",
-	"./en-ca": "../../../../moment/locale/en-ca.js",
-	"./en-ca.js": "../../../../moment/locale/en-ca.js",
-	"./en-gb": "../../../../moment/locale/en-gb.js",
-	"./en-gb.js": "../../../../moment/locale/en-gb.js",
-	"./en-ie": "../../../../moment/locale/en-ie.js",
-	"./en-ie.js": "../../../../moment/locale/en-ie.js",
-	"./en-nz": "../../../../moment/locale/en-nz.js",
-	"./en-nz.js": "../../../../moment/locale/en-nz.js",
-	"./eo": "../../../../moment/locale/eo.js",
-	"./eo.js": "../../../../moment/locale/eo.js",
-	"./es": "../../../../moment/locale/es.js",
-	"./es-do": "../../../../moment/locale/es-do.js",
-	"./es-do.js": "../../../../moment/locale/es-do.js",
-	"./es.js": "../../../../moment/locale/es.js",
-	"./et": "../../../../moment/locale/et.js",
-	"./et.js": "../../../../moment/locale/et.js",
-	"./eu": "../../../../moment/locale/eu.js",
-	"./eu.js": "../../../../moment/locale/eu.js",
-	"./fa": "../../../../moment/locale/fa.js",
-	"./fa.js": "../../../../moment/locale/fa.js",
-	"./fi": "../../../../moment/locale/fi.js",
-	"./fi.js": "../../../../moment/locale/fi.js",
-	"./fo": "../../../../moment/locale/fo.js",
-	"./fo.js": "../../../../moment/locale/fo.js",
-	"./fr": "../../../../moment/locale/fr.js",
-	"./fr-ca": "../../../../moment/locale/fr-ca.js",
-	"./fr-ca.js": "../../../../moment/locale/fr-ca.js",
-	"./fr-ch": "../../../../moment/locale/fr-ch.js",
-	"./fr-ch.js": "../../../../moment/locale/fr-ch.js",
-	"./fr.js": "../../../../moment/locale/fr.js",
-	"./fy": "../../../../moment/locale/fy.js",
-	"./fy.js": "../../../../moment/locale/fy.js",
-	"./gd": "../../../../moment/locale/gd.js",
-	"./gd.js": "../../../../moment/locale/gd.js",
-	"./gl": "../../../../moment/locale/gl.js",
-	"./gl.js": "../../../../moment/locale/gl.js",
-	"./gom-latn": "../../../../moment/locale/gom-latn.js",
-	"./gom-latn.js": "../../../../moment/locale/gom-latn.js",
-	"./he": "../../../../moment/locale/he.js",
-	"./he.js": "../../../../moment/locale/he.js",
-	"./hi": "../../../../moment/locale/hi.js",
-	"./hi.js": "../../../../moment/locale/hi.js",
-	"./hr": "../../../../moment/locale/hr.js",
-	"./hr.js": "../../../../moment/locale/hr.js",
-	"./hu": "../../../../moment/locale/hu.js",
-	"./hu.js": "../../../../moment/locale/hu.js",
-	"./hy-am": "../../../../moment/locale/hy-am.js",
-	"./hy-am.js": "../../../../moment/locale/hy-am.js",
-	"./id": "../../../../moment/locale/id.js",
-	"./id.js": "../../../../moment/locale/id.js",
-	"./is": "../../../../moment/locale/is.js",
-	"./is.js": "../../../../moment/locale/is.js",
-	"./it": "../../../../moment/locale/it.js",
-	"./it.js": "../../../../moment/locale/it.js",
-	"./ja": "../../../../moment/locale/ja.js",
-	"./ja.js": "../../../../moment/locale/ja.js",
-	"./jv": "../../../../moment/locale/jv.js",
-	"./jv.js": "../../../../moment/locale/jv.js",
-	"./ka": "../../../../moment/locale/ka.js",
-	"./ka.js": "../../../../moment/locale/ka.js",
-	"./kk": "../../../../moment/locale/kk.js",
-	"./kk.js": "../../../../moment/locale/kk.js",
-	"./km": "../../../../moment/locale/km.js",
-	"./km.js": "../../../../moment/locale/km.js",
-	"./kn": "../../../../moment/locale/kn.js",
-	"./kn.js": "../../../../moment/locale/kn.js",
-	"./ko": "../../../../moment/locale/ko.js",
-	"./ko.js": "../../../../moment/locale/ko.js",
-	"./ky": "../../../../moment/locale/ky.js",
-	"./ky.js": "../../../../moment/locale/ky.js",
-	"./lb": "../../../../moment/locale/lb.js",
-	"./lb.js": "../../../../moment/locale/lb.js",
-	"./lo": "../../../../moment/locale/lo.js",
-	"./lo.js": "../../../../moment/locale/lo.js",
-	"./lt": "../../../../moment/locale/lt.js",
-	"./lt.js": "../../../../moment/locale/lt.js",
-	"./lv": "../../../../moment/locale/lv.js",
-	"./lv.js": "../../../../moment/locale/lv.js",
-	"./me": "../../../../moment/locale/me.js",
-	"./me.js": "../../../../moment/locale/me.js",
-	"./mi": "../../../../moment/locale/mi.js",
-	"./mi.js": "../../../../moment/locale/mi.js",
-	"./mk": "../../../../moment/locale/mk.js",
-	"./mk.js": "../../../../moment/locale/mk.js",
-	"./ml": "../../../../moment/locale/ml.js",
-	"./ml.js": "../../../../moment/locale/ml.js",
-	"./mr": "../../../../moment/locale/mr.js",
-	"./mr.js": "../../../../moment/locale/mr.js",
-	"./ms": "../../../../moment/locale/ms.js",
-	"./ms-my": "../../../../moment/locale/ms-my.js",
-	"./ms-my.js": "../../../../moment/locale/ms-my.js",
-	"./ms.js": "../../../../moment/locale/ms.js",
-	"./my": "../../../../moment/locale/my.js",
-	"./my.js": "../../../../moment/locale/my.js",
-	"./nb": "../../../../moment/locale/nb.js",
-	"./nb.js": "../../../../moment/locale/nb.js",
-	"./ne": "../../../../moment/locale/ne.js",
-	"./ne.js": "../../../../moment/locale/ne.js",
-	"./nl": "../../../../moment/locale/nl.js",
-	"./nl-be": "../../../../moment/locale/nl-be.js",
-	"./nl-be.js": "../../../../moment/locale/nl-be.js",
-	"./nl.js": "../../../../moment/locale/nl.js",
-	"./nn": "../../../../moment/locale/nn.js",
-	"./nn.js": "../../../../moment/locale/nn.js",
-	"./pa-in": "../../../../moment/locale/pa-in.js",
-	"./pa-in.js": "../../../../moment/locale/pa-in.js",
-	"./pl": "../../../../moment/locale/pl.js",
-	"./pl.js": "../../../../moment/locale/pl.js",
-	"./pt": "../../../../moment/locale/pt.js",
-	"./pt-br": "../../../../moment/locale/pt-br.js",
-	"./pt-br.js": "../../../../moment/locale/pt-br.js",
-	"./pt.js": "../../../../moment/locale/pt.js",
-	"./ro": "../../../../moment/locale/ro.js",
-	"./ro.js": "../../../../moment/locale/ro.js",
-	"./ru": "../../../../moment/locale/ru.js",
-	"./ru.js": "../../../../moment/locale/ru.js",
-	"./sd": "../../../../moment/locale/sd.js",
-	"./sd.js": "../../../../moment/locale/sd.js",
-	"./se": "../../../../moment/locale/se.js",
-	"./se.js": "../../../../moment/locale/se.js",
-	"./si": "../../../../moment/locale/si.js",
-	"./si.js": "../../../../moment/locale/si.js",
-	"./sk": "../../../../moment/locale/sk.js",
-	"./sk.js": "../../../../moment/locale/sk.js",
-	"./sl": "../../../../moment/locale/sl.js",
-	"./sl.js": "../../../../moment/locale/sl.js",
-	"./sq": "../../../../moment/locale/sq.js",
-	"./sq.js": "../../../../moment/locale/sq.js",
-	"./sr": "../../../../moment/locale/sr.js",
-	"./sr-cyrl": "../../../../moment/locale/sr-cyrl.js",
-	"./sr-cyrl.js": "../../../../moment/locale/sr-cyrl.js",
-	"./sr.js": "../../../../moment/locale/sr.js",
-	"./ss": "../../../../moment/locale/ss.js",
-	"./ss.js": "../../../../moment/locale/ss.js",
-	"./sv": "../../../../moment/locale/sv.js",
-	"./sv.js": "../../../../moment/locale/sv.js",
-	"./sw": "../../../../moment/locale/sw.js",
-	"./sw.js": "../../../../moment/locale/sw.js",
-	"./ta": "../../../../moment/locale/ta.js",
-	"./ta.js": "../../../../moment/locale/ta.js",
-	"./te": "../../../../moment/locale/te.js",
-	"./te.js": "../../../../moment/locale/te.js",
-	"./tet": "../../../../moment/locale/tet.js",
-	"./tet.js": "../../../../moment/locale/tet.js",
-	"./th": "../../../../moment/locale/th.js",
-	"./th.js": "../../../../moment/locale/th.js",
-	"./tl-ph": "../../../../moment/locale/tl-ph.js",
-	"./tl-ph.js": "../../../../moment/locale/tl-ph.js",
-	"./tlh": "../../../../moment/locale/tlh.js",
-	"./tlh.js": "../../../../moment/locale/tlh.js",
-	"./tr": "../../../../moment/locale/tr.js",
-	"./tr.js": "../../../../moment/locale/tr.js",
-	"./tzl": "../../../../moment/locale/tzl.js",
-	"./tzl.js": "../../../../moment/locale/tzl.js",
-	"./tzm": "../../../../moment/locale/tzm.js",
-	"./tzm-latn": "../../../../moment/locale/tzm-latn.js",
-	"./tzm-latn.js": "../../../../moment/locale/tzm-latn.js",
-	"./tzm.js": "../../../../moment/locale/tzm.js",
-	"./uk": "../../../../moment/locale/uk.js",
-	"./uk.js": "../../../../moment/locale/uk.js",
-	"./ur": "../../../../moment/locale/ur.js",
-	"./ur.js": "../../../../moment/locale/ur.js",
-	"./uz": "../../../../moment/locale/uz.js",
-	"./uz-latn": "../../../../moment/locale/uz-latn.js",
-	"./uz-latn.js": "../../../../moment/locale/uz-latn.js",
-	"./uz.js": "../../../../moment/locale/uz.js",
-	"./vi": "../../../../moment/locale/vi.js",
-	"./vi.js": "../../../../moment/locale/vi.js",
-	"./x-pseudo": "../../../../moment/locale/x-pseudo.js",
-	"./x-pseudo.js": "../../../../moment/locale/x-pseudo.js",
-	"./yo": "../../../../moment/locale/yo.js",
-	"./yo.js": "../../../../moment/locale/yo.js",
-	"./zh-cn": "../../../../moment/locale/zh-cn.js",
-	"./zh-cn.js": "../../../../moment/locale/zh-cn.js",
-	"./zh-hk": "../../../../moment/locale/zh-hk.js",
-	"./zh-hk.js": "../../../../moment/locale/zh-hk.js",
-	"./zh-tw": "../../../../moment/locale/zh-tw.js",
-	"./zh-tw.js": "../../../../moment/locale/zh-tw.js"
-};
-function webpackContext(req) {
-	return __webpack_require__(webpackContextResolve(req));
-};
-function webpackContextResolve(req) {
-	var id = map[req];
-	if(!(id + 1)) // check for number or string
-		throw new Error("Cannot find module '" + req + "'.");
-	return id;
-};
-webpackContext.keys = function webpackContextKeys() {
-	return Object.keys(map);
-};
-webpackContext.resolve = webpackContextResolve;
-module.exports = webpackContext;
-webpackContext.id = "../../../../moment/locale recursive ^\\.\\/.*$";
-
-/***/ }),
-
 /***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("../../../../../src/main.ts");
+module.exports = __webpack_require__("./src/main.ts");
 
 
 /***/ })
