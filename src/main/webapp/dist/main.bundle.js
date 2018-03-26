@@ -316,47 +316,49 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__("./src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ua_app_routing_module__ = __webpack_require__("./src/app/ua.app.routing.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_charts__ = __webpack_require__("./node_modules/ng2-charts/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ng2_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_ng2_charts__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__common_header_uaheader_component__ = __webpack_require__("./src/app/common/header/uaheader.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__common_executions_ua_executionroot_component__ = __webpack_require__("./src/app/common/executions/ua.executionroot.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__common_executions_ua_executions_component__ = __webpack_require__("./src/app/common/executions/ua.executions.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__common_executions_ua_new_execution_component__ = __webpack_require__("./src/app/common/executions/ua.new.execution.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__common_navtabs_ua_analysis_root_component__ = __webpack_require__("./src/app/common/navtabs/ua.analysis.root.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__common_navtabs_ua_analysis_navtabs_component__ = __webpack_require__("./src/app/common/navtabs/ua.analysis.navtabs.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__common_charts_ua_barchart__ = __webpack_require__("./src/app/common/charts/ua.barchart.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__common_inventory_ua_inventory_component__ = __webpack_require__("./src/app/common/inventory/ua.inventory.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__common_impact_ua_impact_component__ = __webpack_require__("./src/app/common/impact/ua.impact.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__common_impact_ua_impact_type_component__ = __webpack_require__("./src/app/common/impact/ua.impact.type.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__common_bp_ua_bp_component__ = __webpack_require__("./src/app/common/bp/ua.bp.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__common_sfour_ua_sfourhana_component__ = __webpack_require__("./src/app/common/sfour/ua.sfourhana.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__common_tiles_ua_tile_component__ = __webpack_require__("./src/app/common/tiles/ua.tile.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__common_subtabs_ua_subtabs_component__ = __webpack_require__("./src/app/common/subtabs/ua.subtabs.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__common_table_ua_table_component__ = __webpack_require__("./src/app/common/table/ua.table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_ng2_nvd3__ = __webpack_require__("./node_modules/ng2-nvd3/build/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_ng2_nvd3___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_21_ng2_nvd3__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__common_d3charts_ua_discretebar__ = __webpack_require__("./src/app/common/d3charts/ua.discretebar.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__common_d3charts_ua_piechart__ = __webpack_require__("./src/app/common/d3charts/ua.piechart.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__common_d3charts_ua_donutchart__ = __webpack_require__("./src/app/common/d3charts/ua.donutchart.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__common_table_ua_charttable_component__ = __webpack_require__("./src/app/common/table/ua.charttable.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__common_charts_ua_piechart__ = __webpack_require__("./src/app/common/charts/ua.piechart.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__common_charts_ua_interactivecharts__ = __webpack_require__("./src/app/common/charts/ua.interactivecharts.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__common_sfour_ua_readinesscheck_component__ = __webpack_require__("./src/app/common/sfour/ua.readinesscheck.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__common_sfour_ua_sycm_component__ = __webpack_require__("./src/app/common/sfour/ua.sycm.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__file_data_transform_pipe__ = __webpack_require__("./src/app/file-data-transform-pipe.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31_d3__ = __webpack_require__("./node_modules/d3/d3.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31_d3___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_31_d3__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32_nvd3__ = __webpack_require__("./node_modules/nvd3/build/nv.d3.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32_nvd3___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_32_nvd3__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__fetch_file_service__ = __webpack_require__("./src/app/fetch-file.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("./src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ua_app_routing_module__ = __webpack_require__("./src/app/ua.app.routing.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_charts__ = __webpack_require__("./node_modules/ng2-charts/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_ng2_charts__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__common_header_uaheader_component__ = __webpack_require__("./src/app/common/header/uaheader.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__common_executions_ua_executionroot_component__ = __webpack_require__("./src/app/common/executions/ua.executionroot.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__common_executions_ua_executions_component__ = __webpack_require__("./src/app/common/executions/ua.executions.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__common_executions_ua_new_execution_component__ = __webpack_require__("./src/app/common/executions/ua.new.execution.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__common_navtabs_ua_analysis_root_component__ = __webpack_require__("./src/app/common/navtabs/ua.analysis.root.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__common_navtabs_ua_analysis_navtabs_component__ = __webpack_require__("./src/app/common/navtabs/ua.analysis.navtabs.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__common_charts_ua_barchart__ = __webpack_require__("./src/app/common/charts/ua.barchart.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__common_inventory_ua_inventory_component__ = __webpack_require__("./src/app/common/inventory/ua.inventory.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__common_impact_ua_impact_component__ = __webpack_require__("./src/app/common/impact/ua.impact.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__common_impact_ua_impact_type_component__ = __webpack_require__("./src/app/common/impact/ua.impact.type.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__common_bp_ua_bp_component__ = __webpack_require__("./src/app/common/bp/ua.bp.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__common_sfour_ua_sfourhana_component__ = __webpack_require__("./src/app/common/sfour/ua.sfourhana.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__common_tiles_ua_tile_component__ = __webpack_require__("./src/app/common/tiles/ua.tile.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__common_subtabs_ua_subtabs_component__ = __webpack_require__("./src/app/common/subtabs/ua.subtabs.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__common_table_ua_table_component__ = __webpack_require__("./src/app/common/table/ua.table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_ng2_nvd3__ = __webpack_require__("./node_modules/ng2-nvd3/build/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_ng2_nvd3___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_22_ng2_nvd3__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__common_d3charts_ua_discretebar__ = __webpack_require__("./src/app/common/d3charts/ua.discretebar.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__common_d3charts_ua_piechart__ = __webpack_require__("./src/app/common/d3charts/ua.piechart.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__common_d3charts_ua_donutchart__ = __webpack_require__("./src/app/common/d3charts/ua.donutchart.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__common_table_ua_charttable_component__ = __webpack_require__("./src/app/common/table/ua.charttable.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__common_charts_ua_piechart__ = __webpack_require__("./src/app/common/charts/ua.piechart.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__common_charts_ua_interactivecharts__ = __webpack_require__("./src/app/common/charts/ua.interactivecharts.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__common_sfour_ua_readinesscheck_component__ = __webpack_require__("./src/app/common/sfour/ua.readinesscheck.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__common_sfour_ua_sycm_component__ = __webpack_require__("./src/app/common/sfour/ua.sycm.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__file_data_transform_pipe__ = __webpack_require__("./src/app/file-data-transform-pipe.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32_d3__ = __webpack_require__("./node_modules/d3/d3.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32_d3___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_32_d3__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33_nvd3__ = __webpack_require__("./node_modules/nvd3/build/nv.d3.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33_nvd3___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_33_nvd3__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__fetch_file_service__ = __webpack_require__("./src/app/fetch-file.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -398,41 +400,44 @@ var AppModule = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_4__ua_app_routing_module__["a" /* UAAppRoutingModule */],
-                __WEBPACK_IMPORTED_MODULE_5_ng2_charts__["ChartsModule"],
+                __WEBPACK_IMPORTED_MODULE_5__ua_app_routing_module__["a" /* UAAppRoutingModule */],
+                __WEBPACK_IMPORTED_MODULE_6_ng2_charts__["ChartsModule"],
                 __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["b" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_21_ng2_nvd3__["NvD3Module"]
+                __WEBPACK_IMPORTED_MODULE_22_ng2_nvd3__["NvD3Module"],
+                __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormsModule */]
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_33__fetch_file_service__["a" /* FetchFileService */]],
+            providers: [__WEBPACK_IMPORTED_MODULE_34__fetch_file_service__["a" /* FetchFileService */]],
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_6__common_header_uaheader_component__["a" /* UAHeaderComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__common_executions_ua_executionroot_component__["a" /* UAExecutionRootComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__common_executions_ua_executions_component__["a" /* UAExecutionsComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__common_executions_ua_new_execution_component__["a" /* UANewExecutionComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__common_navtabs_ua_analysis_root_component__["a" /* UAAnalysisRootComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__common_navtabs_ua_analysis_navtabs_component__["a" /* UAAnalysisNavTabsComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__common_charts_ua_barchart__["a" /* UABarChartComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__common_inventory_ua_inventory_component__["a" /* UAInventoryComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__common_impact_ua_impact_component__["a" /* UAImpactComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__common_impact_ua_impact_type_component__["a" /* UAImpactTypeComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__common_bp_ua_bp_component__["a" /* UABPComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__common_sfour_ua_sfourhana_component__["a" /* UASFourHanaComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__common_tiles_ua_tile_component__["a" /* UATilesComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__common_subtabs_ua_subtabs_component__["a" /* UASubTabsComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__common_table_ua_table_component__["a" /* UATableComponent */],
-                __WEBPACK_IMPORTED_MODULE_22__common_d3charts_ua_discretebar__["a" /* UADiscreteBarComponent */],
-                __WEBPACK_IMPORTED_MODULE_23__common_d3charts_ua_piechart__["a" /* UAD3PieChartComponent */],
-                __WEBPACK_IMPORTED_MODULE_25__common_table_ua_charttable_component__["a" /* UAChartTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_24__common_d3charts_ua_donutchart__["a" /* UADonutChartComponent */],
-                __WEBPACK_IMPORTED_MODULE_26__common_charts_ua_piechart__["a" /* UAPieChartComponent */],
-                __WEBPACK_IMPORTED_MODULE_27__common_charts_ua_interactivecharts__["a" /* UAInteractiveChartComponent */],
-                __WEBPACK_IMPORTED_MODULE_30__file_data_transform_pipe__["a" /* KeysPipe */],
-                __WEBPACK_IMPORTED_MODULE_28__common_sfour_ua_readinesscheck_component__["a" /* UAReadinessCheckComponent */],
-                __WEBPACK_IMPORTED_MODULE_29__common_sfour_ua_sycm_component__["a" /* UASycmComponent */]
+                __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__common_header_uaheader_component__["a" /* UAHeaderComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__common_executions_ua_executionroot_component__["a" /* UAExecutionRootComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__common_executions_ua_executions_component__["a" /* UAExecutionsComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__common_executions_ua_new_execution_component__["a" /* UANewExecutionComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__common_navtabs_ua_analysis_root_component__["a" /* UAAnalysisRootComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__common_navtabs_ua_analysis_navtabs_component__["a" /* UAAnalysisNavTabsComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__common_charts_ua_barchart__["a" /* UABarChartComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__common_inventory_ua_inventory_component__["a" /* UAInventoryComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__common_impact_ua_impact_component__["a" /* UAImpactComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__common_impact_ua_impact_type_component__["a" /* UAImpactTypeComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__common_bp_ua_bp_component__["a" /* UABPComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__common_sfour_ua_sfourhana_component__["a" /* UASFourHanaComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__common_tiles_ua_tile_component__["a" /* UATilesComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__common_subtabs_ua_subtabs_component__["a" /* UASubTabsComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__common_table_ua_table_component__["a" /* UATableComponent */],
+                __WEBPACK_IMPORTED_MODULE_23__common_d3charts_ua_discretebar__["a" /* UADiscreteBarComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__common_d3charts_ua_piechart__["a" /* UAD3PieChartComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__common_table_ua_charttable_component__["a" /* UAChartTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__common_d3charts_ua_donutchart__["a" /* UADonutChartComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__common_charts_ua_piechart__["a" /* UAPieChartComponent */],
+                __WEBPACK_IMPORTED_MODULE_28__common_charts_ua_interactivecharts__["a" /* UAInteractiveChartComponent */],
+                __WEBPACK_IMPORTED_MODULE_31__file_data_transform_pipe__["b" /* KeysPipe */],
+                __WEBPACK_IMPORTED_MODULE_31__file_data_transform_pipe__["c" /* OrderBy */],
+                __WEBPACK_IMPORTED_MODULE_31__file_data_transform_pipe__["a" /* FilterBy */],
+                __WEBPACK_IMPORTED_MODULE_29__common_sfour_ua_readinesscheck_component__["a" /* UAReadinessCheckComponent */],
+                __WEBPACK_IMPORTED_MODULE_30__common_sfour_ua_sycm_component__["a" /* UASycmComponent */]
             ],
             bootstrap: [
-                __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]
+                __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]
             ]
         })
     ], AppModule);
@@ -1055,6 +1060,10 @@ var UAD3PieChartComponent = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Output"])(),
         __metadata("design:type", Object)
     ], UAD3PieChartComponent.prototype, "totalCount", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
+        __metadata("design:type", String)
+    ], UAD3PieChartComponent.prototype, "filterType", void 0);
     UAD3PieChartComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'ua-d3-pie-chart',
@@ -1791,7 +1800,7 @@ var UAChartTableComponent = (function () {
 /***/ "./src/app/common/table/ua.table.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<!-- \t\t\n\t\t<ul> \n\t\t\t<ng-container >\n\t\t\t\t<li  *ngIf=\"tableItem.required\"><a >{{tableItem.value}} </a></li>\n\t\t\t</ng-container>\n\t\t</ul>\n -->\n\n\t<div class=\"search-selector pull-left\">\n\t\t<span>\n\t\t\t<label for=\"categorySelect\">Select a category:</label>\n\t\t    <select name=\"categorySelect\" id=\"categorySelect\" ng-model=\"searchCategory\">\n\t\t    \t\n\t\t    \t\t<option *ngFor= \"let tableItem of tableHeader | Jsonkeys \"  value=\"{{tableItem.key}}\">{{tableItem.value}}</option>\n\t\t    \t\n\t\t    </select>\n\t    </span>\n\t    <span>\n\t    \t<label for=\"searchText\">Search text:</label>\n\t    \t<input name=\"searchText\" type=\"text\" ng-model=\"searchText\">\n\t    </span>\n\t</div>\n\t<div class=\"clearfix\"></div>\n\t<div class=\"center-section\">\n\t\t<table float-thead=\"floatTheadOptions\" ng-model=\"tabularData\" class=\"col-xs-12\">\n\t\t\t<thead>\n\t\t\t\t<tr class=\"border-bottom\">\n\t\t\t\t\t<td *ngFor= \"let tableItem of tableHeader | Jsonkeys\"  class=\"border-right table-header\">\n\t\t\t\t\t\t<span >{{tableItem.value}}</span>\n\t\t\t\t\t\t<span class=\"fa fa-sort\"></span>\n\t\t\t\t\t\t<span class=\"fa fa-sort-asc\" ></span>\n\t\t\t\t\t\t<span class=\"fa fa-sort-desc\"></span>\n\t\t\t\t\t</td>\n\t\t\t\t</tr>\n\t\t\t</thead>\n\t\t\t<tbody>\n\n\t\t\t\t<tr *ngFor= \"let tableBodyItem of  tableData \">\n\t\t\t\t\t<td  *ngFor= \"let tbodyItem of  tableBodyItem | Jsonkeys\"  class=\"border-right\">{{tbodyItem.value}}</td>\n\t\t\t\t</tr>\n\t\t\t</tbody>\n\t\t</table>\n\t</div>\n  "
+module.exports = "\n<!-- \t\t\n\t\t<ul> \n\t\t\t<ng-container >\n\t\t\t\t<li  *ngIf=\"tableItem.required\"><a >{{tableItem.value}} </a></li>\n\t\t\t</ng-container>\n\t\t</ul>\n -->\n\n\t<div class=\"search-selector pull-left\">\n\t\t<form>\n\t\t<span>\n\t\t\t\t<label for=\"categorySelect\">Select a category:</label>\n\t\t\t    <select name=\"categorySelect\" id=\"categorySelect\"  [(ngModel)]=\"searchCategory\">\n\t\t\t    \t\t<option *ngFor= \"let tableItem of tableHeader | Jsonkeys \"  [value]=\"tableItem.key\">{{tableItem.value}}</option>\n\t\t\t    \t\n\t\t\t    </select>\n\t\t    </span>\n\t\t    <span>\n\t\t    \t<label for=\"searchText\">Search text:</label>\n\t\t    \t<input name=\"searchText\" #filter type=\"text\"  [(ngModel)]=\"searchText\">\n\t\t    </span>\n\t\t</form>\n\t</div>\n\t<div class=\"clearfix\"></div>\n\t<div class=\"center-section\">\n\t\t<table float-thead=\"floatTheadOptions\" ng-model=\"tabularData\" class=\"col-xs-12\">\n\t\t\t<thead>\n\t\t\t\t<tr class=\"border-bottom\">\n\t\t\t\t\t<td *ngFor= \"let tableItem of tableHeader | Jsonkeys\"  class=\"border-right table-header\" (click)=\"sortFunction(tableItem)\">\n\t\t\t\t\t\t<span >{{tableItem.value}}</span>\n\t\t\t\t\t\t<span class=\"fa fa-sort\" *ngIf=\"tableItem.key === orderByField\"></span>\n\t\t\t\t\t\t<span class=\"fa fa-sort-asc\" *ngIf=\"tableItem.key === orderByField && ascSort\"></span>\n\t\t\t\t\t\t<span class=\"fa fa-sort-desc\" *ngIf=\"tableItem.key === orderByField && !ascSort\"></span>\n\t\t\t\t\t</td>\n\t\t\t\t</tr>\n\t\t\t</thead>\n\t\t\t<tbody>\n\n\t\t\t\t<tr *ngFor= \"let tableBodyItem of tableData | orderBy:orderByField:orderType | filterBy:searchCategory:searchText\">\n\t\t\t\t\t<td  *ngFor= \"let tbodyItem of  tableBodyItem | Jsonkeys\"  class=\"border-right\">{{tbodyItem.value}}</td>\n\t\t\t\t</tr>\n\t\t\t</tbody>\n\t\t</table>\n\t</div>\n  "
 
 /***/ }),
 
@@ -1821,6 +1830,10 @@ var UATableComponent = (function () {
         this.tableData = [];
         this.tableBody = [];
         this.getTableData();
+        this.ascSort = false;
+        this.orderByField = '';
+        this.searchText = '';
+        this.searchCategory = '';
     };
     UATableComponent.prototype.getTableData = function () {
         var _this = this;
@@ -1834,6 +1847,10 @@ var UATableComponent = (function () {
                 _this.tableHeader = _this.tableData[0],
                 _this.tableData.splice(0, 1);
         });
+    };
+    UATableComponent.prototype.sortFunction = function (item) {
+        this.orderByField = item.key;
+        this.ascSort = !this.ascSort;
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])(),
@@ -1976,7 +1993,9 @@ var FetchFileService = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return KeysPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return KeysPipe; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return OrderBy; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FilterBy; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1999,6 +2018,61 @@ var KeysPipe = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({ name: 'Jsonkeys' })
     ], KeysPipe);
     return KeysPipe;
+}());
+
+var OrderBy = (function () {
+    function OrderBy() {
+    }
+    OrderBy.prototype.transform = function (list, orderFields, orderType) {
+        list.sort(function (a, b) {
+            if (orderType) {
+                if (a[orderFields] < b[orderFields])
+                    return -1;
+                if (a[orderFields] > b[orderFields])
+                    return 1;
+                return 0;
+            }
+            else {
+                if (a[orderFields] < b[orderFields])
+                    return 1;
+                if (a[orderFields] > b[orderFields])
+                    return -1;
+                return 0;
+            }
+        });
+        return list;
+    };
+    OrderBy = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({ name: 'orderBy' })
+    ], OrderBy);
+    return OrderBy;
+}());
+
+var FilterBy = (function () {
+    function FilterBy() {
+    }
+    FilterBy.prototype.transform = function (list, filterString, searchText) {
+        if (!list)
+            return [];
+        if (!searchText)
+            return list;
+        var filteredItems = [];
+        if (filterString != undefined && searchText != undefined) {
+            list.forEach(function (item) {
+                if (item[filterString].toLowerCase().indexOf(searchText.toLowerCase()) > -1) {
+                    filteredItems.push(item);
+                }
+            });
+        }
+        else {
+            filteredItems = list;
+        }
+        return filteredItems;
+    };
+    FilterBy = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Pipe"])({ name: 'filterBy' })
+    ], FilterBy);
+    return FilterBy;
 }());
 
 

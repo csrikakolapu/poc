@@ -25,6 +25,7 @@ export class UAD3PieChartComponent implements OnInit {
     @Input() isInteractive:boolean;
     @Output() selectedSectionName = new EventEmitter<string>();
     @Output() totalCount =  new EventEmitter<number>();
+    @Input() filterType : string;
 
     ngOnInit() {
         let total = 0;

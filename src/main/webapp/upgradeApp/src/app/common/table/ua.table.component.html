@@ -8,35 +8,36 @@
  -->
 
 	<div class="search-selector pull-left">
+		<form>
 		<span>
-			<label for="categorySelect">Select a category:</label>
-		    <select name="categorySelect" id="categorySelect" ng-model="searchCategory">
-		    	
-		    		<option *ngFor= "let tableItem of tableHeader | Jsonkeys "  value="{{tableItem.key}}">{{tableItem.value}}</option>
-		    	
-		    </select>
-	    </span>
-	    <span>
-	    	<label for="searchText">Search text:</label>
-	    	<input name="searchText" type="text" ng-model="searchText">
-	    </span>
+				<label for="categorySelect">Select a category:</label>
+			    <select name="categorySelect" id="categorySelect"  [(ngModel)]="searchCategory">
+			    		<option *ngFor= "let tableItem of tableHeader | Jsonkeys "  [value]="tableItem.key">{{tableItem.value}}</option>
+			    	
+			    </select>
+		    </span>
+		    <span>
+		    	<label for="searchText">Search text:</label>
+		    	<input name="searchText" #filter type="text"  [(ngModel)]="searchText">
+		    </span>
+		</form>
 	</div>
 	<div class="clearfix"></div>
 	<div class="center-section">
 		<table float-thead="floatTheadOptions" ng-model="tabularData" class="col-xs-12">
 			<thead>
 				<tr class="border-bottom">
-					<td *ngFor= "let tableItem of tableHeader | Jsonkeys"  class="border-right table-header">
+					<td *ngFor= "let tableItem of tableHeader | Jsonkeys"  class="border-right table-header" (click)="sortFunction(tableItem)">
 						<span >{{tableItem.value}}</span>
-						<span class="fa fa-sort"></span>
-						<span class="fa fa-sort-asc" ></span>
-						<span class="fa fa-sort-desc"></span>
+						<span class="fa fa-sort" *ngIf="tableItem.key === orderByField"></span>
+						<span class="fa fa-sort-asc" *ngIf="tableItem.key === orderByField && ascSort"></span>
+						<span class="fa fa-sort-desc" *ngIf="tableItem.key === orderByField && !ascSort"></span>
 					</td>
 				</tr>
 			</thead>
 			<tbody>
 
-				<tr *ngFor= "let tableBodyItem of  tableData ">
+				<tr *ngFor= "let tableBodyItem of tableData | orderBy:orderByField:orderType | filterBy:searchCategory:searchText">
 					<td  *ngFor= "let tbodyItem of  tableBodyItem | Jsonkeys"  class="border-right">{{tbodyItem.value}}</td>
 				</tr>
 			</tbody>

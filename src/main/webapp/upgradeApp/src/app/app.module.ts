@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule }   from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -35,7 +36,7 @@ import { UASycmComponent } from './common/sfour/ua.sycm.component';
 
 
 
-import { KeysPipe } from './file-data-transform-pipe';
+import { KeysPipe, OrderBy, FilterBy } from './file-data-transform-pipe';
 
 import 'd3';
 import 'nvd3';
@@ -48,7 +49,8 @@ import { FetchFileService } from './fetch-file.service';
     UAAppRoutingModule,
     ChartsModule,
     HttpClientModule,
-    NvD3Module
+    NvD3Module,
+    FormsModule 
   ],
   providers: [FetchFileService],
   declarations: [
@@ -75,6 +77,8 @@ import { FetchFileService } from './fetch-file.service';
     UAPieChartComponent,
     UAInteractiveChartComponent,
     KeysPipe,
+    OrderBy, 
+    FilterBy,
     UAReadinessCheckComponent,
     UASycmComponent
   ],

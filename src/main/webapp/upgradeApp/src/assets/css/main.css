@@ -251,13 +251,13 @@ tr:nth-child(odd) {
         .navbar-default .navbar-nav > li.nav-tab > a > span, .navbar-default .navbar-nav > li.nav-tab > a:hover > span, .navbar-default .navbar-nav > li.nav-tab > a:focus > span {
           margin-top: 5px;
           display: inline-block; }
-      .navbar-default .navbar-nav > li.nav-tab.active a {
+      .navbar-default .navbar-nav > li.nav-tab a.active  {
         -moz-box-shadow: inset 0 0 10px #000000;
         -webkit-box-shadow: inset 0 0 10px #000000;
         box-shadow: inset 0 0 10px #000000;
         border-radius: 5px;
         padding: 15px; }
-        .navbar-default .navbar-nav > li.nav-tab.active a + .sub-nav {
+        .navbar-default .navbar-nav > li.nav-tab a.active  + .sub-nav {
           display: block; }
     .navbar-default .navbar-nav .tool-logo {
       padding: 5px 15px; }

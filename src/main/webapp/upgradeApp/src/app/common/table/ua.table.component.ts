@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FetchFileService } from '../../fetch-file.service';
 
 
+
 @Component({
     selector:"ua-table",
     templateUrl:'./ua.table.component.html'
@@ -12,6 +13,10 @@ export class UATableComponent implements OnInit{
     tableHeader : any[];
     tableBody : any[];
     errorString: any;
+    ascSort:boolean;
+    orderByField:string;
+    searchText:string;
+    searchCategory:string;
 
     @Input() fileName: string;
 
@@ -21,6 +26,10 @@ export class UATableComponent implements OnInit{
         this.tableData = [];
         this.tableBody = [];
         this.getTableData();
+        this.ascSort = false;
+        this.orderByField = '';
+        this.searchText = '';
+        this.searchCategory = '';
     }
     getTableData(): void {
         
@@ -37,6 +46,10 @@ export class UATableComponent implements OnInit{
                 
             });
       
+    }
+    sortFunction(item) : void{
+        this.orderByField = item.key;
+        this.ascSort = !this.ascSort;
     }
    
 
